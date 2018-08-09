@@ -17,17 +17,18 @@ var del = require("del");
 var uglify = require("gulp-uglify");
 var pump = require("pump");
 
+//пишем таск для работы со стилями
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
   .pipe(plumber())
   .pipe(sass())
   .pipe(postcss([
     autoprefixer({browsers: [
-      "last 1 version",
-      "last 2 Chrome versions",
-      "last 2 Firefox versions",
-      "last 2 Opera versions",
-      "last 2 Edge versions"
+      "last 3 version",
+      "last 3 Chrome versions",
+      "last 3 Firefox versions",
+      "last 3 Opera versions",
+      "last 3 Edge versions"
       ]}),
     mqpacker({
       sort: false
@@ -41,7 +42,7 @@ gulp.task("style", function() {
   .pipe(gulp.dest("build/css"))
   .pipe(server.stream());
 });
-
+//таск сжатия фоток
 gulp.task("images", function() {
   return gulp.src("build/img/**/*.{png,jpg,gif}")
   .pipe(imagemin([
@@ -50,7 +51,7 @@ gulp.task("images", function() {
     ]))
   .pipe(gulp.dest("build/img"));
 })
-
+//таск объединения svg в sprite
 gulp.task("symbols", function() {
   return gulp.src("build/img/svgsprite/*.svg")
   .pipe(svgmin())
@@ -60,13 +61,12 @@ gulp.task("symbols", function() {
   .pipe(rename("symbols.svg"))
   .pipe(gulp.dest("build/img"));
 })
-
+//таск очиски папки
 gulp.task("clean", function() {
   return del("build");
 })
-
+//таск для работы с библиотеками JS 
 gulp.task("compress", function (cb) {
-  // the same options as described above
   var options = {
     preserveComments: "license"
   };
@@ -80,7 +80,7 @@ gulp.task("compress", function (cb) {
       cb
   );
 })
-
+//таск копирования нужных файлов в нужную папку
 gulp.task("copy", function() {
   return gulp.src([
     "fonts/**/*.{woff,woff2,ttf}",
@@ -104,7 +104,7 @@ gulp.task("build", function(fn) {
     fn
     );
 })
-
+//таск для запуска локального сервера и доступа к ней внутри локальной сети 
 gulp.task("serve", function() {
   server.init({
     server: ".",
@@ -112,7 +112,7 @@ gulp.task("serve", function() {
     open: true,
     ui: false
   });
-
+ //такс для слежения 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
 });

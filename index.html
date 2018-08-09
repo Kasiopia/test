@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Fictitious - Главная</title>
+	<meta name="description" content="Мебельный Магазин Fictitious">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header header--index">	
+		<div class="container">
+			<div class="header__inner header__inner--nojs">
+				<div class="header-top">
+					<div class="header-top__wrapper">
+						<div class="header-top__geolocation" id="geolocation">
+							<div id="geolocation__city" class="citycel">Ваш город:</div>
+							<div id="geolocation__igevsk" class="citycel">Ижевск</div>
+						</div>
+						<div class="header-top__action">
+							<p>Бесплатная доставка в город Ижевск при заказе от 1000 руб.</p>
+						</div>
+						<div class="header-top__phone">
+							<a href="tel:+7 (0000) 00-00-00">+7 (0000) 00-00-00</a>
+						</div>
+					</div>
+					<div class="call-back">
+						<p>Обратный звонок</p>
+					</div>
+				</div>
+				<div class="header-middle">
+					<button type="button" class="nav-toggle"><span></span></button>
+					<div class="logo">
+						<h1 class="hidden-block">Fictitious</h1>
+						<a class="logo__img" href="index.html"></a>
+					</div>
+					<div class="header-middle__wrapper header-middle__wrapper--mobile">
+						<div class="secondary-menu">
+							<ul class="secondary-menu__list">
+								<li class="secondary-menu__item">
+									<a class="secondary-menu__list" href="#">Адреса магазинов</a>
+								</li>
+								<li class="secondary-menu__item">
+									<a class="secondary-menu__list" href="#">Доставка и сборка</a>
+								</li>
+								<li class="secondary-menu__item">
+									<a class="secondary-menu__list" href="#">Оплата</a>
+								</li>
+								<li class="secondary-menu__item">
+									<a class="secondary-menu__list" href="#">Консультант</a>
+								</li>
+								<li class="secondary-menu__item">
+									<a class="secondary-menu__list" href="#">Инофрмация</a>
+								</li>
+								<li class="secondary-menu__item">
+									<a class="secondary-menu__list" href="#">О компании</a>
+								</li>
+								<li class="secondary-menu__item">
+									<a class="secondary-menu__list" href="#">Контакты</a>
+								</li>
+								<li class="secondary-menu__item secondary-menu__item--hidden">
+									<a class="secondary-menu__list" href="#">Отзывы и предложения</a>
+								</li>
+							</ul>
+						</div>
+						<form class="form" action="#" method="get" enctype="multipart/form-data">
+							<input class="form__input-text" type="search" name="search" id="search" placeholder="Поиск по каталогу">
+							<label class="form__label-icon" for="search"></label>
+						</form>						
+					</div>
+					<div class="basket">
+						<a href="#basket"></a>
+					</div>
+				</div>
+				<div class="header-bottom">
+					<nav class="main-nav">
+						<div class="main-nav__dropdown" id="#main-menu">
+							<ul class="main-nav__list">
+								<li class="menu-nav__item">
+									<a class="main-nav__link" href="#">Все товары</a>
+								</li>
+								<li class="menu-nav__item">
+									<a class="main-nav__link" href="#">Кухни и столовые</a>
+								</li>
+								<li class="menu-nav__item">
+									<a class="main-nav__link" href="#">Гостиные</a>
+								</li>
+								<li class="menu-nav__item">
+									<a class="main-nav__link" href="#">Спальни</a>
+								</li>
+								<li class="menu-nav__item">
+									<a class="main-nav__link" href="#">Прихожие</a>
+								</li>
+								<li class="menu-nav__item">
+									<a class="main-nav__link" href="#">Детские</a>
+								</li>
+								<li class="menu-nav__item">
+									<a class="main-nav__link" href="#">Офис</a>
+								</li>
+								<li class="menu-nav__item main-nav__link--action">
+									<a class="main-nav__link" href="#">Акции</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>				
+			</div>
+		</div>
+	</header>
+	<main>
+		<article class="slider">
+			<div class="container">
+				<input type="radio" id="btn-1" name="review" checked="">
+				<input type="radio" id="btn-2" name="review">
+				<input type="radio" id="btn-3" name="review">
+				<input type="radio" id="btn-4" name="review">
+				<div class="slider__controls">
+					<label for="btn-1"></label>
+					<label for="btn-2"></label>
+					<label for="btn-3"></label>
+					<label for="btn-4"></label>
+				</div>
+				<label class="arrow-left" for="btn-1"></label>
+				<label class="arrow-right" for="btn-2"></label>
+				<div class="slider__wrappper">
+					<div class="slide" id="slide">
+						<h2 class="slide__title">Explore our novelties</h2>
+					</div>
+					<div class="slide" id="slide">
+						<h2 class="slide__title">Explore our novelties</h2>
+					</div>
+					<div class="slide" id="slide">
+						<h2 class="slide__title">Explore our novelties</h2>
+					</div>
+					<div class="slide" id="slide">
+						<h2 class="slide__title">Explore our novelties</h2>
+					</div>
+				</div>
+			</div>
+		</article>
+		<section class="card-items">
+			<div class="container">
+				<span class="card-items__head">Хиты продаж</span>
+				<article class="card-item">
+					<div class="card-item__image">
+						<a class="card-item__link card-item__link--hidden" href="#">
+							<img src="img/kitchen_london.jpg" width="380" height="386" alt="Кухня Лондон">
+						</a>		
+					</div>
+					<div class="card-item__title">
+						<span>Кухня Лондон</span>
+					</div>
+					<div class="card-item__description">
+						<span>Производитель Пенза</span>
+					</div>
+					<div class="card-item__prices">
+						<span class="card-item__price">14 250 руб.</span>
+						<span class="card-item__price card-item__price--new">15 050 руб.</span>	
+					</div>
+				</article>
+				<article class="card-item">
+					<div class="card-item__image">
+						<a class="card-item__link card-item__link--hidden" href="#">
+							<img src="img/kitchen_london.jpg" width="380" height="386" alt="Кухня Лондон">
+						</a>	
+						<article class="card-slider card-slider--london" style="display: none;">
+							<div class="container container__card-slider">
+								<input type="radio" id="card-btn-1" name="card__review" checked="">
+								<input type="radio" id="card-btn-2" name="card__review">
+								<div class="card-slider__controls">
+									<label for="card-btn-1"></label>
+									<label for="card-btn-2"></label>
+								</div>
+								<label class="card-arrow-left" for="card-btn-1"></label>
+								<label class="card-arrow-right" for="card-btn-2"></label>
+								<div class="card-slider__wrappper">
+									<div class="card-slide">
+										<a class="card-item__link card-item__link--small" href="#">
+											<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
+										</a>
+									</div>
+									<div class="card-slide">
+										<a class="card-item__link card-item__link--small" href="#">
+											<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
+										</a>
+									</div>
+								</div>
+							</div>
+						</article>			
+					</div>
+					<div class="card-item__title">
+						<span>Кухня Лондон</span>
+					</div>
+					<div class="card-item__description">
+						<span>Производитель Пенза</span>
+					</div>
+					<div class="card-item__prices">
+						<span class="card-item__price">14 250 руб.</span>
+						<span class="card-item__price card-item__price--new">15 050 руб.</span>	
+					</div>
+					<div class="card-item-hover" style="display: none;">
+						<div class="card-item-hover__housing">
+							<div class="card-item-hover__description">
+								<span class="card-item-hover__title">Корпус:</span>
+								<span class="card-item-hover__title card-item-hover__title--sub">Венге ЛДСП</span>
+							</div>
+							<div class="card-item-hover__color">
+								<img src="img/color__light" width="30" height="30" alt="светлый">
+								<img src="img/color__wenge" width="30" height="30" alt="венге">
+							</div>
+						</div>
+						<div class="card-item-hover__facade">
+							<div class="card-item-hover__description">
+								<span class="card-item-hover__title">Фасад:</span>
+								<span class="card-item-hover__title card-item-hover__title--sub">Шимоно темный ЛДСП</span>
+							</div>
+						</div>
+						<div class="card-item-hover__actions">
+							<button class="btn btn--buy js-buy">Добавить в корзину</button>
+						</div>
+					</div>
+				</article>
+				<article class="card-item">
+					<div class="card-item__image">
+						<a class="card-item__link card-item__link--hidden" href="#">
+							<img src="img/stenka_essen.jpg" width="380" height="386" alt="Стенка Эссен">
+						</a>		
+					</div>
+					<div class="card-item__title">
+						<span>Мини-стенка «Эссен»</span>
+					</div>
+					<div class="card-item__description">
+						<span>Производитель: Мебельсон</span>
+					</div>
+					<div class="card-item__prices">
+						<span class="card-item__price">13 250 руб.</span>
+						<span class="card-item__price card-item__price--new">12 430 руб.</span>	
+					</div>
+				</article>
+				<article class="card-item">
+					<div class="card-item__image">
+						<a class="card-item__link card-item__link--hidden" href="#">
+							<img src="img/kitchen_london_2.jpg" width="380" height="386" alt="Кухня Лондон">
+						</a>		
+					</div>
+					<div class="card-item__title">
+						<span>Кухня Лондон</span>
+					</div>
+					<div class="card-item__description">
+						<span>Производитель Пенза</span>
+					</div>
+					<div class="card-item__prices">
+						<span class="card-item__price">14 250 руб.</span>
+						<span class="card-item__price card-item__price--new">15 050 руб.</span>	
+					</div>
+				</article>
+				<article class="card-item">
+					<div class="card-item__image">
+						<a class="card-item__link card-item__link--hidden" href="#">
+							<img src="img/kitchen_london_3.jpg" width="380" height="386" alt="Кухня Лондон">
+						</a>		
+					</div>
+					<div class="card-item__title">
+						<span>Кухня Лондон</span>
+					</div>
+					<div class="card-item__description">
+						<span>Производитель Пенза</span>
+					</div>
+					<div class="card-item__prices">
+						<span class="card-item__price">14 250 руб.</span>
+						<span class="card-item__price card-item__price--new">15 050 руб.</span>	
+					</div>
+				</article>
+				<article class="card-item">
+					<div class="card-item__image">
+						<a class="card-item__link card-item__link--hidden" href="#">
+							<img src="img/kitchen_london_4.jpg" width="380" height="386" alt="Кухня Лондон">
+						</a>		
+					</div>
+					<div class="card-item__title">
+						<span>Кухня Лондон</span>
+					</div>
+					<div class="card-item__description">
+						<span>Производитель Пенза</span>
+					</div>
+					<div class="card-item__prices">
+						<span class="card-item__price">14 250 руб.</span>
+						<span class="card-item__price card-item__price--new">15 050 руб.</span>	
+					</div>
+				</article>
+				<div class="pagination">
+					<button type="button" class="btn btn--pagination">Все хиты продаж</button>
+				</div>
+			</div>
+		</section>
+		<section class="delivery">
+			<div class="container">
+				<span class="delivery__headline">Мебель российских фабрик с бесплатной доставкой</span>
+				<div class="delivery__wrapper">
+					<div class="delivery-specialty">
+						<div class="delivery-specialty__image">
+							<svg preserveAspectRatio="xMidYMid" width="66" height="66" viewBox="0 0 66 66">
+								<defs>
+									<style>
+									.cls-1, .cls-4 {
+										fill: #fff;
+									}
+
+									.cls-1, .cls-2, .cls-3, .cls-4 {
+										stroke: #404041;
+										stroke-linejoin: round;
+									}
+
+									.cls-1, .cls-2 {
+										stroke-width: 2px;
+									}
+
+									.cls-2, .cls-3 {
+										fill: #dae135;
+									}
+
+									.cls-3, .cls-4 {
+										stroke-width: 1px;
+									}
+
+									.cls-5, .cls-6 {
+										fill: #404041;
+									}
+
+									.cls-5 {
+										fill-rule: evenodd;
+									}
+									</style>
+								</defs>
+								<g>
+									<rect x="3" y="44" width="60" height="21" class="cls-1"/>
+									<rect x="7" y="44" width="52" height="21" class="cls-2"/>
+									<rect x="11" y="48" width="44" height="13" class="cls-3"/>
+									<rect x="1" y="40" width="64" height="6" class="cls-2"/>
+									<g>
+										<rect x="8" y="19" width="49" height="23" class="cls-1"/>
+										<rect x="35" y="27" width="21" height="14" class="cls-3"/>
+										<rect x="38" y="30" width="15" height="8" class="cls-4"/>
+										<path d="M14.000,39.999 L14.000,29.000 C14.000,29.000 14.375,26.000 18.000,26.000 C21.625,26.000 22.000,29.000 22.000,29.000 L22.000,34.000 L20.000,34.000 L20.000,29.000 C20.000,29.000 19.812,27.999 18.000,27.999 C16.187,27.999 16.000,29.000 16.000,29.000 L16.000,39.999 L14.000,39.999 Z" class="cls-5"/>
+									</g>
+									<g>
+										<rect x="6" y="1" width="53" height="20" class="cls-2"/>
+										<rect x="10" y="5" width="20" height="12" class="cls-1"/>
+										<rect x="35" y="5" width="20" height="12" class="cls-1"/>
+										<rect x="25" y="9" width="1" height="4" class="cls-6"/>
+										<rect x="39" y="9" width="1" height="4" class="cls-6"/>
+									</g>
+								</g>
+							</svg>
+						</div>
+						<div class="delivery-specialty__description">
+							<h3 class="delivery-specialty__headline">
+								Возможностью сделать заказ в шоу-руме в Ижевске
+							</h3>
+							<p class="delivery-specialty__text">
+								Знаете, как получить удовольствие от покупки мебели в Интернете? Найти продавца, которому можно доверять. С 2008 года компания «Гудвик» продаёт в Ижевске мебель российских фабрик. Мы уверены в продукции, которую предлагаем, а покупатели уверены в нас.
+							</p>
+						</div>
+					</div>
+					<div class="delivery-specialty">
+						<div class="delivery-specialty__image">
+							<svg preserveAspectRatio="xMidYMid" width="46" height="65" viewBox="0 0 46 65">
+								<defs>
+									<style>
+									.cls-11 {
+										fill: #404041;
+									}
+
+									.cls-21 {
+										fill: #dae135;
+									}
+
+									.cls-21, .cls-31, .cls-41 {
+										stroke: #404041;
+										stroke-linejoin: round;
+									}
+
+									.cls-21, .cls-41 {
+										stroke-width: 2px;
+									}
+
+									.cls-31, .cls-41 {
+										fill: #fff;
+									}
+
+									.cls-31 {
+										stroke-width: 1px;
+									}
+									</style>
+								</defs>
+								<g>
+									<rect x="5" y="59" width="5" height="6" class="cls-11"/>
+									<rect x="36" y="59" width="5" height="6" class="cls-11"/>
+									<rect x="2" y="16" width="42" height="44" class="cls-21"/>
+									<rect x="4" y="37" width="38" height="2" class="cls-11"/>
+									<rect x="6" y="20" width="34" height="15" class="cls-31"/>
+									<rect x="20" y="27" width="6" height="2" class="cls-11"/>
+									<rect x="6" y="41" width="34" height="15" class="cls-31"/>
+									<rect x="20" y="48" width="6" height="2" class="cls-11"/>
+									<rect x="1" y="12" width="44" height="6" class="cls-41"/>
+									<rect x="7" y="4" width="6" height="10" class="cls-21"/>
+									<rect x="18" y="1" width="20" height="13" class="cls-21"/>
+									<rect x="18" y="1" width="20" height="6" class="cls-41"/>
+								</g>
+							</svg>
+						</div>
+						<div class="delivery-specialty__description">
+							<h3 class="delivery-specialty__headline">
+								Выбирайте хорошую мебель
+							</h3>
+							<p class="delivery-specialty__text">
+								В <a class="delivery-specialty__link" href="#">каталоге интернет-магазина</a> мебели в Ижевске представлена продукция российских фабрик «Риннер», «Мебельсон», «Интерьер-Центр», «Ивару», «Аквилон». Здесь вы найдёте шкафы-купе, стеллажи и полки, стулья и столы, комоды, трюмо и обувные шкафы, кровати и мебельные стенки, мягкую мебель. Мы продаём изделия из массива, ЛДСП и МДФ. Предлагаем мебель с бюджетной фурнитурой и более дорогие варианты с шариковыми направляющими.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</section>
+		<section class="reviews">
+			<article class="reviews-slider">
+				<div class="container">
+					<input type="radio" id="reviews-btn-1" name="reviews-review">
+					<input type="radio" id="reviews-btn-2" name="reviews-review" checked="">
+					<div class="reviews-slider__controls">
+						<label for="reviews-btn-1"></label>
+						<label for="reviews-btn-2"></label>
+					</div>
+					<label class="reviews-arrow-left" for="reviews-btn-1"></label>
+					<label class="reviews-arrow-right reviews-arrow-right--active" for="reviews-btn-2"></label>
+					<div class="reviews-slider__wrappper">
+						<div class="reviews-slide">
+							<div class="reviews-slide__description">
+								<div class="reviews-slide__head">
+									<h2 class="reviews-slide__headline">Отзывы о нас</h2>
+									<a class="reviews-slide__link" href="#">Все отзывы</a>
+								</div>
+								<div class="reviews-slide__content">
+									<p class="reviews-slide__text">Заказали модульную кухню, все привезли, все понравилось. Хороший ассортимент и большой выбор. Спасибо. Рекомендую</p>
+									<div class="reviews-slide__wrapper">						
+										<span class="reviews-slide__author" id="revies__date">07.03.2017</span>
+										<span class="reviews-slide__author" id="revies__name">Лилия,</span>
+										<span class="reviews-slide__author" id="revies__city">Ижевск</span>
+									</div>
+								</div>					
+							</div>
+						</div>
+						<div class="reviews-slide">
+							<div class="reviews-slide__description">
+								<div class="reviews-slide__head">
+									<h2 class="reviews-slide__headline">Отзывы о нас</h2>
+									<a class="reviews-slide__link" href="#">Все отзывы</a>
+								</div>
+								<div class="reviews-slide__content">
+									<p class="reviews-slide__text">Заказали модульную кухню, все привезли, все понравилось. Хороший ассортимент и большой выбор. Спасибо. Рекомендую2</p>
+									<div class="reviews-slide__wrapper">						
+										<span class="reviews-slide__author" id="revies__date">07.03.2017</span>
+										<span class="reviews-slide__author" id="revies__name">Лилия,</span>
+										<span class="reviews-slide__author" id="revies__city">Ижевск</span>
+									</div>
+								</div>					
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>				
+			<div class="reviews__certificate">
+				<a href="#">
+					<img src="img/diploma.jpg" width="79" height="111" alt="диплом">
+				</a>
+				<a href="#">
+					<img src="img/letter.jpg" width="79" height="111" alt="благодарственное письмо">
+				</a>
+			</div>
+		</section>
+	</main>
+	<footer>
+		
+	</footer>
+</body>
+</html>
