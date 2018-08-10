@@ -9,7 +9,7 @@
     "url": "github.com/Kasiopia/test"
   },
 
-  "homepage": "https://github.com/Kasiopia/test",
+  "homepage": "https://github.com/Kasiopia",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "0.0.7",
     "autoprefixer": "6.4.1",
