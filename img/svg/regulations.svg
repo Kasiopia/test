@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="54" height="65" viewBox="0 0 54 65">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+        stroke: #363636;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #dae135;
+      }
+
+      .cls-4 {
+        fill: #363636;
+      }
+    </style>
+  </defs>
+  <g>
+    <path d="M1.000,4.000 L1.000,63.999 L53.000,63.999 L53.000,4.000 L1.000,4.000 Z" class="cls-1"/>
+    <rect x="6" y="9" width="42" height="50" class="cls-2"/>
+    <rect x="16" y="1" width="22" height="8" class="cls-3"/>
+    <path d="M20.000,41.999 L22.000,41.999 L22.000,32.000 L32.000,32.000 L32.000,20.000 L35.000,22.999 L36.000,22.000 L31.000,17.000 L26.000,22.000 L27.000,22.999 L30.000,20.000 L30.000,30.000 L20.000,30.000 L20.000,41.999 Z" class="cls-4"/>
+    <circle cx="22" cy="47" r="4" class="cls-3"/>
+    <circle cx="16" cy="25" r="4" class="cls-3"/>
+    <path d="M41.000,44.000 L39.000,44.000 L39.000,42.000 L41.000,42.000 L41.000,44.000 ZM37.000,42.000 L37.000,40.000 L39.000,40.000 L39.000,42.000 L37.000,42.000 ZM35.000,44.000 L35.000,42.000 L37.000,42.000 L37.000,44.000 L35.000,44.000 ZM35.000,38.000 L37.000,38.000 L37.000,40.000 L35.000,40.000 L35.000,38.000 ZM41.000,38.000 L41.000,40.000 L39.000,40.000 L39.000,38.000 L41.000,38.000 Z" class="cls-4"/>
+  </g>
+</svg>
