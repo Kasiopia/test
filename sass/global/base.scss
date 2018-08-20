@@ -1,0 +1,78 @@
+body {
+	color: $body-color;
+	background: $body-bg;
+	min-width: 320px;
+	@include style-font(14px, 24px, 400);
+	font-style: normal;
+	font-family: "exo2", Arial, sans-serif;
+
+	@media ($tablet-widths) {
+		min-width: 700px;
+	}
+
+	@media ($desktop-widths) {
+		min-width: 1200px;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+}
+
+section {
+	position: relative;
+}
+
+ul {
+	list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+input,
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+article,
+aside,
+details,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+	position: relative;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+}
+
+button {
+	text-transform: none;
+	cursor: pointer;
+}
+
+.container {
+	@include container();
+}
+
+.vissualy-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

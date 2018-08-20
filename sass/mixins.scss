@@ -1,0 +1,39 @@
+@mixin container() {
+	width: 290px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+
+	@media ($tablet-widths) {
+		width: 620px;
+		margin: 0 auto;
+		padding: 0 40px;
+	}
+
+	@media ($desktop-widths) {
+		width: 1180px;
+		margin: 0 auto;
+		padding: 0 10px;
+	}
+}
+
+@mixin a-link() {
+	display: block;
+	text-decoration: none;
+}
+
+@mixin style-font($f-size, $l-height, $f-weight) {
+	font-size: $f-size;
+	line-height: $l-height;
+	font-weight: $f-weight;
+}
+
+@mixin position-container($top, $bottom, $left, $right) {
+	content: "";
+	position: absolute;
+	margin: auto;
+	top: $top;
+	bottom: $bottom;
+	left: $left;
+	right: $right;
+}
