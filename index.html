@@ -9,102 +9,105 @@
 </head>
 <body>
 	<header class="header header--index">	
-		<div class="container">
-			<div class="header__inner header__inner--nojs">
-				<div class="header-top">
+		<div class="header__inner header__inner--nojs">
+			<div class="header-top">
+				<div class="header-top__container">
 					<div class="header-top__wrapper">
 						<div class="header-top__geolocation" id="geolocation">
-							<div id="geolocation__city" class="citycel">Ваш город:</div>
-							<div id="geolocation__igevsk" class="citycel">Ижевск</div>
+							<span>Ваш город:</span>
+							<span class="city">Ижевск</span>
 						</div>
-						<div class="header-top__action">
-							<p>Бесплатная доставка в город Ижевск при заказе от 1000 руб.</p>
+						<div class="header-top__position">
+							<p class="header-top__action">Бесплатная доставка в город Ижевск при заказе от 1000 руб.</p>
+							<a  class="header-top__phone" href="tel:+7(0000)00-00-00">+7 (0000) 00-00-00</a>
 						</div>
-						<div class="header-top__phone">
-							<a href="tel:+7(0000)00-00-00">+7 (0000) 00-00-00</a>
-						</div>
-					</div>
-					<div class="call-back">
-						<p>Обратный звонок</p>
+						<div class="call-back">
+							<a class="call-back__link">Обратный звонок</a>
+						</div>						
 					</div>
 				</div>
-				<div class="header-middle">
+			</div>
+			<div class="header-middle">
+				<div class="header-middle__container">
 					<button type="button" class="nav-toggle"><span></span></button>
-					<div class="logo">
+					<a class="logo" href="index.html">
 						<h1 class="hidden-block">Fictitious</h1>
-						<a class="logo__img" href="index.html"></a>
-					</div>
+						<div class="logo__img"></div>
+					</a>
 					<div class="header-middle__wrapper header-middle__wrapper--mobile">
-						<div class="secondary-menu">
-							<ul class="secondary-menu__list">
-								<li class="secondary-menu__item">
-									<a class="secondary-menu__list" href="#">Адреса магазинов</a>
+						<div class="menu">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a class="menu__link menu__link--active" href="#">Адреса магазинов</a>
 								</li>
-								<li class="secondary-menu__item">
-									<a class="secondary-menu__list" href="#">Доставка и сборка</a>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Доставка и сборка</a>
 								</li>
-								<li class="secondary-menu__item">
-									<a class="secondary-menu__list" href="#">Оплата</a>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Оплата</a>
 								</li>
-								<li class="secondary-menu__item">
-									<a class="secondary-menu__list" href="#">Консультант</a>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Консультант</a>
 								</li>
-								<li class="secondary-menu__item">
-									<a class="secondary-menu__list" href="#">Инофрмация</a>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Инофрмация</a>
 								</li>
-								<li class="secondary-menu__item">
-									<a class="secondary-menu__list" href="#">О компании</a>
+								<li class="menu__item">
+									<a class="menu__link" href="#">О компании</a>
 								</li>
-								<li class="secondary-menu__item">
-									<a class="secondary-menu__list" href="#">Контакты</a>
+								<li class="menu__item">
+									<a class="menu__link" href="#">Контакты</a>
 								</li>
-								<li class="secondary-menu__item secondary-menu__item--hidden">
-									<a class="secondary-menu__list" href="#">Отзывы и предложения</a>
+								<li class="menu__item menu__item--hidden">
+									<a class="menu__link" href="#">Отзывы и предложения</a>
 								</li>
 							</ul>
 						</div>
 						<form class="form" action="#" method="get" enctype="multipart/form-data">
 							<input class="form__input-text" type="search" name="search" id="search" placeholder="Поиск по каталогу">
-							<label class="form__label-icon" for="search"></label>
+							<label class="form__label-text" for="search"></label>
 						</form>						
 					</div>
 					<div class="basket">
-						<a href="#basket"></a>
-					</div>
+						<a class="basket__link" href="#"></a>
+						<a class="basket__number" href="#" id="basket__number"></a>
+					</div>					
 				</div>
-				<div class="header-bottom">
+			</div>
+			<div class="header-bottom">
+				<div class="header-bottom__container">
 					<nav class="main-nav">
 						<div class="main-nav__dropdown" id="#main-menu">
 							<ul class="main-nav__list">
-								<li class="menu-nav__item">
+								<li class="main-nav__item">
 									<a class="main-nav__link" href="#">Все товары</a>
 								</li>
-								<li class="menu-nav__item">
-									<a class="main-nav__link" href="#">Кухни и столовые</a>
+								<li class="main-nav__item">
+									<a class="main-nav__link main-nav__link--active" href="#">Кухни и столовые</a>
 								</li>
-								<li class="menu-nav__item">
+								<li class="main-nav__item">
 									<a class="main-nav__link" href="#">Гостиные</a>
 								</li>
-								<li class="menu-nav__item">
+								<li class="main-nav__item">
 									<a class="main-nav__link" href="#">Спальни</a>
 								</li>
-								<li class="menu-nav__item">
+								<li class="main-nav__item">
 									<a class="main-nav__link" href="#">Прихожие</a>
 								</li>
-								<li class="menu-nav__item">
+								<li class="main-nav__item">
 									<a class="main-nav__link" href="#">Детские</a>
 								</li>
-								<li class="menu-nav__item">
+								<li class="main-nav__item">
 									<a class="main-nav__link" href="#">Офис</a>
 								</li>
-								<li class="menu-nav__item main-nav__link--action">
-									<a class="main-nav__link" href="#">Акции</a>
+								<li class="main-nav__item">
+									<a class="main-nav__link main-nav__link--action" href="#">Акции</a>
 								</li>
 							</ul>
 						</div>
 					</nav>
-				</div>				
-			</div>
+				</div>
+			</div>				
 		</div>
 	</header>
 	<main>

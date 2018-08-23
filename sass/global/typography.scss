@@ -1,20 +1,20 @@
 h1 {
-	@include style-font(30px, 1.4, 400);
+	@include style-font(34px, 28px, 700);
 	text-transform: uppercase;
-	color: $body-color;
+	color: $text-color;
 }
 
 h2 {
-	@include style-font(24px, 1.4, 400);
-	color: $body-color;
+	@include style-font(30px, 28px, 700);
+	color: $text-color;
 }
 
 h3 {
-	@include style-font(22px, 1.4, 400);
-	color: $body-color;
+	@include style-font(22px, 28px, 400);
+	color: $text-color;
 }
 
 h4 {
-	@include style-font(18px, 1.4, 400);
-	color: $body-color;
+	@include style-font(18px, 28px, 400);
+	color: $text-color;
 }

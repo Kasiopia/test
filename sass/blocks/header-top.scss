@@ -1,0 +1,47 @@
+.header-top {
+	background: $body-color;
+	&__container {
+		display: flex;
+		flex-wrap: nowrap;
+		max-width: 1180px;
+		margin: 0 auto;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&__wrapper {
+		display: flex;
+		width: 100%;
+    	flex-wrap: nowrap;
+	}
+	&__geolocation {
+        width: 200px;
+        display: flex;
+    	align-self: center;
+        text-align: left;
+        & span {
+        	@include style-font(14px, 30px, 400);
+			cursor: pointer;
+			color: #3d3d3d;
+        }		
+	}
+	&__position {
+		display: flex;
+		flex-grow: 1;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;		
+	}
+	&__action {
+        @include style-font(14px, 30px, 500);
+        color: $text-color;		
+	}
+	&__phone {
+		padding-right: 18px;
+		@include a-link();
+        font-size: 16px;
+		line-height: 40px;
+		font-weight: bold;
+		font-family: Arial, sans-serif;
+        color: $text-color;		
+	}
+}

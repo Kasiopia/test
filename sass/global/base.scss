@@ -2,8 +2,7 @@ body {
 	color: $body-color;
 	background: $body-bg;
 	min-width: 320px;
-	@include style-font(14px, 24px, 400);
-	font-style: normal;
+	@include style-font(16px, 25px, 400);
 	font-family: "exo2", Arial, sans-serif;
 
 	@media ($tablet-widths) {
@@ -75,4 +74,8 @@ button {
 	border: 0;
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+.hidden-block {
+	display: none;
 }

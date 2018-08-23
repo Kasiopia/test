@@ -9,12 +9,22 @@
 @import "mixins.scss";
 
 //библиотека blocks
-
+@import "blocks/header.scss";
+@import "blocks/header-top.scss";
+@import "blocks/header-middle.scss";
+@import "blocks/header-bottom.scss";
+@import "blocks/logo.scss";
+@import "blocks/city.scss";
+@import "blocks/call-back.scss";
+@import "blocks/menu.scss";
+@import "blocks/basket.scss";
+@import "blocks/main-nav.scss";
 
 //библиотека global
 @import "global/fonts.scss";
 @import "global/typography.scss";
 @import "global/base.scss";
+@import "global/form.scss";
 
 //библиотека styleguide
-
+@import "styleguide/btn.scss";

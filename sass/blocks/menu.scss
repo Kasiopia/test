@@ -1,0 +1,37 @@
+.menu {
+	display: flex;
+	&__list {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: left;	
+	}
+	&__item {
+		margin: 0px;
+		border: 0px;
+		&:last-child .menu__link {
+			margin-right: 0px;
+		}
+		&--hidden {
+			display: none;
+		}
+	}
+	&__link {
+		margin-right: 30px;
+		text-decoration: none;
+		color: $text-color;
+		@include style-font(14px, 40px, 500);
+		text-transform: none;
+		border: none;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.5;
+			transition: background .3s .5s;
+		}
+		&:active {
+			opacity: 0.5;
+			transition: background .3s .5s;
+		}
+
+	}
+}
