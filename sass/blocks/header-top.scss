@@ -1,13 +1,5 @@
 .header-top {
 	background: $body-color;
-	&__container {
-		display: flex;
-		flex-wrap: nowrap;
-		max-width: 1180px;
-		margin: 0 auto;
-		flex-direction: row;
-		justify-content: space-between;
-	}
 	&__wrapper {
 		display: flex;
 		width: 100%;
@@ -20,7 +12,6 @@
         text-align: left;
         & span {
         	@include style-font(14px, 30px, 400);
-			cursor: pointer;
 			color: #3d3d3d;
         }		
 	}

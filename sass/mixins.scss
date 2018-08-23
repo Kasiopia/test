@@ -17,6 +17,21 @@
 	}
 }
 
+@mixin container-fluid() {
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	@media ($tablet-widths) {
+		max-width: 769px;
+	}
+
+	@media ($desktop-widths) {
+		max-width: 1180px;
+	}
+}
+
 @mixin a-link() {
 	display: block;
 	text-decoration: none;

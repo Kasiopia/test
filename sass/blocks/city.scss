@@ -1,6 +1,7 @@
 .city {
 	position: relative;
 	padding-left: 4px;
+	cursor: pointer;
 	&::after {
 		width: 0;
 		height: 0;

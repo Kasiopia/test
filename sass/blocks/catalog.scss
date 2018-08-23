@@ -1,0 +1,11 @@
+.catalog {
+	padding-top: 50px;
+	&__description {
+		display: block;
+		padding-bottom: 27px; 
+		@include style-font(28px, 30px, 700);
+		color: $additional-text-color;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
