@@ -5,6 +5,10 @@
 	flex-direction: column;
 	margin-bottom: 53px;
 	&__wrapper {
+		position: relative;
+		
+	}
+	&:hover &__wrapper {
 		position: absolute;
 		z-index: 300;
 	}
@@ -99,7 +103,6 @@
 	transition: background .3s .5s;
 }
 
-.card-item:hover .card-slider,
 .card-item:hover .card-item__ad-info {
 	position: relative;
 	display: block;

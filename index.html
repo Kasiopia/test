@@ -167,29 +167,39 @@
 							<div class="card-item__image">
 								<a class="card-item__link" href="#">
 									<img src="img/kitchen_london.jpg" width="380" height="386" alt="Кухня Лондон">
-								</a>										
+								</a>
 							</div>
 							<article class="card-slider">
 								<div class="container__card-slider">
-									<input type="radio" id="card-btn-1" name="card__review" checked="">
-									<input type="radio" id="card-btn-2" name="card__review">
-									<div class="card-slider__controls">
-										<label for="card-btn-1"></label>
-										<label for="card-btn-2"></label>
-									</div>
-									<label class="card-arrow__left" for="card-btn-1"></label>
-									<label class="card-arrow__right" for="card-btn-2"></label>
-									<div class="card-slider__wrappper">
-										<div class="card-slide">
-											<a class="card-slide__link card-slide__link--small" href="#">
-												<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
-											</a>
-										<div class="card-slide" style="display: none;">
-											<a class="card-slide__link card-slide__link--small" href="#">
+									<div id="card-slider__wrappper">
+										<div class="card-slide card-slide--showing">
+											<a href="#">
 												<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
 											</a>
 										</div>
+										<div class="card-slide">
+											<a href="#">
+												<img src="img/kitchen__london--small_2.jpg" width="380" height="231" alt="Кухня Лондон">
+											</a>
+										</div>
+										<div class="card-slide">
+											<a href="#">
+												<img src="img/kitchen__london--small_3.jpg" width="380" height="231" alt="Кухня Лондон">
+											</a>
+										</div>
+										<div class="card-slide">
+											<a href="#">
+												<img src="img/kitchen__london--small_4.jpg" width="380" height="231" alt="Кухня Лондон">
+											</a>
+										</div>
+										<div class="card-slide">
+											<a href="#">
+												<img src="img/kitchen__london--small_5.jpg" width="380" height="231" alt="Кухня Лондон">
+											</a>
+										</div>
 									</div>
+									<button class="card-arrow card-arrow__left" id="next"></button>
+									<button class="card-arrow card-arrow__right" id="previous"></button>
 								</div>
 							</article>
 							<div class="card-item__info">
@@ -650,5 +660,6 @@
 			</div>
 		</div>		
 	</footer>
+	<script src="js/js.js"></script>
 </body>
 </html>
