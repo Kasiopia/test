@@ -23,9 +23,7 @@
 	outline: none;
 	cursor: pointer;
 	&::before {
-		content: "";
-		position: absolute;
-		top: 18px;
+		@include position-container(18px, auto, 0, auto);
 		width: 14px;
 		height: 14px;
 		border-top: 2px solid #ee5b40;
@@ -67,10 +65,8 @@
 }
 
 .card-slide {
-	position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
+	@include position-container(0, auto, 0, auto);
+	width: 100%;
     height: 100%;
     opacity: 0;
     z-index: 1;

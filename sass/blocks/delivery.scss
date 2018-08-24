@@ -1,0 +1,53 @@
+.delivery {
+	padding-top: 69px;
+	background: $body-color;
+	&__headline {
+		@include style-font(28px, 30px, 700);
+		color: $additional-text-color;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__wrapper {
+		display: flex;	
+		padding: 2px 0;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: baseline;		
+	}
+	&__specialty {
+		display: flex;
+		width: 379px;
+		margin: 0 20px 53px;
+		flex-direction: column;
+		align-items: baseline;
+	}
+	&__image {
+		position: relative;
+		width: 130px;
+		height: 130px;
+		margin: 33px 0;
+		background: $body-bg;
+		border-radius: 50%;
+	}
+	&__svg {
+		@include position-container(0, 0, 0, 0);
+		z-index: 20;
+	}
+	&__description {
+
+	}
+	&__sub-headline {
+		@include style-font(16px, 30px, 700);
+		color: $additional-text-color;
+		text-transform: uppercase;
+	}
+	&__text {
+		@include style-font(16px, 25px, 400);
+		color: $additional-text-color;	
+	}
+	&__link {
+		color: #ee5a3f;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}

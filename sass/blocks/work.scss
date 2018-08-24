@@ -1,0 +1,41 @@
+.work {
+	padding-top: 61px;
+	padding-bottom: 30px;
+	background: $body-color;
+	&__headline {
+		text-align: center;
+		@include style-font(28px, 30px, 700);
+		color: $additional-text-color;
+		text-transform: uppercase;
+	}
+	&__operations {
+		display: flex;
+		padding-top: 37px;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+	&__operation {
+		display: flex;
+		width: 280px;
+		margin-bottom: 25px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		
+	}
+	&__icon {
+		margin-bottom: 11px;
+	}
+	&__titul {
+		@include style-font(16.13px, 30px, 700);
+		color: $text-color;
+		text-transform: uppercase;
+	}
+	&__text {
+		@include style-font(16px, 25px, 400);
+		font-family: Arial, sans-serif;
+		color: $text-color;
+		text-align: center;
+	}
+}

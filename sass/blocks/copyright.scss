@@ -1,0 +1,32 @@
+.copyright {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: baseline;
+	&__text {
+		@include style-font(14px, 25px, 400);
+		font-family: Arial, sans-serif;
+		color: #9e9ea1;
+		&--margin {
+			margin-left: auto;
+			white-space: pre;
+		}
+	}
+	&__link {
+		display: block;
+		margin-left: 82px;
+		@include style-font(14px, 25px, 400);
+		font-family: Arial, sans-serif;
+		color: #9e9ea1;
+		text-decoration: none;
+		&--color {
+			margin-left: 0px;			
+			color: #ee5a3f;
+		}
+		&:hover {
+			color: red;
+		}
+		&:active {
+			opacity: 0.5;
+		}
+	}
+}

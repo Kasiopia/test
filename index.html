@@ -126,16 +126,16 @@
 			<label class="slider-arrow__right" for="btn-4"></label>
 			<div class="slider__wrapper">
 				<div class="slide" id="slide-1">
-					<img src="img/slide-1.jpg" alt="slide-1" width="100%" height="100%">
+					<img class="slide__img" src="img/slide-1.jpg" alt="slide-1">
 				</div>
 				<div class="slide" id="slide-2">
-					<img src="img/slide-2.jpg" alt="slide-2" width="100%" height="100%">
+					<img class="slide__img" src="img/slide-2.jpg" alt="slide-2">
 				</div>
 				<div class="slide" id="slide-3">
-					<img src="img/slide-3.jpg" alt="slide-3" width="100%" height="100%">
+					<img class="slide__img" src="img/slide-3.jpg" alt="slide-3">
 				</div>
 				<div class="slide" id="slide-4">
-					<img src="img/slide-4.jpg" alt="slide-4" width="100%" height="100%">
+					<img class="slide__img" src="img/slide-4.jpg" alt="slide-4">
 				</div>
 			</div>
 		</article>
@@ -257,7 +257,7 @@
 								<span class="card-item__price card-item__price--old">13 250 руб.</span>
 								<span class="card-item__price card-item__price--new">12 430 руб.</span>	
 							</div>
-					</div>
+						</div>
 					</article>
 					<article class="card-item">
 						<div class="card-item__image">
@@ -322,11 +322,11 @@
 		</section>
 		<section class="delivery">
 			<div class="container">
-				<span class="delivery__headline">Мебель российских фабрик с бесплатной доставкой</span>
+				<h2 class="delivery__headline">Мебель российских фабрик с бесплатной доставкой</h2>
 				<div class="delivery__wrapper">
 					<div class="delivery__specialty">
 						<div class="delivery__image">
-							<svg preserveAspectRatio="xMidYMid" width="66" height="66" viewBox="0 0 66 66">
+							<svg class="delivery__svg" preserveAspectRatio="xMidYMid" width="66" height="66" viewBox="0 0 66 66">
 								<defs>
 									<style>
 									.cls-1, .cls-4 {
@@ -381,7 +381,7 @@
 							</svg>
 						</div>
 						<div class="delivery__description">
-							<h3 class="delivery__headline">
+							<h3 class="delivery__sub-headline">
 								Возможностью сделать заказ в шоу-руме в Ижевске
 							</h3>
 							<p class="delivery__text">
@@ -391,7 +391,7 @@
 					</div>
 					<div class="delivery__specialty">
 						<div class="delivery__image">
-							<svg preserveAspectRatio="xMidYMid" width="46" height="65" viewBox="0 0 46 65">
+							<svg class="delivery__svg" preserveAspectRatio="xMidYMid" width="46" height="65" viewBox="0 0 46 65">
 								<defs>
 									<style>
 									.cls-11 {
@@ -437,7 +437,7 @@
 							</svg>
 						</div>
 						<div class="delivery__description">
-							<h3 class="delivery__headline">
+							<h3 class="delivery__sub-headline">
 								Выбирайте хорошую мебель
 							</h3>
 							<p class="delivery__text">
@@ -503,29 +503,33 @@
 					<div class="work__operation">
 						<img class="work__icon" src="img/application.png" width="52" height="63" alt="заявка">
 						<h3 class="work__titul">Заявка</h3>
-						<p class="work__decription">
+						<p class="work__text">
 							Принимаем заказы 24/7.
-							Перезваниваем в течение 10 минут
+							Перезваниваем в течение 10 минут<br>
 							в рабочее время с 9:00 до 20:00
 						</p>
 					</div>
 					<div class="work__operation">
 						<img class="work__icon" src="img/svg/pay.svg" alt="оплата">
 						<h3 class="work__titul">Оплата</h3>
-						<p class="work__decription">Оплату принимаем на сайте,
-							на р/с, наличными курьеру или
-						в магазине «Ижевская мебель».</p>
+						<p class="work__text">
+							Оплату принимаем на сайте,<br>
+							на р/с, наличными курьеру или<br>
+							в магазине «Ижевская мебель».
+						</p>
 					</div>
 					<div class="work__operation">
 						<img class="work__icon" src="img/svg/delivery.svg" alt="доставка">
 						<h3 class="work__titul">Доставка</h3>
-						<p class="work__decription">Доставка два раза в неделю (вт, чт).
-						Если товар в наличии, то вы получаете его в течение 4 дней.</p>
+						<p class="work__text">
+							Доставка два раза в неделю (вт, чт).
+						Если товар в наличии, то вы получаете его в течение 4 дней.
+						</p>
 					</div>
 					<div class="work__operation">
 						<img class="work__icon" src="img/svg/garant.svg" alt="гарантия">
 						<h3 class="work__titul">Гарантия</h3>
-						<p class="work__decription">
+						<p class="work__text">
 							Гарантия от 12 до 18 месяцев.
 							Если мебель не подошла, оформляем возврат в течение 7 дней.
 						</p>
@@ -540,123 +544,138 @@
 				</h2>
 				<ul class="features__list">
 					<li class="features__item">
-						<img class="feautres__icon" src="img/svg/free_delivery.svg" alt="">
+						<img class="features__icon" src="img/svg/free_delivery.svg" alt="">
 						<h3 class="features__titul">Бесплатная доставка</h3>
-						<p class="features__description">В черте города доставка до подъезда
-						бесплатна при любой сумме заказа</p>
+						<p class="features__description">
+							В черте города доставка до подъезда
+							бесплатна при любой сумме заказа
+						</p>
 					</li>
 					<li class="features__item">
-						<img class="feautres__icon" src="img/svg/city.svg" alt="">
+						<img class="features__icon" src="img/svg/city.svg" alt="">
 						<h3 class="features__titul">Шоу-рум и склад в Ижевске</h3>
-						<p class="features__description">Оценивайте качество в магазине
-						«Ижевская мебель» на ул. Пойма, 7</p>
+						<p class="features__description">
+							Оценивайте качество в магазине
+							«Ижевская мебель» на ул. Пойма, 7
+						</p>
 					</li>
 					<li class="features__item">
-						<img class="feautres__icon" src="img/svg/loader.svg" alt="">
+						<img class="features__icon" src="img/svg/loader.svg" alt="">
 						<h3 class="features__titul">Грузчики не подводят</h3>
-						<p class="features__description">Напоминаем о доставке за день
-						и за час до назначенного времени</p>
+						<p class="features__description">
+							Напоминаем о доставке за день
+							и за час до назначенного времени
+						</p>
 					</li>
 					<li class="features__item">
-						<img class="feautres__icon" src="img/svg/regulations.svg" alt="">
+						<img class="features__icon" src="img/svg/regulations.svg" alt="">
 						<h3 class="features__titul">Всё по правилам</h3>
-						<p class="features__description">Вы получаете гарантийный талон,
-						товарный и кассовый чеки</p>
+						<p class="features__description">
+							Вы получаете гарантийный талон,
+							товарный и кассовый чеки
+						</p>
 					</li>
 					<li class="features__item">
-						<img class="feautres__icon" src="img/svg/credit.svg" alt="">
+						<img class="features__icon" src="img/svg/credit.svg" alt="">
 						<h3 class="features__titul">Можно в кредит</h3>
-						<p class="features__description">Кредит предоставляет ОТП-банк,
-						«Альфа-банк», банк «Русский Стандарт».</p>
+						<p class="features__description">
+							Кредит предоставляет ОТП-банк,
+							«Альфа-банк», банк «Русский Стандарт».
+						</p>
 					</li>
 					<li class="features__item">
-						<img class="feautres__icon" src="img/svg/economy.svg" alt="">
+						<img class="features__icon" src="img/svg/economy.svg" alt="">
 						<h3 class="features__titul">Экономия</h3>
-						<p class="features__description">Акции и распродажи каждый месяц.
+						<p class="features__description">
+							Акции и распродажи каждый месяц.
 							Скидки 10%, 20%, 30% смотрите
-						в разделе «Акции»</p>
+							в разделе «Акции»
+						</p>
 					</li>
 				</ul>
 				<p class="features__slogan">Ищут везде – покупают в «FICTITIOUS»</p>
-				<p class="features__text">Мы предлагаем доступную мебель фабричного производства и делаем всё,
-				чтобы вы получили заказ без задержек.</p>
-				<p class="features__text">Чтобы купить мебель в интернет-магазине «FICTITIOUS», оформите заказ по телефону
-				+7 (0000) 00-00-00 </p>
-
+				<p class="features__text">
+					Мы предлагаем доступную мебель фабричного производства и делаем всё,<br> чтобы вы получили заказ без задержек.
+				</p>
+				<p class="features__text">
+					Чтобы купить мебель в интернет-магазине «FICTITIOUS», оформите заказ по телефону +7 (0000) 00-00-00
+				</p>
 			</div>
 		</section>
 	</main>
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__top">
-				<div class="about">
-					<h2 class="about__headline">Компания</h2>
-					<nav class="about-menu">
-						<ul class="about-menu__list">
-							<li class="about-menu__item">
-								<a class="about-menu__link" href="#">О компании</a>
+				<div class="footer__wrapper">
+					<h2 class="footer__headline">Компания</h2>
+					<nav class="footer-menu">
+						<ul class="footer-menu__list">
+							<li class="footer-menu__item">
+								<a class="footer-menu__link" href="#">О компании</a>
 							</li>
-							<li class="about-menu__item">
-								<a class="about-menu__link" href="#">Производители</a>
+							<li class="footer-menu__item">
+								<a class="footer-menu__link" href="#">Производители</a>
 							</li>
-							<li class="about-menu__item">
-								<a class="about-menu__link" href="#">Реквизиты</a>
+							<li class="footer-menu__item">
+								<a class="footer-menu__link" href="#">Реквизиты</a>
 							</li>
-							<li class="about-menu__item">
-								<a class="about-menu__link" href="#">Условия возврата</a>
+							<li class="footer-menu__item">
+								<a class="footer-menu__link" href="#">Условия возврата</a>
 							</li>
-							<li class="about-menu__item">
-								<a class="about-menu__link" href="#">Сотрудничество</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="about">
-					<h2 class="about__headline">Интернет-магазин</h2>
-					<nav class="about-menu">
-						<ul class="about-menu__list">
-							<li class="about-menu__item">
-								<a class="about-menu__link" href="#">Доставка и сборка</a>
-							</li>
-							<li class="about-menu__item">
-								<a class="about-menu__link" href="#">Оплата</a>
-							</li>
-							<li class="about-menu__item">
-								<a class="about-menu__link" href="#">Акции</a>
-							</li>
-							<li class="about-menu__item">
-								<a class="about-menu__link" href="#">Отзывы и предложения</a>
+							<li class="footer-menu__item">
+								<a class="footer-menu__link" href="#">Сотрудничество</a>
 							</li>
 						</ul>
 					</nav>
 				</div>
-				<div class="contact">
-					<h2 class="contact__headline">Контакты</h2>
-					<ul class="contact__list">
-						<li class="contact__item">
-							г. Ижевск, ул. Пойма, 7
+				<div class="footer__wrapper">
+					<h2 class="footer__headline">Интернет-магазин</h2>
+					<nav class="footer-menu">
+						<ul class="footer-menu__list">
+							<li class="footer-menu__item">
+								<a class="footer-menu__link" href="#">Доставка и сборка</a>
+							</li>
+							<li class="footer-menu__item">
+								<a class="footer-menu__link" href="#">Оплата</a>
+							</li>
+							<li class="footer-menu__item">
+								<a class="footer-menu__link" href="#">Акции</a>
+							</li>
+							<li class="footer-menu__item">
+								<a class="footer-menu__link" href="#">Отзывы и предложения</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__wrapper">
+					<h2 class="footer__headline">Контакты</h2>
+					<ul class="footer__contacts">
+						<li class="footer__contact">
+							г. Ижевск, ул. Пойма, 7<br>
 							ТЦ «Дом», комната 2
 						</li>
-						<li class="contact__item">
+						<li class="footer__contact">
 							7 (0000) 00-00-00
 						</li>
-						<li class="contact__item">
+						<li class="footer__contact">
 							mebel@fictitios.ru
 						</li>
 					</ul>
 				</div>
-				<div class="payment">
-					<h2 class="payment__headline">Мы принимаем к оплате</h2>
-					<div class="payment-method">
+				<div class="footer__wrapper">
+					<h2 class="footer__headline">Мы принимаем к оплате</h2>
+					<div class="payment">
 						<a class="payment-btn payment-btn--yandex" href="#"></a>
 						<a class="payment-btn payment-btn--visa" href="#"></a>
-						<a class="payment-btn payment-btn--mastercard" href="#"></a>
+						<a class="payment-btn payment-btn--mc" href="#"></a>
 					</div>
 				</div>
 			</div>
-			<div class="footer__bottom">
-				<b class="copyright">© 2017, «FICTITIOUS» интернет-магазин мебели</b>
-				<a class="map-link">Карта сайта</a>
+			<div class="copyright">
+				<p class="copyright__text">© 2017, «FICTITIOUS» интернет-магазин мебели</p>
+				<a class="copyright__link" href="#">Карта сайта</a>
+				<p class="copyright__text copyright__text--margin">Сделано в </p>
+				<a class="copyright__link copyright__link--color" href="#">DLRG</b>
 			</div>
 		</div>		
 	</footer>

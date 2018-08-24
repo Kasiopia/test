@@ -1,0 +1,16 @@
+.footer-menu{
+	&__link {
+		@include style-font(14px, 30px, 400);
+		color: #9e9ea1;
+		font-family: Arial, sans-serif;
+		text-decoration: none;
+		&:hover {
+			opacity: 0.7;
+			transition: background .3s .5s;
+		}
+		&:active {
+			opacity: 0.5;
+			transition: background .3s .5s;
+		}
+	}
+}
