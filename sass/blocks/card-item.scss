@@ -1,19 +1,20 @@
 .card-item {
 	display: flex;
 	width: 380px;
+	position: relative;
 	flex-direction: column;
 	margin-bottom: 53px;
-	
+	&__wrapper {
+		position: absolute;
+		z-index: 300;
+	}
 	&__info {
 		display: flex;
 		flex-direction: column;
-		padding: 18px 19px 19px;
+		padding: 20px 20px 0;
 		justify-content: flex-start;
 		flex-grow: 1;
-		background: 0 0;
-		&--hover {
-			display: none;
-		}
+		background: 0 0;		
 	}
 	&__title span {
 		@include style-font(20px, 30px, 700);
@@ -25,7 +26,6 @@
 	}
 	&__prices {
 		display: flex;
-		margin-top: auto;
 		padding-top: 11px;
 		flex-direction: row;
 		justify-content: left;
@@ -51,11 +51,58 @@
 			color: $text-color;
 		}
 	}
-	
-	&__link {
-
-		&--hidden {
-
+	&__ad-info {
+		position: absolute;
+		display: none;
+		padding: 15px 20px 18px;
+		background: $body-bg;
+		text-align: left;
+		opacity: 0;
+		transition: background .3s .5s;	
+	}
+	&__housing, &__facade {
+		padding-bottom: 15px;
+		border-top: 1px solid #e7e7e7;
+	}
+	&__housing-text, &__facade-text {
+		@include style-font(16px, 40px, 700);
+		color: $additional-text-color;
+		&--sub, &--sub {
+			padding-left: 10px;
+			font-weight: 400;
+			color: $text-color;
 		}
 	}
+	&__housing-colors img, &__facade-colors img {
+		margin-left: 15px;
+		border: 1px solid transparent;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	&__housing-colors img:hover, &__facade-colors img:hover{
+		border: 1px solid #ee5a3f;
+	}
+	&__actions {
+		padding-top: 15px;
+	}
+}
+
+.card-item:hover .card-item__wrapper {
+	box-shadow: 6px 6px 20px 0px rgba(43,43,43, .15);
+
+}
+
+.card-item:hover .card-item__image {
+	position: absolute;
+	opacity: 0;
+	transition: background .3s .5s;
+}
+
+.card-item:hover .card-slider,
+.card-item:hover .card-item__ad-info {
+	position: relative;
+	display: block;
+	opacity: 1;
+	transition: background .3s .5s;
 }

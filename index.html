@@ -112,32 +112,30 @@
 	</header>
 	<main>
 		<article class="slider">
-			<div class="container">
-				<input type="radio" id="btn-1" name="review" checked="">
-				<input type="radio" id="btn-2" name="review">
-				<input type="radio" id="btn-3" name="review">
-				<input type="radio" id="btn-4" name="review">
-				<div class="slider__controls">
-					<label for="btn-1"></label>
-					<label for="btn-2"></label>
-					<label for="btn-3"></label>
-					<label for="btn-4"></label>
+			<input type="radio" id="btn-1" name="review" checked="">
+			<input type="radio" id="btn-2" name="review">
+			<input type="radio" id="btn-3" name="review">
+			<input type="radio" id="btn-4" name="review">
+			<div class="slider__controls">
+				<label for="btn-1"></label>
+				<label for="btn-2"></label>
+				<label for="btn-3"></label>
+				<label for="btn-4"></label>
+			</div>
+			<label class="slider-arrow__left" for="btn-1"></label>
+			<label class="slider-arrow__right" for="btn-4"></label>
+			<div class="slider__wrapper">
+				<div class="slide" id="slide-1">
+					<img src="img/slide-1.jpg" alt="slide-1" width="100%" height="100%">
 				</div>
-				<label class="arrow-left" for="btn-1"></label>
-				<label class="arrow-right" for="btn-2"></label>
-				<div class="slider__wrappper">
-					<div class="slide" id="slide-1">
-						<h2 class="slide__title">Explore our novelties</h2>
-					</div>
-					<div class="slide" id="slide-2">
-						<h2 class="slide__title">Explore our novelties</h2>
-					</div>
-					<div class="slide" id="slide-3">
-						<h2 class="slide__title">Explore our novelties</h2>
-					</div>
-					<div class="slide" id="slide-4">
-						<h2 class="slide__title">Explore our novelties</h2>
-					</div>
+				<div class="slide" id="slide-2">
+					<img src="img/slide-2.jpg" alt="slide-2" width="100%" height="100%">
+				</div>
+				<div class="slide" id="slide-3">
+					<img src="img/slide-3.jpg" alt="slide-3" width="100%" height="100%">
+				</div>
+				<div class="slide" id="slide-4">
+					<img src="img/slide-4.jpg" alt="slide-4" width="100%" height="100%">
 				</div>
 			</div>
 		</article>
@@ -153,10 +151,10 @@
 						</div>
 						<div class="card-item__info">
 							<div class="card-item__title">
-								<span>Кухня Лондон</span>
+								<span>Кухня «Лондон»</span>
 							</div>
 							<div class="card-item__description">
-								<span>Производитель Пенза</span>
+								<span>Производитель: Пенза</span>
 							</div>
 							<div class="card-item__prices">
 								<span class="card-item__price card-item__price--old">14 250 руб.</span>
@@ -165,66 +163,70 @@
 						</div>
 					</article>
 					<article class="card-item">
-						<div class="card-item__image">
-							<a class="card-item__link card-item__link--hidden" href="#">
-								<img src="img/kitchen_london.jpg" width="380" height="386" alt="Кухня Лондон">
-							</a>	
-							<article class="card-slider card-slider--london">
-								<div class="container container__card-slider">
+						<div class="card-item__wrapper">
+							<div class="card-item__image">
+								<a class="card-item__link" href="#">
+									<img src="img/kitchen_london.jpg" width="380" height="386" alt="Кухня Лондон">
+								</a>										
+							</div>
+							<article class="card-slider">
+								<div class="container__card-slider">
 									<input type="radio" id="card-btn-1" name="card__review" checked="">
 									<input type="radio" id="card-btn-2" name="card__review">
 									<div class="card-slider__controls">
 										<label for="card-btn-1"></label>
 										<label for="card-btn-2"></label>
 									</div>
-									<label class="card-arrow-left" for="card-btn-1"></label>
-									<label class="card-arrow-right" for="card-btn-2"></label>
+									<label class="card-arrow__left" for="card-btn-1"></label>
+									<label class="card-arrow__right" for="card-btn-2"></label>
 									<div class="card-slider__wrappper">
 										<div class="card-slide">
-											<a class="card-item__link card-item__link--small" href="#">
+											<a class="card-slide__link card-slide__link--small" href="#">
 												<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
 											</a>
-										</div>
-										<div class="card-slide">
-											<a class="card-item__link card-item__link--small" href="#">
+										<div class="card-slide" style="display: none;">
+											<a class="card-slide__link card-slide__link--small" href="#">
 												<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
 											</a>
 										</div>
 									</div>
 								</div>
-							</article>			
-						</div>
-						<div class="card-item__info">
-							<div class="card-item__title">
-								<span>Кухня Лондон</span>
-							</div>
-							<div class="card-item__description">
-								<span>Производитель Пенза</span>
-							</div>
-							<div class="card-item__prices">
-								<span class="card-item__price card-item__price--old">14 250 руб.</span>
-								<span class="card-item__price card-item__price--new">15 050 руб.</span>	
-							</div>
-						</div>
-						<div class="card-item__info card-item__info--hover">
-							<div class="card-item__facade">
-								<div class="card-item__facade-description card-item__facade-description--sub">
-									<span class="card-item__facade-text">Корпус:</span>
-									<span class="card-item__facade-text card-item__facade-text--sub">Венге ЛДСП</span>
+							</article>
+							<div class="card-item__info">
+								<div class="card-item__title">
+									<span>Кухня «Лондон»</span>
 								</div>
-								<div class="card-item__facade-colors">
-									<img src="img/color__light" width="30" height="30" alt="светлый">
-									<img src="img/color__wenge" width="30" height="30" alt="венге">
-								</div>
-							</div>
-							<div class="card-item__facade">
 								<div class="card-item__description">
-									<span class="card-item__facade-text">Фасад:</span>
-									<span class="card-item__facade-text card-item__facade-text--sub">Шимоно темный ЛДСП</span>
+									<span>Производитель: Пенза</span>
+								</div>
+								<div class="card-item__prices">
+									<span class="card-item__price card-item__price--old">14 250 руб.</span>
+									<span class="card-item__price card-item__price--new">15 050 руб.</span>	
 								</div>
 							</div>
-							<div class="card-item__actions">
-								<button class="btn btn--buy js-buy">Добавить в корзину</button>
+							<div class="card-item__ad-info">
+								<div class="card-item__housing">
+									<div class="card-item__housing-description">
+										<span class="card-item__housing-text">Корпус:</span>
+										<span class="card-item__housing-text card-item__housing-text--sub">Венге ЛДСП</span>
+									</div>
+									<div class="card-item__housing-colors">
+										<img src="img/housing__color--light.jpg" width="30" height="30" alt="светлый">
+										<img src="img/housing__color--wenge.jpg" width="30" height="30" alt="венге">
+									</div>
+								</div>
+								<div class="card-item__facade">
+									<div class="card-item__facade-description">
+										<span class="card-item__facade-text">Фасад:</span>
+										<span class="card-item__facade-text card-item__facade-text--sub">Шимоно темный ЛДСП</span>
+									</div>
+									<div class="card-item__facade-colors">
+										<img src="img/facade__color--wood.jpg" width="30" height="30" alt="цвет дерева">
+									</div>
+								</div>
+								<div class="card-item__actions">
+									<a class="btn btn--buy js-buy" href="#">Добавить в корзину</a>
+								</div>
 							</div>
 						</div>
 					</article>
@@ -255,10 +257,10 @@
 						</div>
 						<div class="card-item__info">
 							<div class="card-item__title">
-								<span>Кухня Лондон</span>
+								<span>Кухня «Лондон»</span>
 							</div>
 							<div class="card-item__description">
-								<span>Производитель Пенза</span>
+								<span>Производитель: Пенза</span>
 							</div>
 							<div class="card-item__prices">
 								<span class="card-item__price card-item__price--old">14 250 руб.</span>
@@ -274,10 +276,10 @@
 						</div>
 						<div class="card-item__info">
 							<div class="card-item__title">
-								<span>Кухня Лондон</span>
+								<span>Кухня «Лондон»</span>
 							</div>
 							<div class="card-item__description">
-								<span>Производитель Пенза</span>
+								<span>Производитель: Пенза</span>
 							</div>
 							<div class="card-item__prices">
 								<span class="card-item__price card-item__price--old">14 250 руб.</span>
@@ -293,10 +295,10 @@
 						</div>
 						<div class="card-item__info">
 							<div class="card-item__title">
-								<span>Кухня Лондон</span>
+								<span>Кухня «Лондон»</span>
 							</div>
 							<div class="card-item__description">
-								<span>Производитель Пенза</span>
+								<span>Производитель: Пенза</span>
 							</div>
 							<div class="card-item__prices">
 								<span class="card-item__price card-item__price--old">14 250 руб.</span>
@@ -305,9 +307,7 @@
 						</div>
 					</article>
 				</div>
-				<div class="pagination">
-					<button type="button" class="btn btn--pagination">Все хиты продаж</button>
-				</div>
+				<button type="button" class="btn btn--pagination">Все хиты продаж</button>
 			</div>
 		</section>
 		<section class="delivery">

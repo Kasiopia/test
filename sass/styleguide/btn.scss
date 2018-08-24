@@ -1,9 +1,20 @@
 .btn {
-
+	display: block;
+	@include style-font(16px, 30px, 500);
+	color: $body-bg;
+	background: $text-color;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
 	&--pagination {
-		
+		width: 336px;
+		margin: 0 auto;
+		@include style-font(16px, 30px, 500);
+		color: $text-color;
+		background: $body-bg;
+		border: 2px solid $text-color;		
 	}
 	&--buy {
-		
+		padding: 10px 10px;
 	}
 }
