@@ -1,4 +1,4 @@
-var slides = document.querySelectorAll('#card-slider__wrappper .card-slide');
+var slides = document.querySelectorAll('#card-slider__wrapper--2 .card-slide');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide,2000);
 
@@ -13,8 +13,8 @@ function goToSlide(n){
 	currentSlide = (n+slides.length)%slides.length; 
 	slides[currentSlide].className = 'card-slide card-slide--showing';    
 }
-var next = document.getElementById('next');
-var previous = document.getElementById('previous');
+var next = document.getElementById('next--2');
+var previous = document.getElementById('prev--2');
 
 next.onclick = function(){
 	clearInterval(slideInterval);   //останавливает слайдер по нажатию на next
