@@ -1,0 +1,40 @@
+.modal-city {
+	display: none;
+	margin: 61px 40px 0;
+	background: $body-bg;
+	box-shadow: 1px 1px 0 8px rgba(43, 43, 43, .15);
+}
+
+.modal-content-show-city {
+	position: fixed;
+	top: 5%;
+	left: 50%;
+	z-index: 200;
+	transform: translateX(-50%);
+	display: block;
+	animation: bounce .4s;
+	display: block;
+}
+
+
+.modal-content-close-city {
+	padding: 0;
+	border: none;
+	&::after, &::before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		width: 20px;
+		height: 5px;
+		background: #ee3643;
+		border: none;
+		cursor: pointer;
+	}
+
+	&::after {
+		transform: rotate(45deg);
+	}
+}

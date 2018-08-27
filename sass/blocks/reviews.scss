@@ -1,0 +1,130 @@
+.reviews {
+	padding-top: 53px;
+	background: $body-bg;
+	&__row {
+		display: flex;
+		margin: 0 200px;
+		flex-wrap: wrap;
+		align-items: start;
+		justify-content: space-between;
+	}
+	&__column {
+		width: 480px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__certificate {
+		display: flex;
+		padding-bottom: 80px;
+		align-items: start;
+		justify-content: space-between;
+	}
+	&__inner {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+	}
+	&__headline {
+		padding-left: 8px;
+		@include style-font(28px, 30px, 700);
+		color: $additional-text-color;
+		text-transform: uppercase;
+	}
+	&__link {
+		display: block;
+		margin: 0 10px;
+		text-align: right;
+		@include style-font(16px, 30px, 400);
+		color: #ee5a3f;
+		text-decoration: none;
+		&:hover {
+			color: rgba(238, 90, 63, 0.8);
+		}
+		&:active {
+			color: rgba(238, 90, 63, 0.5);
+		}
+	}
+	&__link-img {
+		display: block;
+		margin: 0 10px;
+	}
+	&-slider {
+		position: relative;
+		padding-bottom: 116px;
+	}
+}
+
+.reviews-slide {
+	&__text {
+		padding-top: 20px;
+		padding-bottom: 30px;
+		word-break: break-all;
+		@include style-font(16px, 25px, 400);
+		color: $additional-text-color;
+	}
+	&__wrapper {
+		display: flex;
+		align-items: left;
+		justify-content: left;
+	}
+	&__date {
+		margin-right: 4px;
+		@include style-font(14px, 30px, 400);
+		color: #7f7f7f;
+	}
+	&__author {
+		margin-right: 4px;
+		@include style-font(14px, 30px, 400);
+		color: #7f7f7f;
+	}
+	&__town {
+		margin-right: 4px;
+		@include style-font(14px, 30px, 400);
+		color: #7f7f7f;
+	}
+}
+// Подключаем слайдер slick 
+.reviews .slick-slider {
+	position: static;
+	& .slick-arrow {
+		position: absolute;
+		display: block;
+		width: 68px;
+		height: 33px;
+		margin: auto;
+		bottom: 60px;
+		background: #e7e7e7;
+		z-index: 10;
+		border: 1px solid #e7e7e7;
+		border-radius: 2px;
+		outline: none;
+		cursor: pointer;
+		&:hover {
+			border-color: $text-color ;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 10px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			margin: auto;
+			border-top: 3px solid #ee5b40;
+			border-right: 3px solid #ee5b40;
+			transform: rotate(45deg);
+		}
+	}
+	& .slick-prev {
+		&::before {
+			left: 26px;
+			transform: rotate(-135deg);
+		}
+	}
+	& .slick-next {
+		left: 80px;
+		&:before {
+			right: 18px;
+		}
+	}
+}

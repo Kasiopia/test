@@ -1,119 +1,82 @@
 .slider {
-	&__controls {
+	position: relative;
+	margin: auto;
+	max-width: 1280px;
+	min-height: 493px;
+}
+
+.slider .slick-slider {	
+	position: static;
+	& .slick-arrow {
+		position: absolute;
+		display: block;
+		top: 43%;
+		background: 0 0;
+		z-index: 10;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 18px;
+			width: 29px;
+			height: 29px;
+			border-top: 5px solid #ee5b40;
+			border-right: 5px solid #ee5b40;
+			transform: rotate(45deg);
+			opacity: 1;
+		}
+		&:active::before {
+			opacity: .1;
+		}
+		&:hover::before {
+			opacity: .6;
+		}
+	}
+	& .slick-prev {
+		left: 0px;
+		&::before {
+			left: 30px;
+			transform: rotate(-135deg);
+		}
+	}
+	& .slick-next {
+		right: 0px;
+		&:before {
+			right: 41px;
+		}
+	}
+	& .slick-dots {
 		content: "";
 		position: absolute;
 		margin: auto;
 		top: auto;
-		bottom: 34px;
+		bottom: 20px;
 		left: 0;
 		right: 0;
 		width: 220px;
 		height: 16px;
 		text-align: center;
 		z-index: 60;
-		& label {
+		& li {
 			position: relative;
 			display: inline-block;
-			width: 20px;
-			height: 6px;
-			margin: 0 11px;
-			vertical-align: top;
-			background: #bfbfbf;
+			margin: 0 7px;
+			padding: 3px 4px;
+			vertical-align: middle;
+			background: transparent;			
+			border: 1px solid transparent;
 			cursor: pointer;
-			&::before {
-				content: "";
-				position: absolute;
-				margin: auto;
-				top: 0;
-				width: 28px;
-				height: 14px;
-				z-index: 70;
+			& button {
+				padding: 4px 10px;
+				background: #ee5a3f;
+				border: none;
+				outline: none;
 			}
 		}
-	}
-}
-
-.slide {
-	display: none;
-	&__img {
-		width: 100%;
-		height: 100%;
-	}
-}
-
-#btn-1:checked~.slider__wrapper .slide:nth-child(1),
-#btn-2:checked~.slider__wrapper .slide:nth-child(2),
-#btn-3:checked~.slider__wrapper .slide:nth-child(3),
-#btn-4:checked~.slider__wrapper .slide:nth-child(4) {
-    display: block;
-}
-
-#btn-1:checked~.slider__controls label[for=btn-1],
-#btn-2:checked~.slider__controls label[for=btn-2],
-#btn-3:checked~.slider__controls label[for=btn-3],
-#btn-4:checked~.slider__controls label[for=btn-4] {
-	background: #ee5a3f;
-	&::before {
-		content: "";
-		position: absolute;
-		margin: auto;
-		top: -1px;
-		left: -5px;
-		right: 0;
-		bottom: 0;
-		width: 28px;
-		height: 14px;
-		background: 0 0;
-		text-align: center;
-		z-index: 70;
-		border: solid 2px #bfbfbf;
-	}
-}
-
-.slider input[type=radio] {
-	position: absolute;
-	bottom: 0;
-	opacity: 0;
-	transition: background .3s .5s;
-}
-
-.slider-arrow__left, .slider-arrow__right {
-	position: absolute;
-	display: block;
-	top: 43%;
-	background: 0 0;
-	z-index: 10;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	&::before {
-		content: "";
-		position: absolute;
-		top: 18px;
-		width: 29px;
-		height: 29px;
-		border-top: 5px solid #ee5b40;
-		border-right: 5px solid #ee5b40;
-		transform: rotate(45deg);
-		opacity: 1;
-	}
-	&:active::before {
-		opacity: .1;
-	}
-	&:hover::before {
-		opacity: .6;
-	}
-}
-.slider-arrow__left {
-	left: 0px;
-	&::before {
-		left: 16px;
-		transform: rotate(-135deg);
-	}
-}
-.slider-arrow__right {
-	right: 0px;
-	&:before {
-		right: 18px;
+		& .slick-active {
+			border: 1px solid #bfbfbf;
+		}
 	}
 }
