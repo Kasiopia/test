@@ -3,11 +3,11 @@
 	&__input-text {
 		width: 100%;
 		box-sizing: border-box;
-		padding-left: 10px;;
+		padding-left: 10px;
 		@include style-font(14px, 33px, 400);
 		color: #7f7f7f;
 		border: 1px solid #e7e7e7;
-		border-radius: 5px;
+		border-radius: 2px;
 		outline: none;
 		cursor: pointer;
 	}
@@ -19,5 +19,30 @@
 		background: url(../img/svg/search.svg) no-repeat;
 		cursor: pointer;
 		background-position: 0 0;
+	}
+}
+
+.form-city {
+	position: relative;
+	padding-bottom: 25px;
+	& input[type="search"] {
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 10px;
+		@include style-font(14px, 38px, 400);
+		color: #7f7f7f;
+		border: 1px solid #e7e7e7;
+		border-radius: 2px;
+		outline: none;
+		cursor: pointer;
+	}
+	& label {
+		@include position-container(10px, auto, auto, 9px);
+		width: 22px;
+		height: 22px;
+		z-index: 20;
+		background: url(../img/svg/search.svg) no-repeat;
+		cursor: pointer;
+		background-position: 0 0;	
 	}
 }

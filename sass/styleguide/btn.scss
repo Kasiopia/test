@@ -6,6 +6,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
+	cursor: pointer;
 	&--pagination {
 		width: 336px;
 		margin: 0 auto;
@@ -29,6 +30,25 @@
 		}
 		&:active {
 			opacity: 0.5;
+		}
+	}
+	&--city {
+		padding: 16px 46px;
+		color: $text-color;
+		background: $body-bg;
+		border: 2px solid $text-color;
+		&:hover {
+			opacity: 0.8;
+		}	
+		&:active {
+			color: $body-bg;
+			background: $text-color;
+			border-color: $text-color;
+		}
+		&--active {
+			color: $body-bg;
+			background: $text-color;
+			border-color: $text-color;
 		}
 	}
 }

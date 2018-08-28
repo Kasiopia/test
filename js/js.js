@@ -27,22 +27,26 @@ previous.onclick = function(){
 
 var opencity = document.querySelector (".js-city");
 var city = document.querySelector (".modal-city");
-var closecity = document.querySelector (".modal-content-close-city");
+var closecity = document.querySelector (".modal-content-close");
+var modaloverlay = document.querySelector(".modal-overlay");
 
     opencity.addEventListener ("click", function (event) {
       event.preventDefault();
-      city.classList.add ("modal-content-show-city");
-    });   
-
+      city.classList.add ("modal-content-show");
+      modaloverlay.classList.add("modal-overlay--active");
+    });       
+  
     closecity.addEventListener ("click", function(event) {
       event.preventDefault();
-      city.classList.remove ("modal-content-show-city")
+      city.classList.remove ("modal-content-show")
+      modaloverlay.classList.remove("modal-overlay--active");
     });
 
     window.addEventListener ("keydown", function(event) {
       if (event.keyCode === 27) {
-        if (city.classList.contains ("modal-content-show-city")) {
-          city.classList.remove ("modal-content-show-city");
+        if (city.classList.contains ("modal-content-show")) {
+          city.classList.remove ("modal-content-show");
+          modaloverlay.classList.remove("modal-overlay");
         }
       }
     });
