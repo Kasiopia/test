@@ -30,28 +30,41 @@ var city = document.querySelector (".modal-city");
 var closecity = document.querySelector (".modal-content-close");
 var modaloverlay = document.querySelector(".modal-overlay");
 
-    opencity.addEventListener ("click", function (event) {
-      event.preventDefault();
-      city.classList.add ("modal-content-show");
-      modaloverlay.classList.add("modal-overlay--active");
-    });       
-  
-    closecity.addEventListener ("click", function(event) {
-      event.preventDefault();
-      city.classList.remove ("modal-content-show")
-      modaloverlay.classList.remove("modal-overlay--active");
-    });
+opencity.addEventListener ("click", function (event) {
+  event.preventDefault();
+  city.classList.add ("modal-content-show");
+  modaloverlay.classList.add("modal-overlay--active");
+});       
 
-    window.addEventListener ("keydown", function(event) {
-      if (event.keyCode === 27) {
-        if (city.classList.contains ("modal-content-show")) {
-          city.classList.remove ("modal-content-show");
-          modaloverlay.classList.remove("modal-overlay");
-        }
-      }
-    });
+closecity.addEventListener ("click", function(event) {
+  event.preventDefault();
+  city.classList.remove ("modal-content-show")
+  modaloverlay.classList.remove("modal-overlay--active");
+});
+
+window.addEventListener ("keydown", function(event) {
+  if (event.keyCode === 27) {
+    if (city.classList.contains ("modal-content-show")) {
+      city.classList.remove ("modal-content-show");
+      modaloverlay.classList.remove("modal-overlay");
+    }
+  }
+});
 
 $('.reviews-slider__wrappper').slick();
+
+
 $('.slider__wrapper').slick({
-	dots: true
+  dots: true,
+  responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          prevArrow: false,
+          nextArrow: false,
+          dots: true,
+          arrows: false
+        }
+     }
+  ]
 });
