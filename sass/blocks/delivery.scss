@@ -6,44 +6,72 @@
 		color: $additional-text-color;
 		text-align: center;
 		text-transform: uppercase;
+
+		@media ($tablet-widths) {
+			font-size: 21px;
+		}
+
 	}
 	&__wrapper {
-		display: flex;	
+		display: flex;
 		padding: 2px 0;
 		flex-wrap: wrap;
 		justify-content: center;
-		align-items: baseline;		
+		align-items: baseline;
 	}
 	&__specialty {
 		display: flex;
-		width: 379px;
-		margin: 0 20px 53px;
+		margin: 0 0px 53px;
+		padding-top: 33px;
 		flex-direction: column;
-		align-items: baseline;
+		align-items: baseline; 
+
+		@media ($tablet-widths) {
+			margin: 0 auto 53px;
+			text-align: center;
+		}
+		@media ($desktop-widths) {
+			width: 379px;
+			margin: 0 20px 53px;
+			text-align: left;
+		}
+
 	}
 	&__image {
 		position: relative;
 		width: 130px;
 		height: 130px;
-		margin: 33px 0;
+		margin: 0 auto 0px;		
 		background: $body-bg;
 		border-radius: 50%;
+
+		@media ($desktop-widths) {
+			margin: 0 0 33px;
+		}
+
 	}
 	&__svg {
 		@include position-container(0, 0, 0, 0);
 		z-index: 20;
 	}
-	&__description {
-
-	}
 	&__sub-headline {
-		@include style-font(16px, 30px, 700);
+		@include style-font(15px, 22px, 700);
 		color: $additional-text-color;
 		text-transform: uppercase;
+
+		@media ($tablet-widths) {
+			@include style-font(16px, 30px, 700);
+		}
+
 	}
 	&__text {
-		@include style-font(16px, 25px, 400);
-		color: $additional-text-color;	
+		@include style-font(15px, 22px, 400);
+		color: $additional-text-color;
+
+		@media ($tablet-widths) {
+			@include style-font(16px, 25px, 400);
+		}
+
 	}
 	&__link {
 		color: #ee5a3f;

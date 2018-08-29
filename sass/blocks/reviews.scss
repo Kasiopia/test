@@ -3,40 +3,69 @@
 	background: $body-bg;
 	&__row {
 		display: flex;
-		margin: 0 200px;
 		flex-wrap: wrap;
 		align-items: start;
 		justify-content: space-between;
+
+		@media ($desktop-widths) {
+			margin: 0 200px;
+		}
+
 	}
 	&__column {
-		width: 480px;
 		display: flex;
+		width: 100%;
 		flex-direction: column;
+
+		@media ($desktop-widths) {
+			width: 480px;
+		}
+
 	}
 	&__certificate {
-		display: flex;
-		padding-bottom: 80px;
-		align-items: start;
-		justify-content: space-between;
+		display: none;
+
+		@media ($tablet-widths) {
+			display: flex;
+			width: 100%;
+			margin-bottom: 44px;
+			align-items: start;
+			justify-content: center;
+		}
+		@media ($desktop-widths) {
+			width: auto;
+			margin-bottom: 0;
+		}
+
 	}
 	&__inner {
 		display: flex;
+		margin-bottom: 20px;
 		align-items: start;
 		justify-content: space-between;
 	}
 	&__headline {
-		padding-left: 8px;
-		@include style-font(28px, 30px, 700);
+		@include style-font(21px, 30px, 700);
 		color: $additional-text-color;
 		text-transform: uppercase;
+
+		@media ($tablet-widths) {
+			padding-left: 8px;
+			font-size: 28px;
+		}
+
 	}
 	&__link {
 		display: block;
-		margin: 0 10px;
 		text-align: right;
-		@include style-font(16px, 30px, 400);
+		@include style-font(15px, 30px, 400);
 		color: #ee5a3f;
 		text-decoration: none;
+
+		@media ($tablet-widths) {
+			font-size: 16px;
+		}
+
 		&:hover {
 			color: rgba(238, 90, 63, 0.8);
 		}
@@ -50,17 +79,27 @@
 	}
 	&-slider {
 		position: relative;
-		padding-bottom: 116px;
+		padding-bottom: 77px;
+
+		@media ($tablet-widths) {
+			padding-bottom: 116px;
+		}
+
 	}
 }
 
 .reviews-slide {
 	&__text {
-		padding-top: 20px;
-		padding-bottom: 30px;
-		word-break: break-all;
-		@include style-font(16px, 25px, 400);
+		margin-bottom: 8.5px;
+		@include style-font(15px, 22px, 400);
 		color: $additional-text-color;
+
+		@media ($tablet-widths) {
+			margin-bottom: 30px;
+			word-break: break-all;
+			@include style-font(16px, 25px, 400);
+		}
+
 	}
 	&__wrapper {
 		display: flex;
@@ -90,15 +129,20 @@
 		position: absolute;
 		display: block;
 		width: 68px;
-		height: 33px;
+		height: 34px;
 		margin: auto;
-		bottom: 60px;
+		bottom: 34px;
 		background: #e7e7e7;
 		z-index: 10;
 		border: 1px solid #e7e7e7;
 		border-radius: 2px;
 		outline: none;
 		cursor: pointer;
+
+		@media($tablet-widths) {
+			bottom: 60px;
+		}
+
 		&:hover {
 			border-color: $text-color ;
 		}
