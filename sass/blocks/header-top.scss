@@ -1,19 +1,22 @@
 .header-top {
+	background: $body-color;
 	display: none;
 
 	@media ($tablet-widths) {
 		display: block;
-		background: $body-color;
 	}
 
 	&__inner {
+		display: flex;
+		max-width: 640px;
+		margin: 0 auto;
+		padding: 8px 15px 7px;
+		align-items: center;
+		justify-content: space-between;
+
 		@media ($tablet-widths) {
-			display: flex;
 			max-width: 1180px;
-			margin: 0 auto;
 			padding: 0 40px;
-			justify-content: space-between;
-			align-items: center;
 			flex-wrap: wrap;
 		}
 
@@ -26,18 +29,38 @@
 
 	&__wrapper {
 		display: flex;
-		width: 100%;
+		flex-grow: 10;
 		flex-wrap: nowrap;
+		flex-direction: column-reverse;
+		align-items: flex-start;
+
+		@media ($tablet-widths) {
+			display: flex;
+			flex-grow: 10;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+
 	}
 	&__geolocation {
-		width: 200px;
 		display: flex;
-		align-self: center;
-		text-align: left;
+		align-items: flex-start;
 		& span {
-			@include style-font(14px, 30px, 400);
-			color: #3d3d3d;
-		}		
+			display: block;
+			@include style-font(14px, 17px, 400);
+			color: black;
+
+			@media ($tablet-widths) {
+				line-height: 30px;
+				color: #3d3d3d;
+			}
+		}
+
+		@media ($tablet-widths) {
+			width: 200px;
+		}
+
 	}
 	&__position {
 		display: flex;
@@ -58,6 +81,16 @@
 		}
 	}
 	&__phone {
+		@include a-link();
+		font-size: 15px;
+		line-height: 40px;
+		font-weight: normal;
+		font-family: Arial, sans-serif;
+		color: $text-color;
+		& strong {
+			font-weight: 700;
+		}
+
 		@media ($tablet-widths) {
 			display: none;
 		}
@@ -65,12 +98,8 @@
 		@media only screen and (min-width: 1046px) {
 			display: block;
 			padding-right: 18px;
-			@include a-link();
 			font-size: 16px;
-			line-height: 40px;
 			font-weight: bold;
-			font-family: Arial, sans-serif;
-			color: $text-color;
 		}
 	}
 }

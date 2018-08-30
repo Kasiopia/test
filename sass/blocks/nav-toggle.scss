@@ -12,7 +12,6 @@
 		width: 24px;
 		height: 2px;
 		background: $text-color;
-
 		&::before, &::after {
 			content: "";
 			position: absolute;
@@ -50,9 +49,9 @@
 .header__inner--opened
 .nav-toggle:active>span,
 .header__inner--opened
-.nav-toggle:hover>span, 
-.header__inner--opened 
-.nav-toggle>span, 
+.nav-toggle:hover>span,
+.header__inner--opened
+.nav-toggle>span,
 .nav-toggle {
 	background: 0 0;
 }
@@ -62,13 +61,50 @@
 .header__inner--opened
 .nav-toggle>span::before {
 	top: 0;
-	width: 29px;
+	width: 16px;
 	background: $text-color;
 	transform-origin: 50% 50%;
 	transform: rotate3d(0,0,1,45deg);
 }
 
-.header__inner--opened
-.nav-toggle>span::before {
+.header__inner--opened .nav-toggle>span::before {
 	transform: rotate3d(0,0,1,-45deg);
+}
+
+
+.header__inner--opened {
+	& .nav-toggle {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	& .header-top__inner {
+		flex-grow: 10;
+	}
+	& .header-nav__inner {
+		display: block;
+		padding: 0;
+
+	}
+	& .header-top {
+		display: flex;
+	}
+
+	& .logo {
+		display: none;
+	}
+
+	& .form {
+		display: none;
+	}
+
+	& .basket {
+		display: none;
+	}
+	& .main-nav {
+		display: block;
+	}
+	& .header-nav__wrapper {
+		display: none;
+	}
 }

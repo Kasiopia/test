@@ -1,20 +1,21 @@
 .header-nav {
-	flex-grow: 10;
-	
 	@media ($tablet-widths) {
 		padding-top: 30px;
 	}
 
 	&__inner {
 		display: flex;
-		justify-content: space-between;
+		max-width: 640px;
+		margin: 0 auto;
+		padding: 8px 15px 7px;
 		align-items: center;
+		justify-content: space-between;
 
 		@media ($tablet-widths) {
 			max-width: 1180px;
-			margin: 0 auto;
 			padding: 0 40px;
 			flex-wrap: wrap;
+			align-items: flex-end;
 		}
 
 		@media ($desktop-widths) {
@@ -25,9 +26,12 @@
 
 	&__wrapper {
 		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
 
+		@media ($tablet-widths) {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
 		@media ($desktop-widths) {
 			display: flex;
 			width: 845px;

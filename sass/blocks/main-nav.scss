@@ -1,21 +1,22 @@
 .main-nav {
 	display: none;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	background: $body-bg;
 
 	@media ($tablet-widths) {
 		display: block;
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 
-	&__dropdown {
-		display: flex;
-	}
 	&__list {
-		display: flex;
-		width: 100%;
-		flex-wrap: wrap;
-		justify-content: left;
+		flex-direction: column;
+
+		@media ($tablet-widths) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: left;
+		}
+
 	}
 	&__item {
 		margin: 0;
@@ -25,23 +26,76 @@
 		}
 	}
 	&__link {
-		margin-right: 71px;
+		position: relative;
+		padding: 5px 15px;
 		@include a-link();
-		@include style-font(16px, 30px, 700);
+		@include style-font(15px, 30px, 700);
 		cursor: pointer;
 		color: $text-color;
-		border: none;
+		border-bottom: 1px solid $body-color;
 		text-transform: uppercase;
-		&--action {
-			color: #ee5a3f;
+		&::after {
+			@include position-container(50%, 50%, auto, 16px);
+			width: 0;
+			height: 0;
+			border-top: 4px solid transparent;
+			border-left: 5px solid $text-color;
+			border-bottom: 4px solid transparent;
+			z-index: 10;
+
+			@media ($tablet-widths) {
+				display: none;
+			}
 		}
 		&:hover {
-			opacity: 0.5;
+			color: #ee5a3f;
+			opacity: 0.9;
 			transition: background .3s .5s;
-		}		
+			&::after {
+				border-top: 4px solid transparent;
+				border-left: 5px solid #ee5a3f;
+				border-bottom: 4px solid transparent;
+				opacity: 0.9;
+				transition: background .3s .5s;
+			}
+		}
 		&:active {
-			opacity: 0.5;
+			color: #ee5a3f;
+			opacity: 0.3;
 			transition: background .3s .5s;
+			&::after {
+				border-top: 4px solid transparent;
+				border-left: 5px solid #ee5a3f;
+				border-bottom: 4px solid transparent;
+				opacity: 0.9;
+				transition: background .3s .5s;
+			}
+		}
+
+		@media ($tablet-widths) {
+			margin-right: 71px;
+			padding: 0px;
+			font-size: 16px;
+			border: none;
+		}
+
+
+
+		&--action {
+			color: #ee5a3f;
+			&::after {
+				@include position-container(50%, 50%, auto, 16px);
+				width: 0;
+				height: 0;
+				border-top: 4px solid transparent;
+				border-left: 5px solid #ee5a3f;
+				border-bottom: 4px solid transparent;
+				z-index: 10;
+
+				@media ($tablet-widths) {
+					display: none;
+				}
+			}
 		}
 	}
 }

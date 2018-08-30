@@ -1,17 +1,19 @@
+//подключение слайер карточки
+
 var slides = document.querySelectorAll('#card-slider__wrapper--2 .card-slide');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide,2000);
 
 function nextSlide(){
-	goToSlide(currentSlide+1); 
+	goToSlide(currentSlide+1);
 }
 function previousSlide(){
 	goToSlide(currentSlide-1);
 }
 function goToSlide(n){
 	slides[currentSlide].className = 'card-slide';
-	currentSlide = (n+slides.length)%slides.length; 
-	slides[currentSlide].className = 'card-slide card-slide--showing';    
+	currentSlide = (n+slides.length)%slides.length;
+	slides[currentSlide].className = 'card-slide card-slide--showing';
 }
 var next = document.getElementById('next--2');
 var previous = document.getElementById('prev--2');
@@ -25,6 +27,33 @@ previous.onclick = function(){
 	previousSlide();
 };
 
+//подключение основного слайер и слайдера отзывы
+
+$('.reviews-slider__wrappper').slick();
+$('.slider__wrapper').slick({
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        dots: true,
+        arrows: false,
+        аccessibility: false
+      }
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        dots: false,
+        arrows: false,
+        аccessibility: false
+      }
+    }
+  ]
+});
+
+//подключение всплывающих окон
+
 var opencity = document.querySelector (".js-city");
 var city = document.querySelector (".modal-city");
 var closecity = document.querySelector (".modal-content-close");
@@ -34,7 +63,7 @@ opencity.addEventListener ("click", function (event) {
   event.preventDefault();
   city.classList.add ("modal-content-show");
   modaloverlay.classList.add("modal-overlay--active");
-});       
+});
 
 closecity.addEventListener ("click", function(event) {
   event.preventDefault();
@@ -51,27 +80,19 @@ window.addEventListener ("keydown", function(event) {
   }
 });
 
-$('.reviews-slider__wrappper').slick();
+//toogle menu open or close
 
+	var navMain = document.querySelector (".header__inner");
+	var navToggle = document.querySelector (".nav-toggle");
+	var header = document.querySelector (".header");
 
-$('.slider__wrapper').slick({
-  dots: true,
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        dots: true,
-        arrows: false,
-        аccessibility: false
-      }
-    },   
-    {
-      breakpoint: 700,
-      settings: {
-        dots: false,
-        arrows: false,
-        аccessibility: false
-      }
-    }     
-  ]
-});
+	navMain.classList.remove("header__inner--nojs");
+	header.classList.remove("header--nojs");
+
+	navToggle.addEventListener ("click", function(event) {
+		if (navMain.classList.contains("header__inner--opened")) {
+			navMain.classList.remove("header__inner--opened");
+		} else {
+			navMain.classList.add("header__inner--opened");
+		}
+	});
