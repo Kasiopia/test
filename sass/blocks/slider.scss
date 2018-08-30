@@ -11,12 +11,11 @@
 	max-width: 200%;
 
 	@media ($tablet-widths) {
-		max-width: 100%;
-		
+		max-width: 100%;		
 	}
 }
 
-.slider .slick-slider {	
+.slider .slick-slider {
 	position: static;
 }
 
@@ -55,7 +54,7 @@
 .slider .slick-next {
 	display: none;
 
-	@media ($desktop-widths) {		
+	@media ($desktop-widths) {
 		right: 0px;
 		&:before {
 			right: 41px;
@@ -96,7 +95,7 @@
 			margin: 0 7px;
 			padding: 3px 4px;
 			vertical-align: middle;
-			background: transparent;			
+			background: transparent;
 			border: 1px solid transparent;
 			cursor: pointer;
 			& button {

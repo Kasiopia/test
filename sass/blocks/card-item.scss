@@ -1,42 +1,86 @@
 .card-item {
-	display: flex;
-	width: 380px;
 	position: relative;
+	display: flex;
+	width: 100%;
+	margin-bottom: 36.095px;
 	flex-direction: column;
-	margin-bottom: 53px;
+
+	@media ($tablet-widths) {
+		width: 290px;
+		margin-bottom: 53px;
+	}
+	
+	@media ($desktop-widths) {
+		width: 380px;
+	}
+
+	&--mobile {
+		display: none;
+
+		@media ($tablet-widths) {
+			display: flex;
+		}
+	}
+
 	&__wrapper {
-		position: relative;		
+		position: relative;
+		width: 100%;
 	}
 	&:hover &__wrapper {
-		position: absolute;
-		z-index: 300;
+		@media ($tablet-widths) {
+			position: absolute;
+			z-index: 300;
+			box-shadow: 6px 6px 20px 0px rgba(43,43,43, .15);
+		}
+
 	}
 	&__info {
 		display: flex;
-		flex-direction: column;
-		padding: 20px 20px 0;
+		padding-top: 10.095px;
+		flex-direction: column;		
 		justify-content: flex-start;
 		flex-grow: 1;
-		background: 0 0;		
+		background: 0 0;
+
+		@media ($tablet-widths) {
+			padding: 20px 20px 0;
+		}
+
 	}
 	&__title span {
-		@include style-font(20px, 30px, 700);
+		@include style-font(15px, 22.81px, 700);
 		color: $text-color;
+
+		@media ($desktop-widths) {
+			@include style-font(20px, 30px, 700);
+		}
+
 	}
 	&__description span {
-		@include style-font(16px, 40px, 400);
+		margin-bottom: 3.89px;
+		@include style-font(12px, 30.41px, 400);
 		color: #7f7f7f;
+
+		@media ($desktop-widths) {
+			margin-bottom: 7px;
+			@include style-font(16px, 40px, 400);
+		}
+
 	}
 	&__prices {
 		display: flex;
-		padding-top: 11px;
 		flex-direction: row;
 		justify-content: left;
 		align-items: center;
 	}
 	&__price {
-		@include style-font(20px, 30px, 500);
+		@include style-font(15px, 22.81px, 500);
 		color: $text-color;
+
+		@media ($desktop-widths) {
+			@include style-font(20px, 30px, 500);
+		}
+
 		&--old {
 			position: relative;
 			&::before {
@@ -50,26 +94,38 @@
 		}
 		&--new {
 			padding-left: 33px;
-			@include style-font(26px, 30px, 700);
+			@include style-font(19px, 22.81px, 700);
 			color: $text-color;
+
+			@media ($desktop-widths) {
+				@include style-font(26px, 30px, 700);
+			}
 		}
 	}
 	&__ad-info {
-		position: absolute;
 		display: none;
-		padding: 15px 20px 18px;
-		background: $body-bg;
-		text-align: left;
-		opacity: 0;
-		transition: background .3s .5s;	
+
+		@media ($tablet-widths) {
+			position: absolute;
+			padding: 15px 20px 18px;
+			background: $body-bg;
+			text-align: left;
+			opacity: 0;
+			transition: background .3s .5s;	
+		}
 	}
 	&__housing, &__facade {
 		padding-bottom: 15px;
 		border-top: 1px solid #e7e7e7;
 	}
 	&__housing-text, &__facade-text {
-		@include style-font(16px, 40px, 700);
+		@include style-font(12px, 30.41px, 400);		
 		color: $additional-text-color;
+
+		@media ($desktop-widths) {
+			@include style-font(16px, 40px, 400);
+		}
+
 		&--sub, &--sub {
 			padding-left: 10px;
 			font-weight: 400;
@@ -91,18 +147,19 @@
 	}
 }
 
-.card-item:hover .card-item__wrapper {
-	box-shadow: 6px 6px 20px 0px rgba(43,43,43, .15);
-
-}
-
 .card-item:hover .card-item__image {
-	position: absolute;
-	opacity: 0;
+	@media ($tablet-widths) {
+		position: absolute;
+		opacity: 0;
+	}
 }
 
 .card-item:hover .card-item__ad-info {
-	position: relative;
-	display: block;
-	opacity: 1;
+	display: none; 
+
+	@media ($tablet-widths) {
+		position: relative;
+		display: block;
+		opacity: 1;
+	}
 }

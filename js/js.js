@@ -57,14 +57,21 @@ $('.reviews-slider__wrappper').slick();
 $('.slider__wrapper').slick({
   dots: true,
   responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          prevArrow: false,
-          nextArrow: false,
-          dots: true,
-          arrows: false
-        }
-     }
+    {
+      breakpoint: 1280,
+      settings: {
+        dots: true,
+        arrows: false,
+        аccessibility: false
+      }
+    },   
+    {
+      breakpoint: 700,
+      settings: {
+        dots: false,
+        arrows: false,
+        аccessibility: false
+      }
+    }     
   ]
 });

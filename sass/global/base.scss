@@ -85,9 +85,7 @@ button {
 .container {
 	@include container();
 }
-.container-fluid {
-	@include container-fluid();
-}
+
 .vissualy-hidden {
 	position: absolute;
 	width: 1px;

@@ -10,9 +10,9 @@
 
 //библиотека blocks
 @import "blocks/header.scss";
+@import "blocks/nav-toggle.scss";
 @import "blocks/header-top.scss";
-@import "blocks/header-middle.scss";
-@import "blocks/header-bottom.scss";
+@import "blocks/header-nav.scss";
 @import "blocks/logo.scss";
 @import "blocks/city.scss";
 @import "blocks/call-back.scss";
@@ -34,7 +34,6 @@
 @import "blocks/copyright.scss";
 @import "blocks/modal-city.scss";
 
-
 //библиотека global
 @import "global/fonts.scss";
 @import "global/typography.scss";
@@ -42,8 +41,6 @@
 @import "global/form.scss";
 @import "global/slick.scss";
 
-
 //библиотека styleguide
 @import "styleguide/btn.scss";
-@import "styleguide/pagination.scss";
-@import "styleguide/nav-toggle.scss";
+

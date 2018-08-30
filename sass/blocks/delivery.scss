@@ -1,7 +1,20 @@
 .delivery {
-	padding-top: 69px;
+	padding-top: 25.5px;
+	padding-bottom: 12px;
+	
+	@media ($tablet-widths) {
+		padding-top: 40px;
+		padding-bottom: 25px;
+	}
+
+	@media ($desktop-widths) {
+		padding-top: 71px;
+		padding-bottom: 57.5px;
+	}
+
 	background: $body-color;
 	&__headline {
+		margin-bottom: 23.5px;
 		@include style-font(28px, 30px, 700);
 		color: $additional-text-color;
 		text-align: center;
@@ -10,29 +23,31 @@
 		@media ($tablet-widths) {
 			font-size: 21px;
 		}
+		@media ($desktop-widths) {
+			margin-bottom: 35px;
+			font-size: 21px;
+		}
 
 	}
 	&__wrapper {
 		display: flex;
-		padding: 2px 0;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: baseline;
 	}
 	&__specialty {
 		display: flex;
-		margin: 0 0px 53px;
-		padding-top: 33px;
+		margin: 0 0px 14.5px;
 		flex-direction: column;
 		align-items: baseline; 
 
 		@media ($tablet-widths) {
-			margin: 0 auto 53px;
+			
 			text-align: center;
 		}
 		@media ($desktop-widths) {
 			width: 379px;
-			margin: 0 20px 53px;
+			margin: 0 20px 0px;
 			text-align: left;
 		}
 
@@ -41,12 +56,15 @@
 		position: relative;
 		width: 130px;
 		height: 130px;
-		margin: 0 auto 0px;		
+		margin: 0 auto 18.5px;		
 		background: $body-bg;
 		border-radius: 50%;
 
 		@media ($desktop-widths) {
 			margin: 0 0 33px;
+		}
+		@media ($desktop-widths) {
+			margin-bottom: 20px;
 		}
 
 	}
@@ -60,6 +78,7 @@
 		text-transform: uppercase;
 
 		@media ($tablet-widths) {
+			margin-bottom: 11.5px;
 			@include style-font(16px, 30px, 700);
 		}
 

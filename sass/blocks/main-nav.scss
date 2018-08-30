@@ -1,4 +1,12 @@
 .main-nav {
+	display: none;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: $body-bg;
+
+	@media ($tablet-widths) {
+		display: block;
+	}
 
 	&__dropdown {
 		display: flex;
@@ -7,7 +15,7 @@
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
-		justify-content: left;		
+		justify-content: left;
 	}
 	&__item {
 		margin: 0;

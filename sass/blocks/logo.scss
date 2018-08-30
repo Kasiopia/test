@@ -1,8 +1,15 @@
 .logo {
 	display: block;
 	&__img {
-		width: 203px;
-    	height: 60px;
-		background: url("../img/svg/logo.svg") no-repeat center;		
+		width: 102px;
+		height: 30px;
+		background: url("../img/svg/logo.svg") no-repeat center;
+		background-size: 100%;
+
+		@media ($tablet-widths) {
+			width: 204px;
+			height: 60px;
+		}
 	}
+
 }

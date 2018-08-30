@@ -8,9 +8,10 @@
 	text-align: center;
 	cursor: pointer;
 	&--pagination {
-		width: 336px;
-		margin: 0 auto;
-		@include style-font(16px, 30px, 500);
+		width: 100%;
+		padding-top: 12px;
+		padding-bottom: 8px;
+		@include style-font(14px, 30px, 500);
 		color: $text-color;
 		background: $body-bg;
 		border: 2px solid $text-color;
@@ -21,7 +22,15 @@
 		}
 		&:active {
 			opacity: 0.5;
-		}		
+		}
+
+		@media ($tablet-widths) {
+			width: auto;
+			margin: 0 auto;
+			padding: 11px 96px 8px;
+			font-size: 16px;
+		}
+
 	}
 	&--buy {
 		padding: 10px 10px;

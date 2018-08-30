@@ -5,17 +5,17 @@
 	<title>Fictitious - Главная</title>
 	<meta name="description" content="Мебельный Магазин Fictitious">
 	<meta name="viewport" content="width=device-width">
-	<link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 	<noscript>
 		<link rel="stylesheet" href="css/noscript.css">
 	</noscript>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="header header--index">	
-		<div class="header__inner header__inner--nojs">
+	<header class="header">	
+		<div class="header__inner header__inner--opened header__inner--nojs">			
 			<div class="header-top">
-				<div class="container-fluid">
+				<div class="header-top__inner">					
 					<div class="header-top__wrapper">
 						<div class="header-top__geolocation" id="geolocation">
 							<span>Ваш город:</span>
@@ -31,14 +31,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="header-middle">
-				<div class="container-fluid">
+			<div class="header-nav">
+				<div class="header-nav__inner">
 					<button type="button" class="nav-toggle"><span></span></button>
 					<a class="logo" href="index.html">
 						<h1 class="hidden-block">Fictitious</h1>
 						<div class="logo__img"></div>
 					</a>
-					<div class="header-middle__wrapper header-middle__wrapper--mobile">
+					<div class="header-nav__wrapper">
 						<div class="menu">
 							<ul class="menu__list">
 								<li class="menu__item">
@@ -75,11 +75,7 @@
 					<div class="basket">
 						<a class="basket__link" href="#"></a>
 						<a class="basket__number" href="#" id="basket__number"></a>
-					</div>					
-				</div>
-			</div>
-			<div class="header-bottom">
-				<div class="container-fluid">
+					</div>
 					<nav class="main-nav">
 						<div class="main-nav__dropdown" id="#main-menu">
 							<ul class="main-nav__list">
@@ -109,9 +105,9 @@
 								</li>
 							</ul>
 						</div>
-					</nav>
+					</nav>					
 				</div>
-			</div>				
+			</div>		
 		</div>
 	</header>
 	<main>
@@ -363,7 +359,7 @@
 							</div>
 						</div>
 					</article>
-					<article class="card-item">
+					<article class="card-item card-item--mobile">
 						<div class="card-item__wrapper">
 							<div class="card-item__image">
 								<img src="img/kitchen_london_2.jpg" width="380" height="386" alt="Кухня Лондон">
@@ -439,7 +435,7 @@
 							</div>
 						</div>
 					</article>
-					<article class="card-item">
+					<article class="card-item card-item--mobile">
 						<div class="card-item__wrapper">
 							<div class="card-item__image">
 								<img src="img/kitchen_london_3.jpg" width="380" height="386" alt="Кухня Лондон">
@@ -515,7 +511,7 @@
 							</div>
 						</div>
 					</article>
-					<article class="card-item">
+					<article class="card-item card-item--mobile">
 						<div class="card-item__wrapper">
 							<div class="card-item__image">
 								<img src="img/kitchen_london_4.jpg" width="380" height="386" alt="Кухня Лондон">

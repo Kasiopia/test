@@ -1,38 +1,76 @@
 .header-top {
-	background: $body-color;
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
+		background: $body-color;
+	}
+
+	&__inner {
+		@media ($tablet-widths) {
+			display: flex;
+			max-width: 1180px;
+			margin: 0 auto;
+			padding: 0 40px;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		@media ($desktop-widths) {
+			max-width: 1180px;
+			padding: 0 50px;
+			justify-content: flex-start;
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		width: 100%;
-    	flex-wrap: nowrap;
+		flex-wrap: nowrap;
 	}
 	&__geolocation {
-        width: 200px;
-        display: flex;
-    	align-self: center;
-        text-align: left;
-        & span {
-        	@include style-font(14px, 30px, 400);
+		width: 200px;
+		display: flex;
+		align-self: center;
+		text-align: left;
+		& span {
+			@include style-font(14px, 30px, 400);
 			color: #3d3d3d;
-        }		
+		}		
 	}
 	&__position {
 		display: flex;
 		flex-grow: 1;
 		flex-wrap: nowrap;
 		align-items: center;
-		justify-content: space-between;		
+		justify-content: space-between;
 	}
 	&__action {
-        @include style-font(14px, 30px, 500);
-        color: $text-color;		
+		@media ($tablet-widths) {
+			display: none;
+		}
+
+		@media only screen and (min-width: 1046px) {
+			display: block;
+			@include style-font(14px, 30px, 500);
+			color: $text-color;
+		}
 	}
 	&__phone {
-		padding-right: 18px;
-		@include a-link();
-        font-size: 16px;
-		line-height: 40px;
-		font-weight: bold;
-		font-family: Arial, sans-serif;
-        color: $text-color;		
+		@media ($tablet-widths) {
+			display: none;
+		}
+
+		@media only screen and (min-width: 1046px) {
+			display: block;
+			padding-right: 18px;
+			@include a-link();
+			font-size: 16px;
+			line-height: 40px;
+			font-weight: bold;
+			font-family: Arial, sans-serif;
+			color: $text-color;
+		}
 	}
 }
