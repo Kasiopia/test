@@ -9,12 +9,38 @@
 @import "mixins.scss";
 
 //библиотека blocks
-
+@import "blocks/header.scss";
+@import "blocks/nav-toggle.scss";
+@import "blocks/header-top.scss";
+@import "blocks/header-nav.scss";
+@import "blocks/logo.scss";
+@import "blocks/city.scss";
+@import "blocks/call-back.scss";
+@import "blocks/menu.scss";
+@import "blocks/basket.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/slider.scss";
+@import "blocks/catalog.scss";
+@import "blocks/card-item.scss";
+@import "blocks/card-items.scss";
+@import "blocks/card-slider.scss";
+@import "blocks/delivery.scss";
+@import "blocks/reviews.scss";
+@import "blocks/work.scss";
+@import "blocks/features.scss";
+@import "blocks/footer.scss";
+@import "blocks/footer-menu.scss";
+@import "blocks/payment.scss";
+@import "blocks/copyright.scss";
+@import "blocks/modal-city.scss";
 
 //библиотека global
 @import "global/fonts.scss";
 @import "global/typography.scss";
 @import "global/base.scss";
+@import "global/form.scss";
+@import "global/slick.scss";
 
 //библиотека styleguide
+@import "styleguide/btn.scss";
 

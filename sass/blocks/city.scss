@@ -1,0 +1,14 @@
+.city {
+	position: relative;
+	padding-left: 4px;
+	cursor: pointer;
+	&::after {
+		width: 0;
+		height: 0;
+	    @include position-container(50%, 50%, auto, -12px);
+	    z-index: 20;		
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid #ec4324;
+    }
+}

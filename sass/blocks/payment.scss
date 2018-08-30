@@ -1,0 +1,29 @@
+.payment {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	&-btn {
+		margin-right: 20px;
+		&:hover {
+			opacity: 0.8;
+		}
+		&:active {
+			opacity: 0.5;
+		}
+		&--yandex {
+			width: 103px;
+			height: 21px;
+			background: transparent url("../img/yakassa.png") no-repeat center;
+		}
+		&--visa {
+			width: 45px;
+			height: 13px;
+			background: transparent url("../img/visa.png") no-repeat center;
+		}
+		&--mc {
+			width: 43px;
+			height: 27px;
+			background: transparent url("../img/mc.png") no-repeat center;
+		}
+	}
+}

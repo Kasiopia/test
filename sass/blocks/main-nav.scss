@@ -1,0 +1,48 @@
+.main-nav {
+	display: none;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: $body-bg;
+
+	@media ($tablet-widths) {
+		display: block;
+	}
+
+	&__dropdown {
+		display: flex;
+	}
+	&__list {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: left;
+	}
+	&__item {
+		margin: 0;
+		border: 0;
+		&:last-child .main-nav__link {
+			margin-right: 0px;
+		}
+	}
+	&__link {
+		margin-right: 71px;
+		@include a-link();
+		@include style-font(16px, 30px, 700);
+		cursor: pointer;
+		color: $text-color;
+		border: none;
+		text-transform: uppercase;
+		&--action {
+			color: #ee5a3f;
+		}
+		&:hover {
+			opacity: 0.5;
+			transition: background .3s .5s;
+		}		
+		&:active {
+			opacity: 0.5;
+			transition: background .3s .5s;
+		}
+	}
+}
+

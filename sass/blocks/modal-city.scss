@@ -1,0 +1,119 @@
+.modal-overlay {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 1999;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	&--active {
+		display: block;
+	}
+}
+
+.modal-city {
+	display: none;
+	width: 260px;
+	padding: 10px 15px 46px;
+	background: $body-bg;
+	box-shadow: 0px 1px 8px 0px rgba(43, 43, 43, 0.15);
+
+	@media ($tablet-widths) {
+		width: 500px;
+		padding: 36px 40px 0px;
+	}
+	&__tablet {
+		display: none;
+		@media ($tablet-widths) {
+			display: block;
+		}
+	}
+	&__titul {
+		display: block;
+		@include style-font(28px, 30px, 700);
+		text-align: center;
+		color: $text-color;
+
+		@media ($tablet-widths) {
+			padding-bottom: 2.5px;
+			font-size: 28px;
+		}
+	}
+	&__text {
+		padding-bottom: 24.5px;
+		@include style-font(14px, 25px, 400);
+		text-align: center;
+		color: $text-color;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+	&__list {
+		width: 27%;
+		padding-bottom: 26px;
+	}
+	&__town {
+		padding-bottom: 7px;
+		@include style-font(14px, 30px, 400);
+		color: $text-color;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.8;
+		}
+		&:active {
+			opacity: 0.5;
+		}
+		&__town--gray {
+			color: #071426;
+		}
+	}
+	&__mobile {		
+		@include style-font(21px, 30px, 600);
+		color: $text-color;
+		cursor: pointer;
+
+		@media ($tablet-widths) {
+			display: none;
+		}
+	}
+	&__mobile-button {
+		display: flex;
+		padding-top: 23px;		
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+
+.modal-content-show {
+	position: fixed;
+	display: block;
+	top: 10%;
+	left: 50%;
+	z-index: 2000;
+	transform: translateX(-50%);
+	animation: bounce .4s;	
+}
+
+.modal-content-close {
+	padding: 0;
+	border: none;
+	&::after, &::before {
+		@include position-container(16px, auto, auto, 9px);
+		transform: rotate(-45deg);
+		width: 14px;
+		height: 2px;
+		background: #8c8c8d;
+		border: none;
+		cursor: pointer;
+		z-index: 202;
+	}
+	&::after {
+		transform: rotate(45deg);
+	}
+}
+

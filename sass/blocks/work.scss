@@ -1,0 +1,62 @@
+.work {
+	padding-top: 25.5px;
+	background: $body-color;
+
+	@media ($tablet-widths) {
+		padding-top: 61px;
+		padding-bottom: 30px;
+	}
+
+	&__headline {
+		margin-bottom: 21.5px;
+		text-align: center;
+		@include style-font(21px, 30px, 700);
+		color: $additional-text-color;
+		text-transform: uppercase;
+
+		@media ($tablet-widths) {
+			margin-bottom: 37px;
+			font-size: 21px;
+		}
+
+	}
+	&__operations {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+	&__operation {
+		display: flex;
+		width: 280px;
+		margin-bottom: 25px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		
+	}
+	&__icon {
+		margin-bottom: 11px;
+	}
+	&__titul {
+		@include style-font(15px, 30px, 700);
+		color: $text-color;
+		text-transform: uppercase;
+
+		@media ($tablet-widths) {
+			font-size: 16.13px;
+		}
+
+	}
+	&__text {
+		@include style-font(15px, 22px, 400);
+		font-family: Arial, sans-serif;
+		color: $text-color;
+		text-align: center;
+
+		@media ($tablet-widths) {
+			@include style-font(16px, 25px, 400);
+		}
+
+	}
+}

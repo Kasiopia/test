@@ -1,0 +1,63 @@
+.btn {
+	display: block;
+	@include style-font(16px, 30px, 500);
+	color: $body-bg;
+	background: $text-color;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+	&--pagination {
+		width: 100%;
+		padding-top: 12px;
+		padding-bottom: 8px;
+		@include style-font(14px, 30px, 500);
+		color: $text-color;
+		background: $body-bg;
+		border: 2px solid $text-color;
+		outline: none;
+		&:hover {
+			background: $text-color;
+			color: $body-bg;
+		}
+		&:active {
+			opacity: 0.5;
+		}
+
+		@media ($tablet-widths) {
+			width: auto;
+			margin: 0 auto;
+			padding: 11px 96px 8px;
+			font-size: 16px;
+		}
+
+	}
+	&--buy {
+		padding: 10px 10px;
+		&:hover {
+			opacity: 0.8;
+		}
+		&:active {
+			opacity: 0.5;
+		}
+	}
+	&--city {
+		padding: 16px 46px;
+		color: $text-color;
+		background: $body-bg;
+		border: 2px solid $text-color;
+		&:hover {
+			opacity: 0.8;
+		}	
+		&:active {
+			color: $body-bg;
+			background: $text-color;
+			border-color: $text-color;
+		}
+		&--active {
+			color: $body-bg;
+			background: $text-color;
+			border-color: $text-color;
+		}
+	}
+}

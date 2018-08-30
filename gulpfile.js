@@ -2,20 +2,6 @@
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var server = require("browser-sync").create();
-
-//пишем таск для работы со стилями
-gulp.task("sass", function() {
-  return gulp.src('sass/style.scss')
-  .pipe(sass.sync().on('error', sass.logError))
-  .pipe(gulp.dest("css"));
-});
-
-
-"use strict";
-
-var gulp = require("gulp");
-var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
@@ -32,28 +18,27 @@ var uglify = require("gulp-uglify");
 var pump = require("pump");
 
 gulp.task("style", function() {
-	return gulp.src('sass/style.scss')
-	.pipe(sass.sync().on('error', sass.logError))
+	gulp.src("sass/style.scss")
 	.pipe(plumber())
 	.pipe(sass())
-	.pipe(postcss([
-		autoprefixer({browsers: [
-			"last 1 version",
-			"last 2 Chrome versions",
-			"last 2 Firefox versions",
-			"last 2 Opera versions",
-			"last 2 Edge versions"
-			]}),
-		mqpacker({
-			sort: false
-		})
-	]))
+//	.pipe(postcss([
+//		autoprefixer({browsers: [
+//			"last 1 version",
+//			"last 2 Chrome versions",
+//			"last 2 Firefox versions",
+//			"last 2 Opera versions",
+//			"last 2 Edge versions"
+//			]}),
+//		mqpacker({
+//			sort: false
+//		})
+//	]))
 	.pipe(gulp.dest("css"))
-//	.pipe(gulp.dest("build/css"))//
-//	.pipe(minify())//
-	//.pipe(rename("style.min.css")) //
-	.pipe(gulp.dest("css"))
-//	.pipe(gulp.dest("build/css"))//
+//	.pipe(gulp.dest("build/css"))
+//	.pipe(minify())
+//	.pipe(rename("style.min.css"))
+//	.pipe(gulp.dest("css"))
+//	.pipe(gulp.dest("build/css"))
 	.pipe(server.stream());
 });
 

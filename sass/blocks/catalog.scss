@@ -1,0 +1,17 @@
+.catalog {
+	padding-top: 25.5px;
+	padding-bottom: 50px;
+
+	@media ($tablet-widths) {
+		padding: 50px 0;
+	}
+
+	&__description {
+		display: block;
+		padding-bottom: 27px; 
+		@include style-font(28px, 30px, 700);
+		color: $additional-text-color;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}

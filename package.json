@@ -1,17 +1,17 @@
 {
-  "name": "test",
+  "name": "196467-pink",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект",
+  "description": "Личный проект «Пинк» от HTML Academy",
   "author": "Сергей Чернов",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Kasiopia/test.git"
+    "url": "git@github.com:htmlacademy-adaptive/196467-pink.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/htmlacademy-adaptive/196467-pink/issues"
   },
-  "homepage": "https://github.com/Kasiopia/test",
+  "homepage": "https://github.com/htmlacademy-adaptive/196467-pink",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "0.0.7",
     "autoprefixer": "6.4.1",
@@ -24,7 +24,7 @@
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "2.3.2",
+    "gulp-sass": "^2.3.2",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.0.0",
     "gulp-uglify": "^2.0.0",

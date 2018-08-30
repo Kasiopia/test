@@ -1,0 +1,46 @@
+.copyright {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: center;
+	&__text {
+		@include style-font(12px, 25px, 400);
+		font-family: Arial, sans-serif;
+		color: #9e9ea1;
+		white-space: pre;
+
+		@media ($tablet-widths) {
+			font-size: 14px;
+			&--margin {
+				margin-left: auto;
+			}
+		}
+	}
+	&__link {
+		display: block;
+		margin-right: auto;
+		@include style-font(12px, 25px, 400);
+		font-family: Arial, sans-serif;
+		color: #9e9ea1;
+		text-decoration: none;
+
+		@media ($tablet-widths) {
+			font-size: 14px;
+			margin-left: 82px;
+		}
+		&--color {
+			margin-right: 0px;
+			color: #ee5a3f;
+
+			@media ($tablet-widths) {
+				margin-left: 0px;				
+			}
+		}
+		&:hover {
+			color: red;
+		}
+		&:active {
+			opacity: 0.5;
+		}
+	}
+}

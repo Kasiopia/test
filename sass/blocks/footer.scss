@@ -1,0 +1,53 @@
+.footer {
+	padding: 23px 0 13px;
+	background: $additional-text-color;
+
+	@media ($tablet-widths) {
+		padding: 51px 0 32px;
+	}
+	&__top {
+		display: flex;
+		margin-bottom: 33px;
+		justify-content: space-between;
+		align-items: baseline;
+		flex-wrap: wrap;
+		@media ($tablet-widths) {
+			margin-bottom: 42px;
+		}
+	}
+	&__wrapper {
+		display: none;
+		&--mobile {
+			display: flex;
+			width: 100%;
+			margin-bottom: 41px;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		@media ($tablet-widths) {
+			display: flex;
+			width: 260px;
+			margin-right: 20px;
+			margin-bottom: 0px;
+			flex-direction: column;
+			align-items: flex-start;
+			text-align: left;
+		}
+	}
+	&__headline {
+		@include style-font(16px, 30px, 700);
+		color: $body-bg;
+		text-transform: uppercase;
+	}
+	&__contact {
+		margin-bottom: 4px;
+		@include style-font(14px, 20px, 400);
+		font-family: Arial, sans-serif;
+		color: #9e9ea1;
+	}
+}
