@@ -2,14 +2,16 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
-  "description": "Тестовое задание",
+  "description": "Личный проект",
   "author": "Сергей Чернов",
   "repository": {
     "type": "git",
-    "url": "github.com/Kasiopia/test"
+    "url": "git@github.com:Kasiopia/test.git"
   },
-
-  "homepage": "https://github.com/Kasiopia",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/Kasiopia/test",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "0.0.7",
     "autoprefixer": "6.4.1",
