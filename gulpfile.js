@@ -23,11 +23,13 @@ gulp.task("style", function() {
 	.pipe(sass())
 	.pipe(postcss([
 		autoprefixer({browsers: [
-			"last 1 version",
-			"last 2 Chrome versions",
-			"last 2 Firefox versions",
-			"last 2 Opera versions",
-			"last 2 Edge versions"
+			"last 4 version",
+			"last 4 Chrome versions",
+			"last 4 Firefox versions",
+			"last 4 Opera versions",
+			"last 4 Edge versions",
+			"last 4 Safari versions",
+			"last 4 iOS versions"
 			]}),
 		mqpacker({
 			sort: false
