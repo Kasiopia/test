@@ -1,10 +1,10 @@
 .form {
 	position: relative;
-	
+
 	&__input-text {
-		display: none; 
+		display: none;
 		&:focus {
-			font-size: 16px;
+			font-size: 14px;
 			color: $text-color;
 			background: $body-bg;
 		}
@@ -54,7 +54,7 @@
 		outline: none;
 		cursor: pointer;
 		&:focus {
-			font-size: 16px;
+			font-size: 14px;
 			color: $text-color;
 			background: $body-bg;
 		}

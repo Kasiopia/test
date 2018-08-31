@@ -304,7 +304,7 @@ template {
   display: -ms-flexbox;
   display: flex;
   width: 24px;
-  height: 40px;
+  height: 10px;
   padding: 0;
   background: transparent;
   border: 0;
@@ -364,7 +364,7 @@ template {
 
 .header__inner--opened .nav-toggle {
   position: absolute;
-  top: -90px;
+  top: -76px;
   right: 15px;
   z-index: 200; }
 
@@ -378,8 +378,8 @@ template {
   display: flex;
   -ms-flex-direction: column-reverse;
       flex-direction: column-reverse;
-  -ms-flex-align: normal;
-      align-items: normal;
+  -ms-flex-align: stretch;
+      align-items: stretch;
   padding: 0; }
 
 .header__inner--opened .header-top {
@@ -1630,7 +1630,7 @@ button {
   .form__input-text {
     display: none; }
     .form__input-text:focus {
-      font-size: 16px;
+      font-size: 14px;
       color: #404041;
       background: #ffffff; }
     .form__input-text:hover + label {
@@ -1669,7 +1669,7 @@ button {
     outline: none;
     cursor: pointer; }
     .form-city input[type="search"]:focus {
-      font-size: 16px;
+      font-size: 14px;
       color: #404041;
       background: #ffffff; }
     .form-city input[type="search"]:hover + label {
@@ -2221,7 +2221,7 @@ button {
     @media only screen and (max-width: 700px) {
   .header__inner--nojs .nav-toggle {
     position: absolute;
-    top: -90px;
+    top: -70px;
     right: 15px;
     z-index: 200; }
   .header__inner--nojs .header-top__inner {

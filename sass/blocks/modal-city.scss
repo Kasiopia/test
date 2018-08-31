@@ -72,7 +72,7 @@
 			color: #071426;
 		}
 	}
-	&__mobile {		
+	&__mobile {
 		@include style-font(21px, 30px, 600);
 		color: $text-color;
 		cursor: pointer;
@@ -96,7 +96,7 @@
 	left: 50%;
 	z-index: 2000;
 	transform: translateX(-50%);
-	animation: bounce .4s;	
+	animation: bounce .4s;
 }
 
 .modal-content-close {
