@@ -304,7 +304,7 @@ template {
   display: -ms-flexbox;
   display: flex;
   width: 24px;
-  /*height: 40px;*/
+  height: 40px;
   padding: 0;
   background: transparent;
   border: 0;
@@ -364,7 +364,7 @@ template {
 
 .header__inner--opened .nav-toggle {
   position: absolute;
-  top: -71px;
+  top: -90px;
   right: 15px;
   z-index: 200; }
 
@@ -2221,7 +2221,7 @@ button {
     @media only screen and (max-width: 700px) {
   .header__inner--nojs .nav-toggle {
     position: absolute;
-    top: -71px;
+    top: -90px;
     right: 15px;
     z-index: 200; }
   .header__inner--nojs .header-top__inner {
