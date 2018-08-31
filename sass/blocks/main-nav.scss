@@ -58,32 +58,49 @@
 			z-index: 10;
 
 			@media ($tablet-widths) {
-				display: none;
+				@include position-container(30px, 0, 0, 0);
+				width: 100%;
+				height: 2px;
+				z-index: 999;
+				border: none;
 			}
 		}
 		&:hover {
 			color: #ee5a3f;
-			opacity: 0.9;
 			transition: background .3s .5s;
 			&::after {
 				border-top: 4px solid transparent;
 				border-left: 5px solid #ee5a3f;
 				border-bottom: 4px solid transparent;
-				opacity: 0.9;
-				transition: background .3s .5s;
+
+				@media ($tablet-widths) {
+					@include position-container(30px, 0, 0, 0);
+					width: 100%;
+					height: 2px;
+					z-index: 999;
+					border: none;
+					background: #ee5a3f;
+				}
 			}
 		}
 
 		&:active {
 			color: #ee5a3f;
-			opacity: 0.3;
+			opacity: 0.6;
 			transition: background .3s .5s;
 			&::after {
 				border-top: 4px solid transparent;
 				border-left: 5px solid #ee5a3f;
 				border-bottom: 4px solid transparent;
-				opacity: 0.9;
-				transition: background .3s .5s;
+				opacity: 0.6;
+
+				@media ($tablet-widths) {
+					@include position-container(30px, 0, 0, 0);
+					width: 100%;
+					height: 2px;
+					z-index: 999;
+					border: none;
+				}
 			}
 		}
 
@@ -95,11 +112,11 @@
 		}
 		@media only screen and (min-width : 900px) {
 			font-size: 16px;
-		} 
+		}
 		@media ($desktop-widths) {
 			margin-right: 71px;
 		}
-		
+
 		&--action {
 			color: #ee5a3f;
 			&::after {
@@ -112,10 +129,14 @@
 				z-index: 10;
 
 				@media ($tablet-widths) {
-					display: none;
+					@include position-container(30px, 0, 0, 0);
+					width: 100%;
+					height: 2px;
+					z-index: 999;
+					border: none;
+					background: #ee5a3f;
 				}
 			}
 		}
 	}
 }
-
