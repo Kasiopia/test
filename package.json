@@ -1,17 +1,17 @@
 {
-  "name": "196467-pink",
+  "name": "test",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект «Пинк» от HTML Academy",
+  "description": "Личный проект test от Сергея",
   "author": "Сергей Чернов",
   "repository": {
     "type": "git",
-    "url": "git@github.com:htmlacademy-adaptive/196467-pink.git"
+    "url": "git@github.com:kasiopia/test.git"
   },
   "bugs": {
-    "url": "https://github.com/htmlacademy-adaptive/196467-pink/issues"
+    "url": "https://github.com/Kasiopia/test/issues"
   },
-  "homepage": "https://github.com/htmlacademy-adaptive/196467-pink",
+  "homepage": "https://github.com/Kasiopia/test/issues",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "0.0.7",
     "autoprefixer": "6.4.1",
