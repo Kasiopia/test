@@ -19,6 +19,10 @@
 	position: relative;
 	margin: 55px auto auto;
 
+	& .slick-active {
+		outline: none;
+	}
+
 	@media ($tablet-widths) {
 		margin-top: auto;
 	}

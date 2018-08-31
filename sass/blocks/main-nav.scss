@@ -33,6 +33,7 @@
 
 	}
 	&__item {
+		position: relative;
 		margin: 0;
 		border: 0;
 		&:last-child .main-nav__link {
