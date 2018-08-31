@@ -1,0 +1,47 @@
+.arrow-up {
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
+		position: fixed;
+		bottom: 65px;
+		right: 25px;
+		background: #f6f6f6;
+		width: 60px;
+		height: 60px;
+		text-decoration: none;
+		text-align: center;
+		z-index: 10000;
+		transition: all .3s ease 0s;
+
+		&__wrapper {
+			position: relative;
+			display: block;
+		}
+		&__text {
+			@include position-container(15px, 0, 0, 0)
+			z-index: 1000;
+			@include style-font(11px, 50px, 700);
+			text-transform: uppercase;
+			color: black;
+			&:hover {
+				color: #dc3e21;
+			}
+			&:hover::before {
+				border-right: 2px solid #dc3e21;
+				border-bottom: 2px solid #dc3e21;
+			}
+			&::before {
+				@include position-container(11px, 0, 0, 0)
+				width: 0;
+				height: 0;
+				width: 18px;
+				height: 18px;
+				transform: rotate(-135deg);
+				border-right: 2px solid $additional-text-color;
+				border-bottom: 2px solid $additional-text-color;
+				z-index: 1001;
+			}
+		}
+	}
+}

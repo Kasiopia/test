@@ -298,6 +298,11 @@ template {
   display: none; }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 8888;
   background: #fff; }
 
 .nav-toggle {
@@ -760,7 +765,7 @@ template {
 
 .slider {
   position: relative;
-  margin: auto; }
+  margin: 55px auto auto; }
 
 .slide img {
   max-width: 200%; }
@@ -1493,6 +1498,9 @@ template {
     -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
 
+.arrow-up {
+  display: none; }
+
 /* font-family: "exo2regular"; */
 @font-face {
   font-family: "Exo 2";
@@ -1808,6 +1816,9 @@ button {
       background: #404041;
       border-color: #404041; }
     @media (min-width: 700px) {
+  .header {
+    position: static;
+    width: auto; }
   .nav-toggle {
     display: none; }
   .header-top {
@@ -1965,6 +1976,8 @@ button {
     border: none; }
   .main-nav__link--action::after {
     display: none; }
+  .slider {
+    margin-top: auto; }
   .slide img {
     max-width: 100%; }
   .slider .slick-arrow {
@@ -2194,6 +2207,57 @@ button {
     font-size: 28px; }
   .modal-city__mobile {
     display: none; }
+  .arrow-up {
+    display: block;
+    position: fixed;
+    bottom: 65px;
+    right: 25px;
+    background: #f6f6f6;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10000;
+    transition: all .3s ease 0s; }
+  .arrow-up__wrapper {
+    position: relative;
+    display: block; }
+  .arrow-up__text {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-size: 11px;
+    line-height: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black; }
+  .arrow-up__text:hover {
+    color: #dc3e21; }
+  .arrow-up__text:hover::before {
+    border-right: 2px solid #dc3e21;
+    border-bottom: 2px solid #dc3e21; }
+  .arrow-up__text::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 11px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    width: 18px;
+    height: 18px;
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    border-right: 2px solid #363636;
+    border-bottom: 2px solid #363636;
+    z-index: 1001; }
   body {
     min-width: 700px; }
   .container {
