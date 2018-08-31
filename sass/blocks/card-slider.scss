@@ -1,3 +1,7 @@
+.card-slider-nojs .card-arrow {
+	display: none;
+}
+
 .card-slider {
 	@include position-container(0, auto, 0, auto);
 	transition: background .3s .5s;
@@ -31,6 +35,9 @@
 		border: none;
 		outline: none;
 		cursor: pointer;
+		&:hover {
+			background: #ee5a3f;
+		}
 		&::before {
 			@include position-container(18px, auto, 0, auto);
 			width: 14px;
@@ -38,13 +45,9 @@
 			border-top: 2px solid #ee5b40;
 			border-right: 2px solid #ee5b40;
 			transform: rotate(45deg);
-			opacity: 1;
-		}
-		&:active::before {
-			opacity: .1;
 		}
 		&:hover::before {
-			opacity: .6;
+			border-color: $body-bg;
 		}
 	}
 }
@@ -58,7 +61,7 @@
 		border-top-right-radius: 2px;
 		border-bottom-right-radius: 2px;
 		&::before {
-			left: 16px;
+			left: 18px;
 			transform: rotate(-135deg);
 		}
 	}
@@ -73,7 +76,7 @@
 		border-top-left-radius: 2px;
 		border-bottom-left-radius: 2px;
 		&:before {
-			right: 18px;
+			right: 12px;
 		}
 	}
 }

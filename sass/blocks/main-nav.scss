@@ -1,10 +1,20 @@
 .main-nav {
 	display: none;
+	background: $body-bg;
 
 	@media ($tablet-widths) {
 		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+		padding-top: 10px;
+		order: 4;
+	}
+
+	@media ($desktop-widths) {
+		width: auto;
+		margin-bottom: 20px;
 		padding-top: 30px;
-		padding-bottom: 30px;
+		order: unset;
 	}
 
 	&__list {
@@ -14,6 +24,10 @@
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		@media ($desktop-widths) {
 			justify-content: left;
 		}
 
@@ -59,6 +73,7 @@
 				transition: background .3s .5s;
 			}
 		}
+
 		&:active {
 			color: #ee5a3f;
 			opacity: 0.3;
@@ -73,14 +88,18 @@
 		}
 
 		@media ($tablet-widths) {
-			margin-right: 71px;
+			margin-right: 10px;
 			padding: 0px;
-			font-size: 16px;
+			font-size: 13px;
 			border: none;
 		}
-
-
-
+		@media only screen and (min-width : 900px) {
+			font-size: 16px;
+		} 
+		@media ($desktop-widths) {
+			margin-right: 71px;
+		}
+		
 		&--action {
 			color: #ee5a3f;
 			&::after {

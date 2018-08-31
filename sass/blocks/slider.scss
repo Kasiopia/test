@@ -1,9 +1,26 @@
+.slider--nojs {
+	&.slider {
+		max-width: 1180px;
+		min-height: auto;
+	}
+	& .slider__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	& .slide img {
+		width: 143px;
+		height: 82px;
+		margin-right: 5px;
+	}
+}
+
 .slider {
 	position: relative;
 	margin: auto;
-	
+
 	@media ($desktop-widths) {
-		max-width: 1280px;		
+		max-width: 1280px;
 	}
 }
 
@@ -11,7 +28,7 @@
 	max-width: 200%;
 
 	@media ($tablet-widths) {
-		max-width: 100%;		
+		max-width: 100%;
 	}
 }
 
@@ -20,57 +37,69 @@
 }
 
 .slider .slick-arrow {
-	display: none;
-
-	@media ($desktop-widths)  {
+	position: absolute;
+	display: block;
+	top: 43%;
+	background: 0 0;
+	z-index: 10;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	&::before {
+		content: "";
 		position: absolute;
+		top: 18px;
+		width: 29px;
+		height: 29px;
+		border-top: 5px solid #ee5a3f;
+		border-right: 5px solid #ee5a3f;
+		transform: rotate(45deg);
+		opacity: 1;
+	}
+	&:active::before { 
+		opacity: .1;
+		border-top: 5px solid #dc3d20;
+		border-right: 5px solid #dc3d20;
+	}
+	&:hover::before {
+		opacity: .6;
+
+	}
+
+	@media ($tablet-widths) {
+		display: none;
+	}
+	@media ($desktop-widths)  {
 		display: block;
-		top: 43%;
-		background: 0 0;
-		z-index: 10;
-		border: none;
-		outline: none;
-		cursor: pointer;
-		&::before {
-			content: "";
-			position: absolute;
-			top: 18px;
-			width: 29px;
-			height: 29px;
-			border-top: 5px solid #ee5b40;
-			border-right: 5px solid #ee5b40;
-			transform: rotate(45deg);
-			opacity: 1;
-		}
-		&:active::before {
-			opacity: .1;
-		}
-		&:hover::before {
-			opacity: .6;
-		}
 	}
 }
 
 .slider .slick-next {
-	display: none;
+	right: 0px;
+	&:before {
+		right: 41px;
+	}
 
+	@media ($tablet-widths) {
+		display: none;
+	}
 	@media ($desktop-widths) {
-		right: 0px;
-		&:before {
-			right: 41px;
-		}
+		display: block
 	}
 }	
 
 .slider .slick-prev {
-	display: none;
+	left: 0px;
+	&::before {
+		left: 30px;
+		transform: rotate(-135deg);
+	}
 
+	@media ($tablet-widths) {
+		display: none;
+	}
 	@media ($desktop-widths) {
-		left: 0px;
-		&::before {
-			left: 30px;
-			transform: rotate(-135deg);
-		}
+		display: block;
 	}	
 }
 
@@ -105,7 +134,7 @@
 				outline: none;
 			}
 		}
-		& .slick-active {
+		& li:hover {
 			border: 1px solid #bfbfbf;
 		}
 	}

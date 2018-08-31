@@ -8,7 +8,6 @@
 
 	&__inner {
 		display: flex;
-		max-width: 640px;
 		margin: 0 auto;
 		padding: 8px 15px 7px;
 		align-items: center;
@@ -45,11 +44,14 @@
 	}
 	&__geolocation {
 		display: flex;
-		align-items: flex-start;
+		align-items: flex-start;		
 		& span {
 			display: block;
 			@include style-font(14px, 17px, 400);
 			color: black;
+			&:hover {
+				color: #7f7f7f;
+			}
 
 			@media ($tablet-widths) {
 				line-height: 30px;
@@ -64,10 +66,16 @@
 	}
 	&__position {
 		display: flex;
+		margin-bottom: 12px;
 		flex-grow: 1;
 		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: space-between;
+
+		@media ($tablet-widths) {
+			margin-bottom: 0;
+		}
+
 	}
 	&__action {
 		@media ($tablet-widths) {
@@ -79,6 +87,7 @@
 			@include style-font(14px, 30px, 500);
 			color: $text-color;
 		}
+		
 	}
 	&__phone {
 		@include a-link();

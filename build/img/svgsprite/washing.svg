@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="66" height="66" viewBox="0 0 66 66">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #404041;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #dae135;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 1px;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #404041;
+      }
+
+      .cls-5 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect x="3" y="44" width="60" height="21" class="cls-1"/>
+    <rect x="7" y="44" width="52" height="21" class="cls-2"/>
+    <rect x="11" y="48" width="44" height="13" class="cls-3"/>
+    <rect x="1" y="40" width="64" height="6" class="cls-2"/>
+    <g>
+      <rect x="8" y="19" width="49" height="23" class="cls-1"/>
+      <rect x="35" y="27" width="21" height="14" class="cls-3"/>
+      <rect x="38" y="30" width="15" height="8" class="cls-4"/>
+      <path d="M14.000,39.999 L14.000,29.000 C14.000,29.000 14.375,26.000 18.000,26.000 C21.625,26.000 22.000,29.000 22.000,29.000 L22.000,34.000 L20.000,34.000 L20.000,29.000 C20.000,29.000 19.812,27.999 18.000,27.999 C16.187,27.999 16.000,29.000 16.000,29.000 L16.000,39.999 L14.000,39.999 Z" class="cls-5"/>
+    </g>
+    <g>
+      <rect x="6" y="1" width="53" height="20" class="cls-2"/>
+      <rect x="10" y="5" width="20" height="12" class="cls-1"/>
+      <rect x="35" y="5" width="20" height="12" class="cls-1"/>
+      <rect x="25" y="9" width="1" height="4" class="cls-6"/>
+      <rect x="39" y="9" width="1" height="4" class="cls-6"/>
+    </g>
+  </g>
+</svg>

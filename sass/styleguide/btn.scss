@@ -17,11 +17,8 @@
 		border: 2px solid $text-color;
 		outline: none;
 		&:hover {
-			background: $text-color;
+			background: black;
 			color: $body-bg;
-		}
-		&:active {
-			opacity: 0.5;
 		}
 
 		@media ($tablet-widths) {
@@ -35,10 +32,7 @@
 	&--buy {
 		padding: 10px 10px;
 		&:hover {
-			opacity: 0.8;
-		}
-		&:active {
-			opacity: 0.5;
+			background: black;
 		}
 	}
 	&--city {

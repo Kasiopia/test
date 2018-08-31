@@ -1,6 +1,7 @@
 .reviews {
 	padding-top: 53px;
 	background: $body-bg;
+
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
@@ -67,11 +68,9 @@
 		}
 
 		&:hover {
-			color: rgba(238, 90, 63, 0.8);
+			color: #dc3d20;
 		}
-		&:active {
-			color: rgba(238, 90, 63, 0.5);
-		}
+
 	}
 	&__link-img {
 		display: block;
@@ -132,7 +131,7 @@
 		height: 34px;
 		margin: auto;
 		bottom: 34px;
-		background: #e7e7e7;
+		background: transparent;
 		z-index: 10;
 		border: 1px solid #e7e7e7;
 		border-radius: 2px;
@@ -145,6 +144,9 @@
 
 		&:hover {
 			border-color: $text-color ;
+			&::before {
+				border-color: #dc3f23;
+			}
 		}
 		&::before {
 			content: "";
@@ -154,8 +156,8 @@
 			width: 10px;
 			height: 10px;
 			margin: auto;
-			border-top: 3px solid #ee5b40;
-			border-right: 3px solid #ee5b40;
+			border-top: 3px solid #ee5a3f;
+			border-right: 3px solid #ee5a3f;
 			transform: rotate(45deg);
 		}
 	}

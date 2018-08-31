@@ -96,5 +96,8 @@
 		color: #ee5a3f;
 		text-decoration: none;
 		cursor: pointer;
+		&:hover {
+			color: #dc3d20;
+		}
 	}
 }

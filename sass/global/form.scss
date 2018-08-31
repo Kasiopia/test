@@ -3,6 +3,18 @@
 	
 	&__input-text {
 		display: none; 
+		&:focus {
+			font-size: 16px;
+			color: $text-color;
+			background: $body-bg;
+		}
+		&:hover+label {
+			opacity: 0.5;
+		}
+		&:focus+label {
+			opacity: 1;
+			outline: none;
+		}
 		@media ($tablet-widths) {
 			display: block;
 			width: 100%;
@@ -25,6 +37,7 @@
 		cursor: pointer;
 		background-position: 0 0;
 	}
+
 }
 
 .form-city {
@@ -40,6 +53,18 @@
 		border-radius: 2px;
 		outline: none;
 		cursor: pointer;
+		&:focus {
+			font-size: 16px;
+			color: $text-color;
+			background: $body-bg;
+		}
+		&:hover+label {
+			opacity: 0.5;
+		}
+		&:focus+label {
+			opacity: 1;
+			outline: none;
+		}
 	}
 	& label {
 		@include position-container(10px, auto, auto, 9px);

@@ -33,14 +33,11 @@
 			color: #ee5a3f;
 
 			@media ($tablet-widths) {
-				margin-left: 0px;				
+				margin-left: 0px;
 			}
 		}
 		&:hover {
-			color: red;
-		}
-		&:active {
-			opacity: 0.5;
+			color: #dc3d20;
 		}
 	}
 }

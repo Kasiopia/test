@@ -21,24 +21,24 @@ gulp.task("style", function() {
 	gulp.src("sass/style.scss")
 	.pipe(plumber())
 	.pipe(sass())
-//	.pipe(postcss([
-//		autoprefixer({browsers: [
-//			"last 1 version",
-//			"last 2 Chrome versions",
-//			"last 2 Firefox versions",
-//			"last 2 Opera versions",
-//			"last 2 Edge versions"
-//			]}),
-//		mqpacker({
-//			sort: false
-//		})
-//	]))
+	.pipe(postcss([
+		autoprefixer({browsers: [
+			"last 1 version",
+			"last 2 Chrome versions",
+			"last 2 Firefox versions",
+			"last 2 Opera versions",
+			"last 2 Edge versions"
+			]}),
+		mqpacker({
+			sort: false
+		})
+	]))
 	.pipe(gulp.dest("css"))
-//	.pipe(gulp.dest("build/css"))
-//	.pipe(minify())
-//	.pipe(rename("style.min.css"))
-//	.pipe(gulp.dest("css"))
-//	.pipe(gulp.dest("build/css"))
+	.pipe(gulp.dest("build/css"))
+	.pipe(minify())
+	.pipe(rename("style.min.css"))
+	.pipe(gulp.dest("css"))
+	.pipe(gulp.dest("build/css"))
 	.pipe(server.stream());
 });
 

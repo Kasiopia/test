@@ -10,6 +10,9 @@
 		background: #ee5a3f;
 		cursor: pointer;
 		align-self: stretch;
+		&:hover {
+			background: #dc3d20;
+		}
 	}
 
 	&__link {

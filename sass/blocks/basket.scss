@@ -3,7 +3,15 @@
 	margin-right: 6px;
 
 	@media ($tablet-widths) {
+		order: 2;
+		margin-right: 0;
+		align-self: center;
+	}
+
+	@media ($desktop-widths) {
 		margin-right: 20px;
+		order: unset;
+		align-self: unset;
 	}
 	
 	&__link {
@@ -14,6 +22,9 @@
 		cursor: pointer;
 		background: #efeff1;
 		border-radius: 2px;
+		&:hover {
+			background: #bfbfbf;
+		}
 
 		@media ($tablet-widths) {
 			width: 50px;
@@ -25,15 +36,15 @@
 			width: 22px;
 			height: 30px;
 			z-index: 20;
-			background: url(../img/basket.png) no-repeat;
+			background: transparent url(../img/sprite.png) -133px -10px;
 		}
 		
 
 	}
 	&__number {
-		@include position-container(-9px, auto, auto, -4px);
-		width: 20px;
-		height: 20px;
+		@include position-container(-3px, auto, auto, -4px);
+		width: 16px;
+		height: 16px;
 		z-index: 20;
 		background: #ec4324;
 		border-radius: 50%;
@@ -41,13 +52,23 @@
 		&::after {
 			content: "0";
 			position: absolute;
-			top: -6px;
+			top: -9px;
 			bottom: 0;
 			left: 0;
 			right: 0;
 			z-index: 21;
-			@include style-font(14px, 33px, 400);
+			@include style-font(11px, 33px, 400);
 			color: $body-bg;
 		}
+		@media ($tablet-widths) {
+			top: -9px;
+			width: 20px;
+			height: 20px;
+			&::after {
+				top: -6px;
+				font-size: 14px;
+			}
+		}
+		
 	}
 }

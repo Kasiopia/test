@@ -31,12 +31,13 @@
 	}
 	&__titul {
 		display: block;
+		margin-bottom: 23px;
 		@include style-font(28px, 30px, 700);
 		text-align: center;
 		color: $text-color;
 
 		@media ($tablet-widths) {
-			padding-bottom: 2.5px;
+			margin-bottom: 2.5px;
 			font-size: 28px;
 		}
 	}
@@ -82,7 +83,6 @@
 	}
 	&__mobile-button {
 		display: flex;
-		padding-top: 23px;		
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: flex-start;
@@ -105,7 +105,7 @@
 	&::after, &::before {
 		@include position-container(16px, auto, auto, 9px);
 		transform: rotate(-45deg);
-		width: 14px;
+		width: 16px;
 		height: 2px;
 		background: #8c8c8d;
 		border: none;
