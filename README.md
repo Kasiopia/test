@@ -5,8 +5,6 @@
 Запуск проектра gulp build
 Работа с проектом на SASS gulp serve
 
-Тестовый проект  [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
-
 * оператор: [Сергей Чернов](https://github.com/Kasiopia).
 
 ---
