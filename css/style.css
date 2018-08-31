@@ -718,13 +718,13 @@ template {
         border-bottom: 4px solid transparent; }
     .main-nav__link:active {
       color: #ee5a3f;
-      opacity: 0.3;
+      opacity: 0.6;
       transition: background .3s .5s; }
       .main-nav__link:active::after {
         border-top: 4px solid transparent;
         border-left: 5px solid #ee5a3f;
         border-bottom: 4px solid transparent;
-        opacity: 0.3; }
+        opacity: 0.6; }
     .main-nav__link--action {
       color: #ee5a3f; }
       .main-nav__link--action::after {
