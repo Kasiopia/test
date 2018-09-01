@@ -4,36 +4,32 @@
 
 	@media ($tablet-widths) {
 		display: block;
-		width: 100%;
-		margin-bottom: 10px;
-		padding-top: 10px;
 		order: 4;
 	}
 
 	@media ($desktop-widths) {
-		width: auto;
-		margin-bottom: 20px;
-		padding-top: 30px;
 		order: unset;
 	}
-
+	&__dropdown {
+		@media ($tablet-widths) {
+			display: flex;
+		}
+	}
 	&__list {
 		flex-direction: column;
 
 		@media ($tablet-widths) {
 			display: flex;
 			flex-direction: row;
-			flex-wrap: wrap;
 			justify-content: space-between;
+			flex-wrap: wrap;
+			flex: 10 1 auto;
+			background: 0 0;
+			width: 100%;
+			text-align: center;
 		}
-
-		@media ($desktop-widths) {
-			justify-content: left;
-		}
-
 	}
 	&__item {
-		position: relative;
 		margin: 0;
 		border: 0;
 		&:last-child .main-nav__link {
@@ -49,6 +45,20 @@
 		color: $text-color;
 		border-bottom: 1px solid $body-color;
 		text-transform: uppercase;
+
+		@media ($tablet-widths) {
+			margin-right: 10px;
+			padding: 20px 0 30px;
+			font-size: 13px;
+			border: none;
+		}
+		@media only screen and (min-width : 900px) {
+			font-size: 16px;
+		}
+		@media ($desktop-widths) {
+			margin-right: 71px;
+		}
+
 		&::after {
 			@include position-container(50%, 50%, auto, 16px);
 			width: 0;
@@ -104,20 +114,6 @@
 				}
 			}
 		}
-
-		@media ($tablet-widths) {
-			margin-right: 10px;
-			padding: 0px;
-			font-size: 13px;
-			border: none;
-		}
-		@media only screen and (min-width : 900px) {
-			font-size: 16px;
-		}
-		@media ($desktop-widths) {
-			margin-right: 71px;
-		}
-
 		&--action {
 			color: #ee5a3f;
 			&::after {

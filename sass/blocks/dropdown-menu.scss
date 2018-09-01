@@ -1,16 +1,13 @@
 .dropdown-menu {
 	display: none;
 
-	@media ($desktop-widths) {
-		display: none;
-	}
-	&__wrapper {
+	@media ($tablet-widths) {
 		position: absolute;
 		min-height: 415px;
 		min-width: 1152px;
 		height: auto;
 		padding: 0 0 0 30px;
-		top: 50px;
+		top: 80px;
 		left: 0;
 		z-index: 2000;
 		background: $body-bg;
@@ -46,10 +43,8 @@
 	}
 }
 
-.main-nav__item:hover > .dropdown-menu {
-	display: block;
-
-}
-.main-nav__item:hover .dropdown-menu__wrapper {
-	display: block;
+.main-nav__list > .main-nav__item:hover .dropdown-menu {
+	@media ($tablet-widths) {
+		display: block;
+	}
 }
