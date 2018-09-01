@@ -1580,7 +1580,17 @@ template {
       .dropdown-menu__link--bigger::after {
         display: none; }
 
+/*
 .main-nav__list > .main-nav__item:hover .dropdown-menu {
+	@media ($tablet-widths) {
+		display: block;
+	}
+}
+
+.main-nav__list > .main-nav__item:hover .dropdown-menu {
+	display: block;
+}*/
+.main-nav--opened .dropdown-menu {
   display: block; }
 
 .dropdown-menu-toggle {
@@ -2481,13 +2491,11 @@ button {
   .dropdown-menu__link--bigger::after {
     display: block; }
   .dropdown-menu__link--bigger {
-    padding: 5px 15px;
+    padding: 5px 0px;
     font-size: 14px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase; }
-  .main-nav__list > .main-nav__item:hover .dropdown-menu {
-    display: block; }
   .dropdown-menu-toggle {
     display: none; }
   body {

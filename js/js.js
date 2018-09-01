@@ -60,7 +60,7 @@ $('.slider__wrapper').slick({
 	]
 });
 
-//подключение всплывающих окон
+//подключение всплывающих окон и закрытие окон
 
 var opencity = document.querySelector (".js-city");
 var city = document.querySelector (".modal-city");
@@ -88,24 +88,37 @@ window.addEventListener ("keydown", function(event) {
 	}
 });
 
-//toogle menu open or close
-
 var navMain = document.querySelector (".header__inner");
 var navToggle = document.querySelector (".nav-toggle");
 var header = document.querySelector (".header");
 var slider = document.querySelector(".slider");
 var cardslider = document.querySelector(".card-slider");
 
-
 //not js
+
 navMain.classList.remove("header__inner--nojs");
 slider.classList.remove("slider--nojs");
 cardslider.classList.remove("card-slider--nojs");
+
+// реакция на нажатие в nav-toggle
 
 navToggle.addEventListener ("click", function(event) {
 	if (navMain.classList.contains("header__inner--opened")) {
 		navMain.classList.remove("header__inner--opened");
 	} else {
 		navMain.classList.add("header__inner--opened");
+	}
+});
+
+// реакция на нажатие в dropdown-toggle
+
+var subnavMain = document.querySelector (".main-nav");
+var subToggle = document.querySelector (".js-sub-click");
+
+subToggle.addEventListener ("click", function(event) {
+	if (subnavMain.classList.contains("main-nav--opened")) {
+		subnavMain.classList.remove("main-nav--opened");
+	} else {
+		subnavMain.classList.add("main-nav--opened");
 	}
 });

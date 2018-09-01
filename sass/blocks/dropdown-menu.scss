@@ -146,21 +146,19 @@
 			z-index: 150;
 			&::after {
 				display: none;
-
 				@media ($tablet-widths) {
 					display: block;
 				}
 			}
-
 			@media ($tablet-widths) {
-				padding: 5px 15px;
+				padding: 5px 0px;
 				@include style-font(14px, 30px, 700);
 				text-transform: uppercase;
 			}
 		}
 	}
 }
-
+/*
 .main-nav__list > .main-nav__item:hover .dropdown-menu {
 	@media ($tablet-widths) {
 		display: block;
@@ -168,5 +166,10 @@
 }
 
 .main-nav__list > .main-nav__item:hover .dropdown-menu {
+	display: block;
+}*/
+
+
+.main-nav--opened .dropdown-menu {
 	display: block;
 }
