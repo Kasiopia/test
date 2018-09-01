@@ -760,7 +760,8 @@ template {
   margin-right: 5px; }
 
 .slider {
-  position: relative; }
+  position: relative;
+  margin: auto; }
   .slider .slick-active {
     outline: none; }
 
