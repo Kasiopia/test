@@ -3,7 +3,7 @@
 	display: none;
 	top: 0;
 	left: 0;
-	z-index: 1999;
+	z-index: 9000;
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.5);
@@ -94,7 +94,7 @@
 	display: block;
 	top: 10%;
 	left: 50%;
-	z-index: 2000;
+	z-index: 9999;
 	transform: translateX(-50%);
 	animation: bounce .4s;
 }

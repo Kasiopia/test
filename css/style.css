@@ -1392,7 +1392,7 @@ template {
   display: none;
   top: 0;
   left: 0;
-  z-index: 1999;
+  z-index: 9000;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); }
@@ -1468,7 +1468,7 @@ template {
   display: block;
   top: 10%;
   left: 50%;
-  z-index: 2000;
+  z-index: 9999;
   -ms-transform: translateX(-50%);
       transform: translateX(-50%);
   animation: bounce .4s; }
@@ -2325,7 +2325,7 @@ button {
     transform: rotate(-135deg);
     border-right: 2px solid #363636;
     border-bottom: 2px solid #363636;
-    z-index: 1001; }
+    z-index: 100; }
   .dropdown-menu {
     position: absolute;
     min-height: 415px;
