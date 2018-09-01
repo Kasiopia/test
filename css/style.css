@@ -1918,12 +1918,7 @@ button {
   .menu {
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     padding-top: 10px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-pack: left;
-    justify-content: left;
     background: transparent; }
   .menu__list {
     -ms-flex-direction: row;
@@ -1977,6 +1972,7 @@ button {
     font-size: 14px; }
   .main-nav {
     display: block;
+    width: 100%;
     -ms-flex-order: 4;
     order: 4; }
   .main-nav__dropdown {
@@ -1985,16 +1981,14 @@ button {
   .main-nav__list {
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     -ms-flex-direction: row;
     flex-direction: row;
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex: 10 1 auto;
-    flex: 10 1 auto;
     background: 0 0;
-    width: 100%;
     text-align: center; }
   .main-nav__link {
     margin-right: 10px;
@@ -2336,15 +2330,16 @@ button {
   .dropdown-menu {
     position: absolute;
     min-height: 415px;
-    min-width: 1152px;
+    width: 100%;
     height: auto;
-    padding: 0 0 0 30px;
     top: 80px;
     left: 0;
     z-index: 2000;
     background: #ffffff;
     box-shadow: 0px 1px 8px 0px rgba(43, 43, 43, 0.15);
     border-radius: 3px; }
+  .dropdown-menu__wrapper {
+    padding: 0 40px; }
   .main-nav__list > .main-nav__item:hover .dropdown-menu {
     display: block; }
   body {
@@ -2433,15 +2428,7 @@ button {
     flex-direction: column;
     order: unset; }
   .menu {
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    padding-top: 0px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-pack: left;
-    justify-content: left;
-    background: transparent; }
+    padding-top: 0px; }
   .menu__list {
     -ms-flex-direction: row;
     flex-direction: row;
@@ -2515,6 +2502,8 @@ button {
   .features__item {
     width: 312px;
     margin: 0 20px 50px; }
+  .dropdown-menu__wrapper {
+    padding: 0 50px; }
   body {
     min-width: 1200px; }
   .container {
@@ -2534,9 +2523,6 @@ button {
     font-size: 16px;
     font-weight: bold; } }
     @media only screen and (min-width: 750px) {
-  .menu {
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
   .menu__link {
     font-size: 14px; } }
     @media only screen and (min-width: 900px) {
