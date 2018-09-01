@@ -1,0 +1,14 @@
+.svg-icon {
+	cursor: pointer;
+	opacity: .3;
+
+	&--back {
+		width: 11px;
+		height: 17px;
+		opacity: 1;
+		fill: $text-color;
+		&:active {
+			fill: #ee5a3f;
+		}
+	}
+}

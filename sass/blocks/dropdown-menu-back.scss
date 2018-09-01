@@ -1,0 +1,11 @@
+.dropdown-menu-back {
+	position: absolute;
+	display: inline-block;
+	top: 18px;
+	left: 19px;
+	vertical-align: middle;
+	z-index: 150;
+	@media ($tablet-widths) {
+		display: none;
+	}
+}

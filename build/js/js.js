@@ -66,6 +66,15 @@ var opencity = document.querySelector (".js-city");
 var city = document.querySelector (".modal-city");
 var closecity = document.querySelector (".modal-content-close");
 var modaloverlay = document.querySelector(".modal-overlay");
+var navMain = document.querySelector (".header__inner");
+var navToggle = document.querySelector (".nav-toggle");
+var header = document.querySelector (".header");
+var slider = document.querySelector(".slider");
+var cardslider = document.querySelector(".card-slider");
+var subnavMain = document.querySelector (".main-nav");
+var subToggle = document.querySelector (".js-sub-click");
+var closeDropMenu = document.querySelector (".dropdown-menu-back");
+var dropMenu = document.querySelector (".dropdown-menu");
 
 opencity.addEventListener ("click", function (event) {
 	event.preventDefault();
@@ -88,12 +97,6 @@ window.addEventListener ("keydown", function(event) {
 	}
 });
 
-var navMain = document.querySelector (".header__inner");
-var navToggle = document.querySelector (".nav-toggle");
-var header = document.querySelector (".header");
-var slider = document.querySelector(".slider");
-var cardslider = document.querySelector(".card-slider");
-
 //not js
 
 navMain.classList.remove("header__inner--nojs");
@@ -112,13 +115,26 @@ navToggle.addEventListener ("click", function(event) {
 
 // реакция на нажатие в dropdown-toggle
 
-var subnavMain = document.querySelector (".main-nav");
-var subToggle = document.querySelector (".js-sub-click");
-
 subToggle.addEventListener ("click", function(event) {
 	if (subnavMain.classList.contains("main-nav--opened")) {
 		subnavMain.classList.remove("main-nav--opened");
 	} else {
 		subnavMain.classList.add("main-nav--opened");
+	}
+});
+//закрываем sub меню dropdown
+
+closeDropMenu.addEventListener ("click", function(event) {
+	event.preventDefault();
+	subnavMain.classList.remove("main-nav--opened");
+});
+
+window.addEventListener ("keydown", function(event) {
+	if (event.keyCode === 27) {
+		if (subnavMain.classList.contains ("main-nav--opened")) {
+			subnavMain.classList.remove("main-nav--opened");
+		}else {
+			subnavMain.classList.remove("main-nav--opened");
+		}
 	}
 });

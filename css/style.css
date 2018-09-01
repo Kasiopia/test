@@ -369,7 +369,7 @@ template {
 
 .header__inner--opened .nav-toggle {
   position: absolute;
-  top: -76px;
+  top: -78px;
   right: 15px;
   z-index: 200; }
 
@@ -1572,7 +1572,9 @@ template {
         border-bottom: 4px solid transparent;
         opacity: 0.6; }
     .dropdown-menu__link--bigger {
+      display: inline-block;
       padding: 7.5px 15px;
+      vertical-align: middle;
       font-size: 15px;
       line-height: 40px;
       font-weight: 400;
@@ -1580,48 +1582,16 @@ template {
       .dropdown-menu__link--bigger::after {
         display: none; }
 
-/*
-.main-nav__list > .main-nav__item:hover .dropdown-menu {
-	@media ($tablet-widths) {
-		display: block;
-	}
-}
-
-.main-nav__list > .main-nav__item:hover .dropdown-menu {
-	display: block;
-}*/
 .main-nav--opened .dropdown-menu {
   display: block; }
 
-.dropdown-menu-toggle {
+.dropdown-menu-back {
   position: absolute;
-  display: block;
-  top: 40%;
+  display: inline-block;
+  top: 18px;
   left: 19px;
-  width: 11px;
-  height: 17px;
-  padding: 0;
-  border: 0;
-  cursor: pointer;
-  outline: 0;
-  background: transparent; }
-  .dropdown-menu-toggle > span::before {
-    content: "";
-    position: absolute;
-    margin: auto;
-    top: 0px;
-    width: 11px;
-    height: 11px;
-    -ms-transform: rotate(135deg);
-        transform: rotate(135deg);
-    border-right: 2px solid #363636;
-    border-bottom: 2px solid #363636;
-    z-index: 100; }
-
-.dropdown-menu-toggle span:hover::before,
-.dropdown-menu-toggle span:active::before {
-  border-right: 2px solid #dc3e21;
-  border-bottom: 2px solid #dc3e21; }
+  vertical-align: middle;
+  z-index: 150; }
 
 /* font-family: "exo2regular"; */
 @font-face {
@@ -1752,7 +1722,8 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
-.hidden-block {
+.hidden-block,
+.svg-hide {
   display: none; }
 
 .form {
@@ -1937,6 +1908,17 @@ button {
       color: #ffffff;
       background: #404041;
       border-color: #404041; }
+
+.svg-icon {
+  cursor: pointer;
+  opacity: .3; }
+  .svg-icon--back {
+    width: 11px;
+    height: 17px;
+    opacity: 1;
+    fill: #404041; }
+    .svg-icon--back:active {
+      fill: #ee5a3f; }
     @media (min-width: 700px) {
   .header {
     width: auto; }
@@ -2496,7 +2478,7 @@ button {
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase; }
-  .dropdown-menu-toggle {
+  .dropdown-menu-back {
     display: none; }
   body {
     min-width: 700px; }
@@ -2525,7 +2507,7 @@ button {
     @media only screen and (max-width: 700px) {
   .header__inner--nojs .nav-toggle {
     position: absolute;
-    top: -70px;
+    top: -78px;
     right: 15px;
     z-index: 200; }
   .header__inner--nojs .header-top__inner {

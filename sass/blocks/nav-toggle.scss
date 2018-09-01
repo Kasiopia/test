@@ -76,7 +76,7 @@
 .header__inner--opened {
 	& .nav-toggle {
 		position: absolute;
-		top: -76px;
+		top: -78px;
 		right: 15px;
 		z-index: 200;
 	}
@@ -126,7 +126,7 @@
 	@media only screen and (max-width : 700px) {
 		& .nav-toggle {
 			position: absolute;
-			top: -70px;
+			top: -78px;
 			right: 15px;
 			z-index: 200;
 		}
