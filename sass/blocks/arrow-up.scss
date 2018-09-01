@@ -5,13 +5,13 @@
 		display: block;
 		position: fixed;
 		bottom: 65px;
-		right: 25px;
+		right: 30px;
 		background: #f6f6f6;
 		width: 60px;
 		height: 60px;
 		text-decoration: none;
 		text-align: center;
-		z-index: 10000;
+		z-index: 100;
 		transition: all .3s ease 0s;
 
 		&__wrapper {
@@ -20,7 +20,7 @@
 		}
 		&__text {
 			@include position-container(15px, 0, 0, 0)
-			z-index: 1000;
+			z-index: 100;
 			@include style-font(11px, 50px, 700);
 			text-transform: uppercase;
 			color: black;

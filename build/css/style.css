@@ -2279,13 +2279,13 @@ button {
     display: block;
     position: fixed;
     bottom: 65px;
-    right: 25px;
+    right: 30px;
     background: #f6f6f6;
     width: 60px;
     height: 60px;
     text-decoration: none;
     text-align: center;
-    z-index: 10000;
+    z-index: 100;
     transition: all .3s ease 0s; }
   .arrow-up__wrapper {
     position: relative;
@@ -2298,7 +2298,7 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
     font-size: 11px;
     line-height: 50px;
     font-weight: 700;
