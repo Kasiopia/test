@@ -1,12 +1,11 @@
 .header {
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 8888;
 	background: #fff;
 	@media ($tablet-widths) {
-		position: static;
 		width: auto;
 	}
 }

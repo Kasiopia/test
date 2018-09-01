@@ -298,7 +298,7 @@ template {
   display: none; }
 
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -760,8 +760,7 @@ template {
   margin-right: 5px; }
 
 .slider {
-  position: relative;
-  margin: 55px auto auto; }
+  position: relative; }
   .slider .slick-active {
     outline: none; }
 
@@ -1841,7 +1840,6 @@ button {
       border-color: #404041; }
     @media (min-width: 700px) {
   .header {
-    position: static;
     width: auto; }
   .nav-toggle {
     display: none; }
