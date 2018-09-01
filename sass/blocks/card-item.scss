@@ -9,7 +9,7 @@
 		width: 290px;
 		margin-bottom: 53px;
 	}
-	
+
 	@media ($desktop-widths) {
 		width: 380px;
 	}
@@ -37,7 +37,7 @@
 	&__info {
 		display: flex;
 		padding-top: 10.095px;
-		flex-direction: column;		
+		flex-direction: column;
 		justify-content: flex-start;
 		flex-grow: 1;
 		background: 0 0;
@@ -111,7 +111,7 @@
 			background: $body-bg;
 			text-align: left;
 			opacity: 0;
-			transition: background .3s .5s;	
+			transition: background .3s .5s;
 		}
 	}
 	&__housing, &__facade {
@@ -119,7 +119,7 @@
 		border-top: 1px solid #e7e7e7;
 	}
 	&__housing-text, &__facade-text {
-		@include style-font(12px, 30.41px, 400);		
+		@include style-font(12px, 30.41px, 400);
 		color: $additional-text-color;
 
 		@media ($desktop-widths) {
@@ -155,7 +155,7 @@
 }
 
 .card-item:hover .card-item__ad-info {
-	display: none; 
+	display: none;
 
 	@media ($tablet-widths) {
 		position: relative;

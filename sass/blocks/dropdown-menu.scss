@@ -1,21 +1,27 @@
 .dropdown-menu {
+	position: absolute;
 	display: none;
+	padding-bottom: 143px;
+	z-index: 100;
+	width: 100%;
+	top: -101px;
+	left: 0px;
+	background: $body-bg;
 
 	@media ($tablet-widths) {
 		position: absolute;
 		min-height: 415px;
 		width: 100%;
 		height: auto;
+		padding-bottom: 0;
 		top: 80px;
 		left: 0;
 		z-index: 2000;
-		background: $body-bg;
 		box-shadow: 0px 1px 8px 0px rgba(43, 43, 43, 0.15);
 		border-radius: 3px;
 	}
 
 	&__wrapper {
-
 		@media ($tablet-widths) {
 			padding: 0 40px;
 		}
@@ -27,29 +33,130 @@
 
 	&__list {
 		display: inline-block;
-		width: 25%;
+		width: 100%;
 		margin: 0;
 		list-style: none;
 		vertical-align: top;
 		text-align: left;
+		background: $body-bg;
+
+		@media ($tablet-widths) {
+			position: static;
+			width: 25%;
+		}
+
+		&--mobile {
+			display: none;
+			@media ($tablet-widths) {
+				display: inline-block;
+			}
+		}
 	}
 
 	&__item {
 		&--bigger {
-			margin-top: 21px;
-		}
+			position: relative;
+			text-align: center;
+			background: $body-color;
 
+			@media ($tablet-widths) {
+				position: static;
+				margin-top: 21px;
+				background: transparent;
+				text-align: left;
+			}
+		}
 	}
 	&__link {
-		@include a-link();
-		@include style-font(16px, 30px, 400);
+		position: relative;
+		display: block;
+		padding: 5px 15px;
+		border-bottom: 1px solid $body-color;
+		text-transform: uppercase;
+		@include style-font(15px, 30px, 700);
 		color: $text-color;
+		cursor: pointer;
+		text-decoration: none;
+
+		@media ($tablet-widths) {
+			display: inline-block;
+			padding: 0;
+			text-decoration: none;
+			@include style-font(16px, 30px, 400);
+			border: none;
+			text-transform: none;
+		}
+		&::after {
+			@include position-container(50%, 50%, auto, 16px);
+			width: 0;
+			height: 0;
+			border-top: 4px solid transparent;
+			border-left: 5px solid $text-color;
+			border-bottom: 4px solid transparent;
+			z-index: 10;
+
+			@media ($tablet-widths) {
+				@include position-container(30px, 0, 0, 0);
+				width: 100%;
+				height: 2px;
+				z-index: 999;
+				border: none;
+			}
+		}
 		&:hover {
 			color: #ee5a3f;
+			transition: background .3s .5s;
+			&::after {
+				border-top: 4px solid transparent;
+				border-left: 5px solid #ee5a3f;
+				border-bottom: 4px solid transparent;
+
+				@media ($tablet-widths) {
+					@include position-container(30px, 0, 0, 0);
+					width: 100%;
+					height: 2px;
+					z-index: 999;
+					border: none;
+					background: #ee5a3f;
+				}
+			}
+		}
+		&:active {
+			color: #ee5a3f;
+			opacity: 0.6;
+			transition: background .3s .5s;
+			&::after {
+				border-top: 4px solid transparent;
+				border-left: 5px solid #ee5a3f;
+				border-bottom: 4px solid transparent;
+				opacity: 0.6;
+
+				@media ($tablet-widths) {
+					@include position-container(30px, 0, 0, 0);
+					width: 100%;
+					height: 2px;
+					z-index: 999;
+					border: none;
+				}
+			}
 		}
 		&--bigger {
-			@include style-font(14px, 30px, 700);
-			text-transform: uppercase;
+			padding: 7.5px 15px;
+			@include style-font(15px, 40px, 400);
+			z-index: 150;
+			&::after {
+				display: none;
+
+				@media ($tablet-widths) {
+					display: block;
+				}
+			}
+
+			@media ($tablet-widths) {
+				padding: 5px 15px;
+				@include style-font(14px, 30px, 700);
+				text-transform: uppercase;
+			}
 		}
 	}
 }
@@ -58,4 +165,8 @@
 	@media ($tablet-widths) {
 		display: block;
 	}
+}
+
+.main-nav__list > .main-nav__item:hover .dropdown-menu {
+	display: block;
 }

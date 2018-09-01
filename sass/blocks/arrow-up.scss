@@ -24,13 +24,6 @@
 			@include style-font(11px, 50px, 700);
 			text-transform: uppercase;
 			color: black;
-			&:hover {
-				color: #dc3e21;
-			}
-			&:hover::before {
-				border-right: 2px solid #dc3e21;
-				border-bottom: 2px solid #dc3e21;
-			}
 			&::before {
 				@include position-container(11px, 0, 0, 0)
 				width: 0;
@@ -44,4 +37,13 @@
 			}
 		}
 	}
+}
+
+.arrow-up:hover .arrow-up__text {
+	color: #dc3e21;
+}
+
+.arrow-up:hover .arrow-up__text::before {
+	border-right: 2px solid red;
+	border-bottom: 2px solid red;
 }
