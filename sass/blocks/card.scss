@@ -1,0 +1,139 @@
+.card {
+	max-width: 380px;
+	height: 365px;
+	margin-bottom: 36px;
+	overflow: hidden;
+
+	@media ($tablet-widths) {
+		width: 380px;
+		height: 505px;
+		margin: 0 auto 36px;
+		text-align: center;
+	}
+	@media ($desktop-widths) {
+		display: inline-block;
+		margin-right: 20px;
+		vertical-align: bottom;
+		text-align: left;
+		&:nth-child(3n) {
+			margin-right: 0px;
+		}
+	}
+
+	&:hover {
+		@media ($desktop-widths) {
+			& .card__main-image {
+				display: none;
+			}
+
+			& .card__text-hidden {
+				display: block;
+			}
+
+			& .card-slider {
+				display: block;
+			}
+		}
+	}
+
+	&--click {
+		@media only screen and (max-width : 700px) {
+			& .card__main-image {
+				display: none;
+			}
+			& .card__text-hidden {
+				display: block;
+			}
+
+			& .card-slider {
+				display: block;
+			}
+		}
+	}
+
+	&--hidden {
+		display: none;
+
+		@media ($desktop-widths) {
+			display: inlile-block;
+		}
+	}
+
+	&__image {
+		width: 290px;
+		height: 289px;
+		margin-bottom: 10px;
+
+		@media ($tablet-widths) {
+			width: 380px;
+			height: 386px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__main-image {
+		overflow: hidden;
+	}
+
+	&__description {
+
+		@media ($desktop-widths) {
+			padding: 0px 20px;
+		}
+	}
+
+	&__text {
+		height: 22.81px;
+		max-height: 22.81px;
+		@include style-font( 15px, 22.81px, 700);
+		color: $text-color;
+		overflow: hidden;
+
+		&--hidden {
+			display: none;
+		}
+
+		&--title {
+			text-transform: uppercase;
+		}
+
+		&--subtitle {
+			font-size: 12px;
+			font-weight: 400;
+			color: #7f7f7f;
+		}
+	}
+
+	&__price {
+		display: inline-block;
+		max-width: 104px;
+		vertical-align: bottom;
+		overflow: hidden;
+
+		&--old {
+			position: relative;
+			margin-right: 24px;
+			font-weight: 500;
+
+			&:before {
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 11px;
+				border-bottom: 3px solid #ff1414;
+				-ms-transform: rotate(-7deg);
+				transform: rotate(-7deg);
+			}
+		}
+
+		&--new {
+			font-size: 19px;
+		}
+	}
+
+	&__action {
+
+		&--hidden {display: none;}
+	}
+}
+
