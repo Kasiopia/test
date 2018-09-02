@@ -96,24 +96,24 @@ subToggle.addEventListener ("click", function(event) {
 
 // реакция на нажатие на card
 var card = document.querySelector (".card");
-//var cardToggle = document.querySelector (".card--click");
-
 
 card.addEventListener ("click", function (event) {
 	event.preventDefault();
 	card.classList.add ("card--click");
 });
 
-//cardToggle.addEventListener ("click", function(event) {
-//	if (card.classList.contains("card--click")) {
-//		card.classList.remove("card--click");
-//	} else {
-//		card.classList.add("card--click");
-//	}
-//});
+// реакция на закрытие или esc на card
+window.addEventListener ("keydown", function(event) {
+	if (event.keyCode === 27) {
+		if (card.classList.contains ("card--click")) {
+			card.classList.remove("card--click");
+		}else {
+			card.classList.remove("card--click");
+		}
+	}
+});
 
 //закрываем sub меню dropdown
-
 closeDropMenu.addEventListener ("click", function(event) {
 	event.preventDefault();
 	subnavMain.classList.remove("main-nav--opened");
@@ -128,4 +128,3 @@ window.addEventListener ("keydown", function(event) {
 		}
 	}
 });
-

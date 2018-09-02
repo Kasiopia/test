@@ -1,8 +1,9 @@
 .card {
+	position: relative;
 	max-width: 380px;
 	height: 365px;
 	margin-bottom: 36px;
-	overflow: hidden;
+	z-index: 100;
 
 	@media ($tablet-widths) {
 		width: 380px;
@@ -13,42 +14,81 @@
 	@media ($desktop-widths) {
 		display: inline-block;
 		margin-right: 20px;
-		vertical-align: bottom;
+		margin-bottom: 36px;
+		vertical-align: top;
 		text-align: left;
 		&:nth-child(3n) {
 			margin-right: 0px;
 		}
 	}
 
+	&--click {
+		height: 480px;
+		@media ($tablet-widths) {
+			height: 605px;
+		}
+		& .card__wrapper {
+			box-shadow: 6px 6px 20px 0 rgba(43,43,43,.15);
+		}
+
+		& .card__image {
+			height: 176px;
+			@media ($tablet-widths) {
+				height: 231px;
+			}
+		}
+
+		& .card__main-image {
+			display: none;
+		}
+		& .card__text--hidden {
+			display: block;
+		}
+
+		& .card-slider {
+			display: block;
+		}
+
+		& .card__action--hidden {
+			display: block;
+		}
+	}
+
 	&:hover {
+		& .card__wrapper {
+			box-shadow: 6px 6px 20px 0 rgba(43,43,43,.15);
+		}
+
 		@media ($desktop-widths) {
+			height: 605px;
+
+			& .card__wrapper {
+				position: absolute;
+				z-index: 300;
+			}
+			& .card__image {
+				height: 231px;
+			}
 			& .card__main-image {
 				display: none;
 			}
 
-			& .card__text-hidden {
+			& .card__text--hidden {
 				display: block;
 			}
 
 			& .card-slider {
+				display: block;
+			}
+
+			& .card__action--hidden {
 				display: block;
 			}
 		}
 	}
 
-	&--click {
-		@media only screen and (max-width : 700px) {
-			& .card__main-image {
-				display: none;
-			}
-			& .card__text-hidden {
-				display: block;
-			}
-
-			& .card-slider {
-				display: block;
-			}
-		}
+	&__wrapper {
+		overflow: hidden;
 	}
 
 	&--hidden {
@@ -76,9 +116,8 @@
 	}
 
 	&__description {
-
 		@media ($desktop-widths) {
-			padding: 0px 20px;
+			padding: 0px 20px 18px;
 		}
 	}
 
@@ -89,6 +128,12 @@
 		color: $text-color;
 		overflow: hidden;
 
+		@media ($desktop-widths) {
+			height: 30px;
+			max-height: 30px;
+			@include style-font( 20px, 30px, 700);
+		}
+
 		&--hidden {
 			display: none;
 		}
@@ -97,10 +142,70 @@
 			text-transform: uppercase;
 		}
 
-		&--subtitle {
+		&--subtitle,
+		&--housing-description,
+		&--facade-description {
 			font-size: 12px;
 			font-weight: 400;
 			color: #7f7f7f;
+
+			@media ($desktop-widths) {
+				margin-bottom: 10px;
+				@include style-font( 16px, 32px, 400);
+			}
+		}
+
+		&--housing-description,
+		&--facade-description {
+			padding-top: 10px;
+			font-weight: 700;
+			color: $text-color;
+			border-top: 1px solid #e7e7e7;
+			overflow: hidden;
+		}
+
+		&--facade-colors,
+		&--housing-colors {
+			padding-bottom: 15px;
+			& img,
+			& img {
+				margin-left: 15px;
+				border: 1px solid transparent;
+				&:hover {
+					border: 1px solid #ee5a3f;
+				}
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	&__housing-text {
+		display: inline-block;
+		max-width: 68px;
+		vertical-align: bottom;
+		font-weight: 700;
+		&--sub {
+			max-width: 140px;
+			margin-left: 10px;
+			font-weight: 400;
+		}
+	}
+
+	&__facade-text {
+		display: inline-block;
+		max-width: 63px;
+		vertical-align: bottom;
+		font-weight: 700;
+		&--sub {
+			max-width: 140px;
+			margin-left: 10px;
+			font-weight: 400;
+
+			@media ($tablet-widths) {
+				max-width: 190px;
+			}
 		}
 	}
 
@@ -110,10 +215,19 @@
 		vertical-align: bottom;
 		overflow: hidden;
 
+		@media ($desktop-widths) {
+			max-width: 137px;
+		}
+
 		&--old {
 			position: relative;
 			margin-right: 24px;
 			font-weight: 500;
+
+			@media ($desktop-widths) {
+				margin-right: 30px;
+				font-weight: 500;
+			}
 
 			&:before {
 				position: absolute;
@@ -128,12 +242,18 @@
 
 		&--new {
 			font-size: 19px;
+			@media ($desktop-widths) {
+				font-size: 26px;
+			}
 		}
 	}
 
 	&__action {
-
-		&--hidden {display: none;}
+		padding-top: 15px;
+		&--hidden {
+			display: none;
+		}
 	}
 }
+
 
