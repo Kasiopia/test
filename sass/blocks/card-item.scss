@@ -53,6 +53,7 @@
 
 		@media ($desktop-widths) {
 			@include style-font(20px, 30px, 700);
+			text-transform: uppercase;
 		}
 
 	}

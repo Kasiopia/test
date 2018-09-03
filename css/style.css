@@ -2596,7 +2596,8 @@ button {
   .card-item__title span {
     font-size: 20px;
     line-height: 30px;
-    font-weight: 700; }
+    font-weight: 700;
+    text-transform: uppercase; }
   .card-item__description span {
     margin-bottom: 7px;
     font-size: 16px;
