@@ -10,63 +10,55 @@
 
 
 .card-arrow__left, .card-arrow__right {
-	display: none;
+	position: absolute;
+	display: block;
+	margin-top: 87px;
+	width: 50px;
+	height: 50px;
+	top: -25px;
+	background: $body-bg;
+	z-index: 777;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	&:hover {
+		background: #ee5a3f;
+	}
+	&::before {
+		@include position-container(18px, auto, 0, auto);
+		width: 14px;
+		height: 14px;
+		border-top: 2px solid #ee5b40;
+		border-right: 2px solid #ee5b40;
+		transform: rotate(45deg);
+	}
+	&:hover::before {
+		border-color: $body-bg;
+	}
 
-	@media ($tablet-widths) {
-		position: absolute;
-		display: block;
-		margin-top: 87px;
-		width: 50px;
-		height: 50px;
+	@media ($desktop-widths) {
 		top: 0;
-		background: $body-bg;
-		z-index: 777;
-		border: none;
-		outline: none;
-		cursor: pointer;
-		&:hover {
-			background: #ee5a3f;
-		}
-		&::before {
-			@include position-container(18px, auto, 0, auto);
-			width: 14px;
-			height: 14px;
-			border-top: 2px solid #ee5b40;
-			border-right: 2px solid #ee5b40;
-			transform: rotate(45deg);
-		}
-		&:hover::before {
-			border-color: $body-bg;
-		}
 	}
 }
 
 .card-arrow__left {
-	display: none;
-
-	@media ($tablet-widths) {
-		display: block;
-		left: 0px;
-		border-top-right-radius: 2px;
-		border-bottom-right-radius: 2px;
-		&::before {
-			left: 18px;
-			transform: rotate(-135deg);
-		}
+	display: block;
+	left: 0px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	&::before {
+		left: 18px;
+		transform: rotate(-135deg);
 	}
 }
 
 .card-arrow__right {
-	display: none;
-
-	@media ($tablet-widths) {
-		display: block;
-		right: 0px;
-		border-top-left-radius: 2px;
-		border-bottom-left-radius: 2px;
-		&:before {
-			right: 12px;
-		}
+	display: block;
+	right: 0px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	&:before {
+		right: 12px;
 	}
 }
 
