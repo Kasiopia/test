@@ -49,6 +49,10 @@
 		&:hover::before {
 			border-color: $body-bg;
 		}
+		
+		@media ($desktop-widths) {
+			top: 0;
+		}
 	}
 }
 

@@ -2671,3 +2671,6 @@ button {
     margin-right: 30px; }
   .main-nav__link {
     font-size: 16px; } }
+    @media (min-width: 700px) and (min-width: 1280px) {
+  .card-arrow__left, .card-arrow__right {
+    top: 0; } }
