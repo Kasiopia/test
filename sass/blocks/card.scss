@@ -124,6 +124,7 @@
 	&__text {
 		height: 22.81px;
 		max-height: 22.81px;
+		margin-bottom: 5px;
 		@include style-font( 15px, 22.81px, 700);
 		color: $text-color;
 		overflow: hidden;
@@ -139,7 +140,11 @@
 		}
 
 		&--title {
+			margin-bottom: 0px;
 			text-transform: uppercase;
+		}
+		&--title-sub {
+			margin-bottom: 0px;
 		}
 
 		&--subtitle,
@@ -157,26 +162,22 @@
 
 		&--housing-description,
 		&--facade-description {
-			padding-top: 10px;
+			padding-top: 5px;
 			font-weight: 700;
 			color: $text-color;
 			border-top: 1px solid #e7e7e7;
 			overflow: hidden;
 		}
 
-		&--facade-colors,
-		&--housing-colors {
-			padding-bottom: 15px;
-			& img,
-			& img {
-				margin-left: 15px;
-				border: 1px solid transparent;
-				&:hover {
-					border: 1px solid #ee5a3f;
-				}
-				&:first-child {
-					margin-left: 0;
-				}
+		&--facade-colors img,
+		&--housing-colors img {
+			margin-left: 15px;
+			border: 1px solid transparent;
+			&:hover {
+				border: 1px solid #ee5a3f;
+			}
+			&:first-child {
+				margin-left: 0;
 			}
 		}
 	}

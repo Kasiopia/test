@@ -861,6 +861,7 @@ template {
   .card__text {
     height: 22.81px;
     max-height: 22.81px;
+    margin-bottom: 5px;
     font-size: 15px;
     line-height: 22.81px;
     font-weight: 700;
@@ -869,32 +870,30 @@ template {
     .card__text--hidden {
       display: none; }
     .card__text--title {
+      margin-bottom: 0px;
       text-transform: uppercase; }
+    .card__text--title-sub {
+      margin-bottom: 0px; }
     .card__text--subtitle, .card__text--housing-description, .card__text--facade-description {
       font-size: 12px;
       font-weight: 400;
       color: #7f7f7f; }
     .card__text--housing-description, .card__text--facade-description {
-      padding-top: 10px;
+      padding-top: 5px;
       font-weight: 700;
       color: #404041;
       border-top: 1px solid #e7e7e7;
       overflow: hidden; }
-    .card__text--facade-colors, .card__text--housing-colors {
-      padding-bottom: 15px; }
-      .card__text--facade-colors img,
-      .card__text--facade-colors img, .card__text--housing-colors img,
-      .card__text--housing-colors img {
-        margin-left: 15px;
-        border: 1px solid transparent; }
-        .card__text--facade-colors img:hover,
-        .card__text--facade-colors img:hover, .card__text--housing-colors img:hover,
-        .card__text--housing-colors img:hover {
-          border: 1px solid #ee5a3f; }
-        .card__text--facade-colors img:first-child,
-        .card__text--facade-colors img:first-child, .card__text--housing-colors img:first-child,
-        .card__text--housing-colors img:first-child {
-          margin-left: 0; }
+    .card__text--facade-colors img,
+    .card__text--housing-colors img {
+      margin-left: 15px;
+      border: 1px solid transparent; }
+      .card__text--facade-colors img:hover,
+      .card__text--housing-colors img:hover {
+        border: 1px solid #ee5a3f; }
+      .card__text--facade-colors img:first-child,
+      .card__text--housing-colors img:first-child {
+        margin-left: 0; }
   .card__housing-text {
     display: inline-block;
     max-width: 68px;
