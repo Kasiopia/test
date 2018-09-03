@@ -1,3 +1,32 @@
+//подключение слайер карточки
+
+var slides = document.querySelectorAll('#card-slider--1 .card-slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide(){
+	goToSlide(currentSlide+1);
+}
+function previousSlide(){
+	goToSlide(currentSlide-1);
+}
+function goToSlide(n){
+	slides[currentSlide].className = 'card-slide';
+	currentSlide = (n+slides.length)%slides.length;
+	slides[currentSlide].className = 'card-slide card-slide--showing';
+}
+var next = document.getElementById('next--1');
+var previous = document.getElementById('prev--1');
+
+next.onclick = function(){
+	clearInterval(slideInterval);   //останавливает слайдер по нажатию на next
+	nextSlide();
+};
+previous.onclick = function(){
+	clearInterval(slideInterval);   //останавливает слайдер по нажатию на previous
+	previousSlide();
+};
+
 //подключение слайдеров
 $('.slider__wrapper').slick({
 	dots: true,
@@ -28,12 +57,6 @@ $('.slider__wrapper').slick({
 	}
 	]
 });
-$('.card-slider--1').slick();
-$('.card-slider--2').slick();
-$('.card-slider--3').slick();
-$('.card-slider--4').slick();
-$('.card-slider--5').slick();
-$('.card-slider--6').slick();
 $('.reviews-slider__wrapper').slick();
 //подключение всплывающих окон и закрытие окон
 

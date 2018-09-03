@@ -6,7 +6,7 @@
 	<meta name="description" content="Мебельный Магазин Fictitious">
 	<meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 	<div class="svg-hide">
@@ -244,8 +244,8 @@
 						<div class="card__wrapper">
 							<div class="card__image">
 								<img class="card__main-image" src="img/kitchen_london.jpg" width="380" height="386" alt="Кухня Лондон">
-								<article class="card-slider card-slider--1">
-									<div class="card-slide">
+								<article class="card-slider" id="card-slider--1">
+									<div class="card-slide card-slide--showing">
 										<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
 									<div class="card-slide">
@@ -260,6 +260,8 @@
 									<div class="card-slide">
 										<img src="img/kitchen__london--small_5.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
+									<button class="card-arrow card-arrow__left" id="next--1"></button>
+									<button class="card-arrow card-arrow__right" id="prev--1"></button>
 								</article>
 							</div>
 							<div class="card__description">
@@ -269,7 +271,7 @@
 								<div class="card__text card__text--subtitle">
 									<span>Производитель: Пенза</span>
 								</div>
-								<div class="card__text">
+								<div class="card__text card__text--prices">
 									<span class="card__price card__price--old">14 250 руб.</span>
 									<span class="card__price card__price--new">15 050 руб.</span>
 								</div>
@@ -298,15 +300,24 @@
 						<div class="card__wrapper">
 							<div class="card__image">
 								<img class="card__main-image" src="img/kitchen_london.jpg" width="380" height="386" alt="Кухня Лондон">
-								<article class="card-slider card-slider--2">
-									<div class="card__wrapper">
-										<div class="card-slide">
-											<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
-										</div>
-										<div class="card-slide">
-											<img src="img/kitchen__london--small_2.jpg" width="380" height="231" alt="Кухня Лондон">
-										</div>
+								<article class="card-slider" id="card-slider--2">
+									<div class="card-slide">
+										<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
+									<div class="card-slide card-slide--showing">
+										<img src="img/kitchen__london--small_2.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_3.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_4.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_5.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<button class="card-arrow card-arrow__left" id="next--2"></button>
+									<button class="card-arrow card-arrow__right" id="prev--2"></button>
 								</article>
 							</div>
 							<div class="card__description">
@@ -316,7 +327,7 @@
 								<div class="card__text card__text--subtitle">
 									<span>Производитель: Пенза</span>
 								</div>
-								<div class="card__text">
+								<div class="card__text card__text--prices">
 									<span class="card__price card__price--old">14 250 руб.</span>
 									<span class="card__price card__price--new">15 050 руб.</span>
 								</div>
@@ -345,13 +356,24 @@
 						<div class="card__wrapper">
 							<div class="card__image">
 								<img class="card__main-image" src="img/stenka_essen.jpg" width="380" height="386" alt="Кухня Лондон">
-								<article class="card-slider card-slider--3">
-									<div class="card-slide">
+								<article class="card-slider" id="card-slider--3">
+									<div class="card-slide card-slide--showing">
 										<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
 									<div class="card-slide">
 										<img src="img/kitchen__london--small_2.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_3.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_4.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_5.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<button class="card-arrow card-arrow__left" id="next--3"></button>
+									<button class="card-arrow card-arrow__right" id="prev--3"></button>
 								</article>
 							</div>
 							<div class="card__description">
@@ -361,7 +383,7 @@
 								<div class="card__text card__text--subtitle">
 									<span>Производитель: Пенза</span>
 								</div>
-								<div class="card__text">
+								<div class="card__text card__text--prices">
 									<span class="card__price card__price--old">14 250 руб.</span>
 									<span class="card__price card__price--new">15 050 руб.</span>
 								</div>
@@ -390,13 +412,24 @@
 						<div class="card__wrapper">
 							<div class="card__image">
 								<img class="card__main-image" src="img/kitchen_london_2.jpg" width="380" height="386" alt="Кухня Лондон">
-								<article class="card-slider card-slider--4">
-									<div class="card-slide">
+								<article class="card-slider" id="card-slider--4">
+									<div class="card-slide card-slide--showing">
 										<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
 									<div class="card-slide">
 										<img src="img/kitchen__london--small_2.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_3.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_4.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_5.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<button class="card-arrow card-arrow__left" id="next--42"></button>
+									<button class="card-arrow card-arrow__right" id="prev--4"></button>
 								</article>
 							</div>
 							<div class="card__description">
@@ -406,7 +439,7 @@
 								<div class="card__text card__text--subtitle">
 									<span>Производитель: Пенза</span>
 								</div>
-								<div class="card__text">
+								<div class="card__text card__text--prices">
 									<span class="card__price card__price--old">14 250 руб.</span>
 									<span class="card__price card__price--new">15 050 руб.</span>
 								</div>
@@ -435,13 +468,24 @@
 						<div class="card__wrapper">
 							<div class="card__image">
 								<img class="card__main-image" src="img/kitchen_london_3.jpg" width="380" height="386" alt="Кухня Лондон">
-								<article class="card-slider card-slider--5">
-									<div class="card-slide">
+								<article class="card-slider" id="card-slider--5">
+									<div class="card-slide card-slide--showing">
 										<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
 									<div class="card-slide">
 										<img src="img/kitchen__london--small_2.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_3.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_4.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_5.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<button class="card-arrow card-arrow__left" id="next--5"></button>
+									<button class="card-arrow card-arrow__right" id="prev--5"></button>
 								</article>
 							</div>
 							<div class="card__description">
@@ -451,7 +495,7 @@
 								<div class="card__text card__text--subtitle">
 									<span>Производитель: Пенза</span>
 								</div>
-								<div class="card__text">
+								<div class="card__text card__text--prices">
 									<span class="card__price card__price--old">14 250 руб.</span>
 									<span class="card__price card__price--new">15 050 руб.</span>
 								</div>
@@ -480,13 +524,24 @@
 						<div class="card__wrapper">
 							<div class="card__image">
 								<img class="card__main-image" src="img/kitchen_london_4.jpg" width="380" height="386" alt="Кухня Лондон">
-								<article class="card-slider card-slider--6">
-									<div class="card-slide">
+								<article class="card-slider">
+									<div class="card-slide card-slide--showing">
 										<img src="img/kitchen__london--small.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
 									<div class="card-slide">
 										<img src="img/kitchen__london--small_2.jpg" width="380" height="231" alt="Кухня Лондон">
 									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_3.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_4.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<div class="card-slide">
+										<img src="img/kitchen__london--small_5.jpg" width="380" height="231" alt="Кухня Лондон">
+									</div>
+									<button class="card-arrow card-arrow__left" id="next--6"></button>
+									<button class="card-arrow card-arrow__right" id="prev--6"></button>
 								</article>
 							</div>
 							<div class="card__description">
@@ -496,7 +551,7 @@
 								<div class="card__text card__text--subtitle">
 									<span>Производитель: Пенза</span>
 								</div>
-								<div class="card__text">
+								<div class="card__text card__text--prices">
 									<span class="card__price card__price--old">14 250 руб.</span>
 									<span class="card__price card__price--new">15 050 руб.</span>
 								</div>
@@ -958,6 +1013,6 @@
 <div class="modal-overlay"></div>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/slick.min.js"></script>
-<script src="js/js.js"></script>
+<script src="js/js.min.js"></script>
 </body>
 </html>

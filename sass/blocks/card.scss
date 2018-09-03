@@ -1,13 +1,10 @@
 .card {
 	position: relative;
 	max-width: 380px;
-	height: 365px;
 	margin-bottom: 36px;
-	z-index: 100;
 
 	@media ($tablet-widths) {
 		width: 380px;
-		height: 505px;
 		margin: 0 auto 36px;
 		text-align: center;
 	}
@@ -22,11 +19,14 @@
 		}
 	}
 
-	&--click {
-		height: 480px;
-		@media ($tablet-widths) {
-			height: 605px;
+	&.card--click {
+		& .card__wrapper {
+			height: 480px;
+			@media ($tablet-widths) {
+				height: 605px;
+			}
 		}
+
 		& .card__wrapper {
 			box-shadow: 6px 6px 20px 0 rgba(43,43,43,.15);
 		}
@@ -55,16 +55,12 @@
 	}
 
 	&:hover {
-		& .card__wrapper {
-			box-shadow: 6px 6px 20px 0 rgba(43,43,43,.15);
-		}
-
 		@media ($desktop-widths) {
-			height: 605px;
-
 			& .card__wrapper {
+				height: 605px;
 				position: absolute;
 				z-index: 300;
+				box-shadow: 6px 6px 20px 0 rgba(43,43,43,.15);
 			}
 			& .card__image {
 				height: 231px;
@@ -88,14 +84,19 @@
 	}
 
 	&__wrapper {
+		height: 365px;
 		overflow: hidden;
+		background: $body-bg;
+		@media ($tablet-widths) {
+			height: 505px;
+		}
 	}
 
 	&--hidden {
 		display: none;
 
 		@media ($desktop-widths) {
-			display: inlile-block;
+			display: inline-block;
 		}
 	}
 
@@ -124,12 +125,12 @@
 	&__text {
 		height: 22.81px;
 		max-height: 22.81px;
-		margin-bottom: 5px;
+		
 		@include style-font( 15px, 22.81px, 700);
 		color: $text-color;
 		overflow: hidden;
 
-		@media ($desktop-widths) {
+		@media ($tablet-widths) {
 			height: 30px;
 			max-height: 30px;
 			@include style-font( 20px, 30px, 700);
@@ -154,7 +155,7 @@
 			font-weight: 400;
 			color: #7f7f7f;
 
-			@media ($desktop-widths) {
+			@media ($tablet-widths) {
 				margin-bottom: 10px;
 				@include style-font( 16px, 32px, 400);
 			}
@@ -179,6 +180,12 @@
 			&:first-child {
 				margin-left: 0;
 			}
+		}
+		&--prices {
+			margin-bottom: 10px;
+		}
+		&--housing-colors {
+			margin-bottom: 15px;
 		}
 	}
 
@@ -216,7 +223,7 @@
 		vertical-align: bottom;
 		overflow: hidden;
 
-		@media ($desktop-widths) {
+		@media ($tablet-widths) {
 			max-width: 137px;
 		}
 
@@ -225,7 +232,7 @@
 			margin-right: 24px;
 			font-weight: 500;
 
-			@media ($desktop-widths) {
+			@media ($tablet-widths) {
 				margin-right: 30px;
 				font-weight: 500;
 			}
@@ -243,7 +250,7 @@
 
 		&--new {
 			font-size: 19px;
-			@media ($desktop-widths) {
+			@media ($tablet-widths) {
 				font-size: 26px;
 			}
 		}
