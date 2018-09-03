@@ -2643,6 +2643,8 @@ button {
     margin: 0 20px 50px; }
   .dropdown-menu__wrapper {
     padding: 0 50px; }
+  .main-nav__item:hover > .dropdown-menu {
+    display: block; }
   body {
     min-width: 1200px; }
   .container {

@@ -164,3 +164,9 @@
 .main-nav--opened .dropdown-menu {
 	display: block;
 }
+
+.main-nav__item:hover > .dropdown-menu {
+	@media ($desktop-widths) {
+		display: block;
+	}
+}
