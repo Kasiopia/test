@@ -119,7 +119,6 @@ subToggle.addEventListener ("click", function(event) {
 
 
 var cards = document.querySelectorAll(".card");
-var card_mark = document.querySelectorAll(".card");
 
 // реакция на нажатие на card
 Array.prototype.forEach.call(cards, function(card) {
@@ -130,20 +129,15 @@ Array.prototype.forEach.call(cards, function(card) {
 })
 
 // реакция на уход мышки с card
-//Array.prototype.forEach.call(card_mark, function(card2) {
-//	card2.addEventListener ("mouseout", function(event) {
-//		event.preventDefault();
-//		card2.classList.remove ("card--click");
-//	})
-//})
-//
+Array.prototype.forEach.call(cards, function(card2) {
+	card2.addEventListener ("mouseleave", function(event) {
+		event.preventDefault();
+		card2.classList.remove ("card--click");
+	})
+})
+
 // реакция на нажатие на покупку
-//Array.prototype.forEach.call(cards, function(card2) {
-//	card2.addEventListener ("click", function(event) {
-//		event.preventDefault();
-//		card2.classList.add ("card--click");
-//	})
-//})
+
 
 // реакция на закрытие или esc на card
 window.addEventListener ("keydown", function(event) {

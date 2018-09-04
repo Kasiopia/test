@@ -6,7 +6,6 @@
 	@media ($tablet-widths) {
 		width: 380px;
 		margin: 0 auto 36px;
-		text-align: center;
 	}
 	@media ($desktop-widths) {
 		display: inline-block;
@@ -21,7 +20,7 @@
 
 	&.card--click {
 		& .card__wrapper {
-			height: 480px;
+			height: 465px;
 			@media ($tablet-widths) {
 				height: 605px;
 			}
@@ -112,14 +111,14 @@
 		}
 	}
 
-	&__main-image {
-		overflow: hidden;
-	}
-
 	&__description {
-		@media ($desktop-widths) {
+		@media ($tablet-widths) {
 			padding: 0px 20px 18px;
 		}
+	}
+
+	&__main-image {
+		overflow: hidden;
 	}
 
 	&__text {

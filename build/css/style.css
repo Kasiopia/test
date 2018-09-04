@@ -831,7 +831,7 @@ template {
   max-width: 380px;
   margin-bottom: 36px; }
   .card.card--click .card__wrapper {
-    height: 480px; }
+    height: 465px; }
   .card.card--click .card__wrapper {
     box-shadow: 6px 6px 20px 0 rgba(43, 43, 43, 0.15); }
   .card.card--click .card__image {
@@ -936,6 +936,9 @@ template {
     padding-top: 15px; }
     .card__action--hidden {
       display: none; }
+
+.cards {
+  background: #ffffff; }
 
 .card .card-slider {
   display: none; }
@@ -2200,8 +2203,7 @@ button {
     padding: 50px 0; }
   .card {
     width: 380px;
-    margin: 0 auto 36px;
-    text-align: center; }
+    margin: 0 auto 36px; }
   .card.card--click .card__wrapper {
     height: 605px; }
   .card.card--click .card__image {
@@ -2212,6 +2214,8 @@ button {
     width: 380px;
     height: 386px;
     margin-bottom: 20px; }
+  .card__description {
+    padding: 0px 20px 18px; }
   .card__text {
     height: 30px;
     max-height: 30px;
@@ -2607,8 +2611,6 @@ button {
     display: block; }
   .card--hidden {
     display: inline-block; }
-  .card__description {
-    padding: 0px 20px 18px; }
   .card-arrow__left, .card-arrow__right {
     top: 0; }
   .delivery {
